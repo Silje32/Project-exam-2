@@ -3,7 +3,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import ServerWarning from "./serverWarning";
 import ValidationMessage from "./validationMessage";
-import { StyledInput, StyledMessage } from "./styledLoginForm.styles";
 import { StyledBaseButton } from "../../components/Togglebutton/togglebutton.styles";
 
 // * Adding yup validation
@@ -34,28 +33,22 @@ function LoginForm() {
     }
 
     return ( 
-        <div>
-            <StyledInput>
-                <StyledMessage>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <ServerWarning>Login error message here</ServerWarning>
-                      <div>
-                        <label>Email:</label>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <ServerWarning>Login error message here</ServerWarning>
+                <div>
+                  <label>Email:</label>
                         <input {...register("email") }  />
-                        {errors.email && <ValidationMessage>{errors.email.message}</ValidationMessage>}
-                      </div>
-                      <div>
-                        <label>Password:</label>
-                        <input {...register("password") }  />
-                        {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
-                      </div>
-                      <div>
-                         <StyledBaseButton type="submit">LOG IN</StyledBaseButton>   
-                      </div>   
-                    </form>
-                </StyledMessage>
-            </StyledInput>
-        </div>
+                  {errors.email && <ValidationMessage>{errors.email.message}</ValidationMessage>}
+                </div>
+                <div>
+                  <label>Password:</label>
+                         <input {...register("password") }  />
+                {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
+                </div>
+                <div>
+                  <StyledBaseButton type="submit">LOG IN</StyledBaseButton>   
+                </div>   
+        </form>
     );
 }
 

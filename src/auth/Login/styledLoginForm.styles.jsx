@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledInput = styled.input`
    border: 2px solid #5EA7EF;
    background: none;
-   padding: 10px 20px;
+   padding: 20px 40px;
    font-size: 18px;
-   min-width: 200px;
+   min-width: 400px;
    cursor: pointer;
    color: ${(props) => (props.$isActive ? "white" : "#306FB6")};
 

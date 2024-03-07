@@ -1,5 +1,13 @@
+import { StyledMessage } from "./styledLoginForm.styles";
+
 function ServerWarning({ children }) {
-    return <p>{children}</p>;
+    return (
+        <>
+          <StyledMessage>
+            {children}
+          </StyledMessage>
+        </>
+    );
 }
 
 export default ServerWarning;

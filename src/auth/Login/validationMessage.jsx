@@ -1,6 +1,13 @@
+import { StyledMessage } from "./styledLoginForm.styles";
 
 function ValidationMessage({ children }) {
-    return <p>{children}</p>; 
+    return (
+        <>
+          <StyledMessage>
+             {children}
+          </StyledMessage>
+        </>
+    );
 }
 
 export default ValidationMessage;
