@@ -14,7 +14,7 @@ import Icons from "../components/Icons/index";
 function MyProfile() {
     return (
         <>
-           <h2>PROFILE NAME</h2>
+           <h2>PROFILE NAME :</h2>
            <Icons />
            <StyledBaseButton />
         </>      
