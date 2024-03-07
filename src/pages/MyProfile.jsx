@@ -9,10 +9,13 @@
 // A registered user may delete a Post they own. 
 
 import StyledBaseButton from "../components/Togglebutton/index";
+import Icons from "../components/Icons/index";
 
 function MyProfile() {
     return (
         <>
+           <h2>PROFILE NAME</h2>
+           <Icons />
            <StyledBaseButton />
         </>      
     );

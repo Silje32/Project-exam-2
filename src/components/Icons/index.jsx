@@ -1,15 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFaceSmile } from "react-icons/fa";
-import { StyledSocialIcons } from "../Socialicons/socialicons.styles";
+import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import { StyledIcons } from "./icons.styles";
 
-function SocialIcons() {
+function Icons() {
     return (
-        <StyledSocialIcons>
-            <li>
+        <StyledIcons>
                 <FontAwesomeIcon icon={faFaceSmile}  />
-            </li>
-        </StyledSocialIcons>
+        </StyledIcons>
     );
 }
 
-export default SocialIcons;
+export default Icons;
