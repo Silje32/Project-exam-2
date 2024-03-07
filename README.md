@@ -33,13 +33,13 @@ In the terminal in VSC write; "npm install react-hook-form". Then for yup valida
 05. For the Icons you will need to install react-icons from Fontawesome:
 In the terminal in VSC write; "npm i react-icons". 
 
-SVG Icon Packages:
+SVG ICON PACKAGES:
 npm i --save @fortawesome/fontawesome-svg-core
 npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/react-fontawesome
 
 
-The Free Package: 
+THE FREE PACKAGE: 
 npm install --save @fortawesome/fontawesome-free
 
 
