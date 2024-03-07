@@ -6,10 +6,14 @@ function Card() {
     return (  
         <>
           <StyledCard>
-              <h2>PLEASE LOG IN</h2>
-              <LoginForm />
-              <h2>OR REGISTER HERE:</h2>
-              <StyledBaseButton>REGISTER</StyledBaseButton>
+              <div>
+                <h2>PLEASE LOG IN</h2>
+                <LoginForm />
+              </div> 
+              <div>
+                <h2>OR REGISTER HERE:</h2>
+                <StyledBaseButton>REGISTER</StyledBaseButton>
+              </div>
           </StyledCard>
         </>
     );

@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const StyledCard = styled.div`
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    align-items: center;
    background-color: white;
-   border-radius: 15px;
-   margin: 40px 0;
+   border-radius: 5px;
+   margin: 20px 130px;
    padding: 60px;
 `;
