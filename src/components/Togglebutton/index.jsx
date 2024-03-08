@@ -6,7 +6,9 @@ function toggleButton() {
     
     return ( 
         <div>
-            <StyledBaseButton $isActive={false}>REGISTER</StyledBaseButton>
+            <StyledBaseButton $isActive={false} onClick={() => toggleButton() }>
+                REGISTER
+            </StyledBaseButton>
         </div>        
     );
 }
