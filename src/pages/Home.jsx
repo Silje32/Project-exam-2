@@ -4,7 +4,16 @@ function Home() {
 
     return (
        <>
-         <StyledBaseButton />
+        <div>
+          <button>
+             LIKE
+          </button>
+        </div>
+        <div>
+          <button>
+             COMMENT
+          </button>
+        </div>
        </>
     );       
 }

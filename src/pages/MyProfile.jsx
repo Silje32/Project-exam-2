@@ -16,7 +16,7 @@ function MyProfile() {
         <>
            <h2>PROFILE NAME :</h2>
            <Icons />
-           <StyledBaseButton />
+           <button>FOLLOW</button>
         </>      
     );
 }
