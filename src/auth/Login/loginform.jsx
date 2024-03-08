@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useNavigate } from 'react-router-dom';
 import ServerError from "./serverError";
 import ValidationMessage from "./validationMessage";
+import { useUserActions } from "../../store/UseUserStore";
 import { loginurl } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
 import { StyledBaseButton } from "../../components/Togglebutton/togglebutton.styles";
@@ -18,10 +20,14 @@ const schema = yup
 
 
 function LoginForm() {
-
-    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    const { setUser } = useUserActions();
+
+    const navigate = useNavigate();
+
+    console.log(setUser);
     
     const {
         register, 
@@ -43,8 +49,6 @@ function LoginForm() {
             body: JSON.stringify(data)  
         }
 
-       
-
         try {
           setIsLoading(true);
           setError(null);
@@ -55,6 +59,10 @@ function LoginForm() {
           if(!response.ok) {
             return setError(json.errors?.[0]?.message ?? "There was an error");
           }  
+
+          setUser(json);
+          
+          navigate("/home");
 
         } catch(error) {
           setError(error.toString());
@@ -74,7 +82,7 @@ function LoginForm() {
                 </div>
                 <div>
                    <StyledLabel>Password:</StyledLabel>
-                   <StyledInput {...register("password") }  />
+                   <StyledInput {...register("password") } type="password" />
                    {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
                 </div>
                 <div>
