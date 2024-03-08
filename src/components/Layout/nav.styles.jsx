@@ -13,17 +13,20 @@ ul {
 }
 
 ul li {
-      color: ${(props) => (props.$nav ? "white" : "black")};
-      font-size: 18px;
-      font-family: haboro-serif, times new roman, serif;
-      font-style: normal;
-      font-weight: 500;
-      margin: 0 auto;
-
+   margin: 0 auto;
 }
 
-:hover {
-   color: white;
+a {
+   color: ${(props) => (props.$nav ? "black" : "white")};
+   text-decoration: none;
+   font-size: 18px;
+   font-family: haboro-serif, times new roman, serif;
+   font-style: normal;
+   font-weight: 500;
+}
+
+a:hover {
+   color: black;
 }
 
 `;
