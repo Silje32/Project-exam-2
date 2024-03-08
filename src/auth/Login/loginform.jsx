@@ -5,6 +5,7 @@ import * as yup from "yup";
 import ServerError from "./serverError";
 import ValidationMessage from "./validationMessage";
 import { loginurl } from "../../constants/api";
+import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
 import { StyledBaseButton } from "../../components/Togglebutton/togglebutton.styles";
 
 // * Adding yup validation
@@ -64,16 +65,16 @@ function LoginForm() {
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
-           <fieldset disabled={isLoading}> 
+           <StyledFieldset disabled={isLoading}> 
             {error && <ServerError>{error}</ServerError>}
                 <div>
-                  <label>Email:</label>
-                  <input {...register("email") }  />
+                  <StyledLabel>Email:</StyledLabel>
+                  <StyledInput {...register("email") }  />
                   {errors.email && <ValidationMessage>{errors.email.message}</ValidationMessage>}
                 </div>
                 <div>
-                   <label>Password:</label>
-                   <input {...register("password") }  />
+                   <StyledLabel>Password:</StyledLabel>
+                   <StyledInput {...register("password") }  />
                    {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
                 </div>
                 <div>
@@ -81,7 +82,7 @@ function LoginForm() {
                     {isLoading ? "Logging in..." : "LOGIN"}
                   </StyledBaseButton>   
                 </div>
-           </fieldset>   
+           </StyledFieldset>   
         </form>
     );
 }
