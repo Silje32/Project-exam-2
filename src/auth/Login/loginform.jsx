@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import ServerWarning from "./serverWarning";
+import ServerError from "./serverError";
 import ValidationMessage from "./validationMessage";
+import { loginurl } from "../../constants/api";
 import { StyledBaseButton } from "../../components/Togglebutton/togglebutton.styles";
 
 // * Adding yup validation
@@ -15,6 +17,10 @@ const schema = yup
 
 
 function LoginForm() {
+
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
     
     const {
         register, 
@@ -28,26 +34,54 @@ function LoginForm() {
 
     async function onSubmit(data)  {
 
-
         console.log(data);
+
+        const options = {
+            headers: { "Content-Type": "application/json" },
+            method: "POST",
+            body: JSON.stringify(data)  
+        }
+
+       
+
+        try {
+          setIsLoading(true);
+          setError(null);
+            
+          const response = await fetch(loginurl, options );
+          const json = await response.json();
+
+          if(!response.ok) {
+            return setError(json.errors?.[0]?.message ?? "There was an error");
+          }  
+
+        } catch(error) {
+          setError(error.toString());
+        } finally {
+          setIsLoading(false);  
+        }
     }
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
-            <ServerWarning>Login error message here</ServerWarning>
+           <fieldset disabled={isLoading}> 
+            {error && <ServerError>{error}</ServerError>}
                 <div>
                   <label>Email:</label>
-                        <input {...register("email") }  />
+                  <input {...register("email") }  />
                   {errors.email && <ValidationMessage>{errors.email.message}</ValidationMessage>}
                 </div>
                 <div>
-                  <label>Password:</label>
-                         <input {...register("password") }  />
-                {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
+                   <label>Password:</label>
+                   <input {...register("password") }  />
+                   {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
                 </div>
                 <div>
-                  <StyledBaseButton type="submit">LOG IN</StyledBaseButton>   
-                </div>   
+                  <StyledBaseButton type="submit">
+                    {isLoading ? "Logging in..." : "LOGIN"}
+                  </StyledBaseButton>   
+                </div>
+           </fieldset>   
         </form>
     );
 }
