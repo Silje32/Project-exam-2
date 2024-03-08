@@ -1,15 +1,12 @@
-import { StyledHeading } from "../components/Header/heading.styles";
-import StyledBaseButton from "../components/Togglebutton/index";
+import RegisterCard from "../components/Cards/registerCard";
 
 function Register() {
   return (
      <>
-       <StyledHeading>
-          <h2>REGISTER</h2>
-       </StyledHeading>
-       <StyledBaseButton />
+       <RegisterCard />
      </>
   );
 }
 
 export default Register;  
+
