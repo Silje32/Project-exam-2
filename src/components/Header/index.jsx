@@ -5,9 +5,8 @@ function Header() {
 
     return (
       <>
-       <StyledLogo />
         <StyledHeading> 
-             <img src={Logo} alt="Logo" />
+             <StyledLogo src={Logo} alt="Logo" />
              DROPS OF KNOWLEDGE
         </StyledHeading> 
       </>     

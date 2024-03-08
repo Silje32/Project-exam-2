@@ -12,8 +12,8 @@ export const StyledHeading = styled.h1`
 `
 
 export const StyledLogo = styled.img`
-  padding: 2px;
-  width: 20px;
+  padding: 20px;
+  width: 100px;
 `;
 
 
