@@ -23,7 +23,7 @@ ul li {
 }
 
 :hover {
-   color: black;
+   color: white;
 }
 
 `;
