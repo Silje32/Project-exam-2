@@ -1,19 +1,10 @@
-import StyledBaseButton from "../components/Togglebutton/index";
+import HomeCard from "../components/Cards/homeCard";
 
 function Home() {
 
     return (
        <>
-        <div>
-          <button>
-             LIKE
-          </button>
-        </div>
-        <div>
-          <button>
-             COMMENT
-          </button>
-        </div>
+          <HomeCard />
        </>
     );       
 }

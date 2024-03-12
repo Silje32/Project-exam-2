@@ -5,9 +5,9 @@ import Card from "../components/Cards/index";
 
 function Login() {
     return (
-        <div>
+        <>
           <Card />   
-        </div>
+        </>
     );
 }
 
