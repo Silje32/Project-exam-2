@@ -5,6 +5,8 @@ import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./validationmessage";
 import { registerurl  } from "../../constants/api";
+import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
+import { StyledBaseButton } from "../Buttons/buttons.styles";
 
 
 // * Adding yup validation
@@ -20,7 +22,7 @@ const schema = yup
 function RegistrationForm() {
 
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState([]);
 
     const {
         register, 
@@ -46,7 +48,7 @@ function RegistrationForm() {
 
         try {
           setIsLoading(true);
-          setError(null);
+          setError([]);
             
           const response = await fetch(registerurl, options );
           const json = await response.json();
@@ -57,7 +59,6 @@ function RegistrationForm() {
 
           setUser(json);
           
-          navigate("/home");
 
         } catch(error) {
           setError(error.toString());
@@ -70,24 +71,28 @@ function RegistrationForm() {
   return ( 
     <div>
         <form onSubmit={handleSubmit(onSubmit)} >
+          <StyledFieldset> 
             <div>
-                <label>First Name:</label>
-                <input $isActive={true} {...register("firstName") }  />
+                <StyledLabel>First Name:</StyledLabel>
+                <StyledInput {...register("firstName") }  />
                 {error.firstName && <ValidationMessage>{error.firstName.message}</ValidationMessage>}
             </div>
             <div>
-                <label>Last Name:</label>
-                <input $isActive={true} {...register("lastName") }  />
+                <StyledLabel>Last Name:</StyledLabel>
+                <StyledInput {...register("lastName") }  />
                 {error.lastName && <ValidationMessage>{error.lastName.message}</ValidationMessage>}
             </div>
             <div>
-                <label>E-mail:</label>
-                <input $isActive={true} {...register("email") }  />
+                <StyledLabel>E-mail:</StyledLabel>
+                <StyledInput {...register("email") }  />
                 {error.email && <ValidationMessage>{error.email.message}</ValidationMessage>}
             </div>
             <div>
-               <button $isActive={true} type="submit">{isLoading ? "submit the form" : "display an error" }</button>   
-            </div>   
+               <StyledBaseButton type="submit">
+                   {isLoading ? "SUBMIT THE FORM" : "Error"}
+               </StyledBaseButton>   
+            </div>
+          </StyledFieldset>  
         </form>
     </div>
     );
