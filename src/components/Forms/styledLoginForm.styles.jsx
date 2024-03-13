@@ -9,6 +9,7 @@ export const StyledInput = styled.input`
    min-width: 400px;
    cursor: pointer;
    color: ${(props) => (props.$isActive ? "#306FB6" : "black")};
+   display: block;
 
    :hover {
       border-color: #C09DDF;
