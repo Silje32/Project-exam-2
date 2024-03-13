@@ -13,6 +13,31 @@ const GlobalStyles = createGlobalStyle`
         color: black
         flex-grow: 1;
     }
+
+    h2 {
+        color: #306FB6;
+        text-align: center;
+        font-size: 36px;
+        font-family: haboro-serif, serif;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    h3 {
+        color: #306FB6;
+        font-size: 26px;
+        font-family: haboro-serif, serif;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    h4 {
+        color: #306FB6;
+        font-size: 21px;
+        font-family: haboro-serif, serif;
+        font-style: normal;
+        font-weight: 400;
+    }
 `;
 
 export default GlobalStyles;
