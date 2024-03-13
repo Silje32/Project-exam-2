@@ -4,7 +4,6 @@ function Register() {
 
   return (
      <>
-       <h1>REGISTRATION</h1>
        <RegisterCard />
      </>
   );
