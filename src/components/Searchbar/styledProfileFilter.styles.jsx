@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledProfileFilter = styled.input`
+   display: flex;
+   flex-direction: column;
    border: 2px solid #5EA7EF;
    background: none;
    padding: 10px 20px;
