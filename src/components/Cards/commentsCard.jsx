@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Icons from "../Icons/index";
-import { StyledBaseButton } from "../Togglebutton/togglebutton.styles";
+import { StyledBaseButton } from "../Buttons/buttons.styles";
 import { StyledCard } from "./styledCard.styles";
 
 function CommentCard() {
+
+  const { id } = useParams();
 
     return (  
         <>
@@ -11,7 +13,9 @@ function CommentCard() {
               <div>
                   <Icons />
                   <button>LIKE</button>
-                  <StyledBaseButton><Link to={"home"}>BACK</Link></StyledBaseButton>
+                  <StyledBaseButton>
+                       <Link to={"home"}>BACK</Link>
+                  </StyledBaseButton>
               </div>
               <div>
                 <h3>Profile Name:</h3>
