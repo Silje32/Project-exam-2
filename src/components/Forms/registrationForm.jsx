@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./validationmessage";
+import useApi from "../../hooks/useApi";
 import { registerurl  } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
 import { StyledBaseButton } from "../Buttons/buttons.styles";
@@ -20,9 +19,15 @@ const schema = yup
 
 
 function RegistrationForm() {
+  const { isLoading, error  } = useApi(registerurl);
 
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState([]);
+  if (isLoading) {
+    return <div>Loading posts...</div>;
+  }
+
+  if (error) {
+    return <div>Error loading registration page</div>;
+  }
 
     const {
         register, 
@@ -32,12 +37,12 @@ function RegistrationForm() {
         resolver: yupResolver(schema),
     });
 
-    const navigate = useNavigate();
-
     console.log(errors);
 
-    async function onSubmit(data)  {
+  
 
+    async function onSubmit(data)  {
+      
         console.log(data);
 
         const options = {
@@ -46,28 +51,11 @@ function RegistrationForm() {
             body: JSON.stringify(data)  
         }
 
-        try {
-          setIsLoading(true);
-          setError([]);
-            
           const response = await fetch(registerurl, options );
           const json = await response.json();
-
-          if(!response.ok) {
-            return setError(json.errors?.[0]?.message ?? "There was an error");
-          }  
-
-          setUser(json);
+   } 
           
-
-        } catch(error) {
-          setError(error.toString());
-        } finally {
-          setIsLoading(false);  
-        }
-    }
-    
-    
+     
   return ( 
     <div>
         <form onSubmit={handleSubmit(onSubmit)} >

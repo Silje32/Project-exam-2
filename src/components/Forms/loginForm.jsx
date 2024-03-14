@@ -1,14 +1,14 @@
-import { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ServerError from "./serverError";
 import ValidationMessage from "./validationMessage";
+import useApi from "../../hooks/useApi";
 import { useUserActions } from "../../store/UseUserStore";
 import { loginurl } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
-import { StyledBaseButton } from "../Togglebutton/togglebutton.styles";
+import { StyledBaseButton } from "../Buttons/buttons.styles";
 
 // * Adding yup validation
 const schema = yup
@@ -20,14 +20,17 @@ const schema = yup
 
 
 function LoginForm() {
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+  const { isLoading, error } = useApi(loginurl);
+  const { setUser } = useUserActions();
+  const navigate = useNavigate();
 
-    const { setUser } = useUserActions();
+  if (isLoading) {
+    return <div>Logging in...</div>;
+  }
 
-    const navigate = useNavigate();
-
-    console.log(setUser);
+  if (error) {
+    return <div>Error loading login page</div>;
+  }
     
     const {
         register, 
@@ -39,37 +42,23 @@ function LoginForm() {
 
     console.log(errors);
 
+    
+    
     async function onSubmit(data)  {
+
+      const options = {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify(data)  
+    }
 
         console.log(data);
 
-        const options = {
-            headers: { "Content-Type": "application/json" },
-            method: "POST",
-            body: JSON.stringify(data)  
-        }
-
-        try {
-          setIsLoading(true);
-          setError(null);
-            
-          const response = await fetch(loginurl, options );
-          const json = await response.json();
-
-          if(!response.ok) {
-            return setError(json.errors?.[0]?.message ?? "There was an error");
-          }  
-
-          setUser(json);
-          
+        
           navigate("/home");
 
-        } catch(error) {
-          setError(error.toString());
-        } finally {
-          setIsLoading(false);  
-        }
-    }
+          setUser(json);
+    } 
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
