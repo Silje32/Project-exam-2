@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledBaseButton } from "../Togglebutton/togglebutton.styles";
+import { StyledBaseButton } from "../Buttons/buttons.styles";
 import { StyledCard } from "../Cards/styledCard.styles";
 
 function CreatePostCard() {
@@ -19,7 +19,9 @@ function CreatePostCard() {
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <StyledBaseButton>PUBLISH</StyledBaseButton>
-                <StyledBaseButton><Link to={"home"}>CLOSE</Link></StyledBaseButton>
+                <StyledBaseButton>
+                    <Link to={"home"}>CLOSE</Link>
+                </StyledBaseButton>
               </div>
           </StyledCard>
         </>
