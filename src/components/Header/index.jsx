@@ -6,7 +6,7 @@ function Header() {
     return (
       <>
         <StyledHeading> 
-             <StyledLogo src={Logo} alt="Logo" />
+             <StyledLogo src={Logo}  alt="Logo" />
              DROPS OF KNOWLEDGE
         </StyledHeading> 
       </>     
