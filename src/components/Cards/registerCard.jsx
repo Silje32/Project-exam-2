@@ -1,5 +1,4 @@
 import RegistrationForm from "../Forms/registrationForm";
-import { StyledBaseButton } from "../Togglebutton/togglebutton.styles";
 import { StyledCard } from "../Cards/styledCard.styles";
 
 
@@ -8,12 +7,9 @@ function RegisterCard() {
         <>
           <StyledCard>
               <div>
-                <h2>PLEASE REGISTER</h2>
+                <h2>REGISTRATION</h2>
                 <RegistrationForm />
               </div> 
-              <div>
-                <StyledBaseButton>REGISTER</StyledBaseButton>
-              </div>
           </StyledCard>
         </>
     );
