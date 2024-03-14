@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import Icons from "../Icons/index";
-import { StyledBaseButton } from "../Togglebutton/togglebutton.styles";
-import { StyledCard } from "./styledCard.styles";
+import { StyledBaseButton } from "../Buttons/buttons.styles";
+import { StyledProfileCard } from "./styledCard.styles";
 
 function ProfileCard() {
 
     return (  
         <>
-          <StyledCard>
+          <StyledProfileCard>
               <div>
                   <h3>Profile Name:</h3>
-                  <StyledBaseButton><Link to={"home"}>BACK</Link></StyledBaseButton>
+                  <StyledBaseButton>FOLLOW</StyledBaseButton>
               </div>
               <div>
               <h3>Title:</h3>
@@ -51,7 +51,7 @@ function ProfileCard() {
                 <StyledBaseButton>DELETE</StyledBaseButton>
                 <StyledBaseButton>UPDATE</StyledBaseButton>
               </div>
-          </StyledCard>
+          </StyledProfileCard>
         </>
     );
 }
