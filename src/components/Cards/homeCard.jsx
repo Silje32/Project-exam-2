@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
-import { StyledBaseButton } from "../Buttons/buttons.styles";
-import { StyledCard } from "../Cards/styledCard.styles";
 import Icons from "../Icons/index";
 import LikeButton from "../Buttons/likeButton";
+import PostList from "../Posts/index";
+import { StyledBaseButton } from "../Buttons/buttons.styles";
+import { StyledCard } from "../Cards/styledCard.styles";
+
 
 function HomeCard() {
 
     return (  
         <>
           <StyledCard>
+            <PostList />
               <div>
                 <h2>PROFILE NAME:</h2>
               </div> 
