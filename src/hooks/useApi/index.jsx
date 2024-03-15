@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export default function useApi(registerurl) {
 
+export default function useApi(getpostsurl) {
     const [isLoading, setisLoading] = useState(true);
     const [error, setError] = useState([]);
     const [data, setData] = useState([]);
@@ -11,29 +11,24 @@ export default function useApi(registerurl) {
             try {
               setisLoading(true);
               setError([]);
-              const response = await fetch(registerurl, options);
+              const response = await fetch(getpostsurl);
 
               if(!response.ok) {
-                throw new Error("The was an error when fetching the website"); 
-  
+                const json = await response.json();
+                return setData(json);
               }
-              const json = await response.json();
-  
-              console.log(json);
-              setData(json);
-            }  
-  
-            catch (error) {
+              
+              throw new Error("The was an error when fetching the website");
+            } catch (error) {
+              console.log(error);
               setError (error.toString());
-            }
-            finally {
+            }finally {
               setisLoading (false);
             } 
         }    
-          getData();
-        }, [registerurl]); 
-
-
-  return { isLoading, error, data };
+          
+        getData();
+        }, [getpostsurl]); 
+        return { data, isLoading, error };
 }
 
