@@ -54,7 +54,6 @@ function LoginForm() {
 
         console.log(data);
 
-        
           navigate("/home");
 
           setUser(json);
