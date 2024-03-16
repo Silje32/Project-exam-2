@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-export default function useApi(getpostsurl) {
+export default function useApi(loginurl) {
     const [isLoading, setisLoading] = useState(true);
     const [error, setError] = useState([]);
     const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ export default function useApi(getpostsurl) {
             try {
               setisLoading(true);
               setError([]);
-              const response = await fetch(getpostsurl);
+              const response = await fetch(loginurl, options);
 
               if(!response.ok) {
                 const json = await response.json();
@@ -28,7 +28,7 @@ export default function useApi(getpostsurl) {
         }    
           
         getData();
-        }, [getpostsurl]); 
+        }, [loginurl]); 
         return { data, isLoading, error };
 }
 
