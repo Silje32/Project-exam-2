@@ -21,9 +21,13 @@ const schema = yup
 
 function LoginForm() {
   const { isLoading, error } = useApi(loginurl);
+
   const { setUser } = useUserActions();
+    console.log(setUser);
+
   const navigate = useNavigate();
 
+  
   if (isLoading) {
     return <div>Logging in...</div>;
   }
@@ -45,18 +49,19 @@ function LoginForm() {
     
     
     async function onSubmit(data)  {
+      
+      console.log(data);
 
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(data)  
-    }
+        body: JSON.stringify(data),  
+      };
 
-        console.log(data);
+      setUser(json);
 
           navigate("/home");
-
-          setUser(json);
+        
     } 
 
     return ( 

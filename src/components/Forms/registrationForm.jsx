@@ -48,11 +48,8 @@ function RegistrationForm() {
         const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(data)  
-        }
-
-          const response = await fetch(registerurl, options );
-          const json = await response.json();
+            body: JSON.stringify(data),  
+        };
    } 
           
      
