@@ -1,8 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { NavStyling } from "./nav.styles";
+import { useToken } from "../../store/UseUserStore";
 
 
 function Nav() {
+
+  const token = useToken();
+
+  console.log("token", token);
 
   return (
       <nav>
