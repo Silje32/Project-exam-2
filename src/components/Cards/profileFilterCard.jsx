@@ -3,7 +3,7 @@ import StyledProfileFilter  from "../Searchbar/profileFilter";
 import { StyledCard } from "./styledCard.styles";
 import { profilesurl } from "../../constants/api";
 
-function ProfileFilterCard(profilesurl) {
+function ProfileFilterCard([]) {
    const [searchTerm, setSearchTerm] = useState("");
     
    console.log("search", searchTerm );
