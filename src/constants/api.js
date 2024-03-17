@@ -1,53 +1,62 @@
+export const BASE_URL = "https://nf-api.onrender.com/api/v1/";
+
+
+
 // Auth
 
 //POST
-export const loginurl = "https://nf-api.onrender.com/api/v1/social/auth/login";
+export const loginurl = "${BASE_URL}social/auth/login";
 
-export const registerurl = "https://nf-api.onrender.com/api/v1/social/auth/register";
+export const registerurl = "${BASE_URL}social/auth/register";
 
 
 
 // Profiles
 
 //GET
-export const profilesurl = "https://nf-api.onrender.com/api/v1/social/profiles";
+export const profilesurl = "${BASE_URL}social/profiles";
+
+export const profileIdurl = "${BASE_URL}social/profiles/{name}";
+
+export const postsurl = "${BASE_URL}social/profiles/{name}/posts";
+
 
 //PUT
-export const BannerAvatarurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}/media";
+export const BannerAvatarurl = "${BASE_URL}social/profiles/{name}/media";
 
-//GET
-export const profileIdurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}";
+
 
 //PUT
-export const followurl = "https://nf-api.onrender.com/api/v1/social/{name}/follow";
+export const followurl = "${BASE_URL}social/{name}/follow";
 
-export const unfollowurl = "https://nf-api.onrender.com/api/v1/social/{name}/unfollow";
+export const unfollowurl = "${BASE_URL}social/{name}/unfollow";
 
-//GET
-export const postsurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}/posts";
 
 
 
 //Posts
 
 //GET
-export const getpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
+export const getpostsurl = "${BASE_URL}social/posts";
+
+export const getfollowingurl = "${BASE_URL}social/posts/following";
+
+
 
 //POST
-export const postpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
+export const postpostsurl = "${BASE_URL}social/posts";
 
-//GET
-export const getfollowingurl = "https://nf-api.onrender.com/api/v1/social/posts/following";
+export const commenturl = "${BASE_URL}social/posts/{id}/comment";
+
+
 
 //PUT/DELETE/GET
-export const postsidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}";
+export const postsidurl = "${BASE_URL}social/posts/{id}";
 
 //PUT
-export const emojiurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/react/{symbol}";
+export const emojiurl = "${BASE_URL}social/posts/{id}/react/{symbol}";
 
-//POST
-export const commenturl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment";
 
 //DELETE
-export const commentidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment/{commentId}";
+export const commentidurl = "${BASE_URL}social/posts/{id}/comment/{commentId}";
 
