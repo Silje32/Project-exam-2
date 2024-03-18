@@ -1,34 +1,44 @@
 import { useState, useEffect } from 'react';
+      
 
-
-export default function useApi(loginurl) {
-    const [isLoading, setisLoading] = useState(true);
+export default function useApi(BASE_URL) {
+    const [isLoading, setisLoading] = useState(false);
     const [error, setError] = useState([]);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
+
   
       useEffect(() => {
           async function getData() {
+
+            const options = {
+              headers: { "Content-Type": "application/json" },
+              method: ("POST", "GET", "PUT", "DELETE"),
+              body: JSON.stringify(data),  
+            };
+      
+
             try {
               setisLoading(true);
-              setError([]);
-              const response = await fetch(loginurl, options);
+              setError(null);
+              const response = await fetch(BASE_URL, options);
+              const json = await response.json();
+
 
               if(!response.ok) {
-                const json = await response.json();
-                return setData(json);
-              }
-              
-              throw new Error("The was an error when fetching the website");
+                return setError(json.errors?.[0]?.message ?? "There was an error");
+          }
+
             } catch (error) {
               console.log(error);
               setError (error.toString());
             }finally {
               setisLoading (false);
+              
             } 
         }    
           
         getData();
-        }, [loginurl]); 
+        }, [BASE_URL]); 
         return { data, isLoading, error };
 }
 
