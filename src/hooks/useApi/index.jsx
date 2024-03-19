@@ -12,7 +12,7 @@ export default function useApi(BASE_URL) {
 
             const options = {
               headers: { "Content-Type": "application/json" },
-              method: "POST",
+              method: ("POST","GET"),
               body: JSON.stringify(data),  
             };
       
