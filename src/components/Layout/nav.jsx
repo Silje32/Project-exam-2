@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { NavStyling } from "./nav.styles";
 import { useToken } from "../../store/UseUserStore";
+import LogoutButton from "../Buttons/logoutButton";
 
 
 function Nav() {
@@ -10,8 +11,10 @@ function Nav() {
   console.log("token", token);
 
   return (
+    <>
       <nav>
         <NavStyling>
+      {!token ? (
           <ul>             
             <li>
               <NavLink to="/">LOGIN</NavLink>
@@ -25,9 +28,13 @@ function Nav() {
             <li>
               <NavLink to="/my-profile">MY PROFILE</NavLink>
             </li>
-          </ul>         
-        </NavStyling>
+          </ul>
+      ) : (
+          <LogoutButton /> 
+      )}      
+        </NavStyling>        
       </nav>
+    </>
   );
 }
 
