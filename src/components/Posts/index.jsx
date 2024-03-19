@@ -14,13 +14,6 @@ function PostList() {
     }
     
 
-    const options = {
-        headers: { "Content-Type": "application/json" },
-        method: "GET",
-        body: JSON.stringify(data),  
-    };
-    
-
     return ( 
         <>
           {posts.map((post) => (
