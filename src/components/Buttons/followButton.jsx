@@ -7,12 +7,12 @@ function FollowButton () {
     const { data, isLoading, error  } = useApi(followurl);
 
     if (isLoading) {
-      return <div>Follow person</div>;
+      return <div>Follow profile</div>;
     }
 
   
     if (error) {
-      return <div>An error occured when following this person</div>;
+      return <div>An error occured when following this profile</div>;
     }
 
     
@@ -22,17 +22,20 @@ function FollowButton () {
      
     
       if (unfollow) {
-        return <div>Remove this person</div>;
+        return <div>Stop following this profile</div>;
       }
          
     }
 
 
-    return ( 
-        <FollowButton onClick={handleFollow}>
+    return (
+        <>  
+          <FollowButton onClick={handleFollow}>
             FOLLOW
-        </FollowButton>
-     );
+          </FollowButton>
+        </> 
+        
+    );
 }
 
 export default FollowButton ;

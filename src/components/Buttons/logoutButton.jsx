@@ -13,9 +13,9 @@ function LogoutButton() {
     }
 
     return ( 
-        <Button onClick={handleLogout}>
+        <StyledLogoutButton onClick={handleLogout}>
             LOGOUT
-        </Button>
+        </StyledLogoutButton>
      );
 }
 
