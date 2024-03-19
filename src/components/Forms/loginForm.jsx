@@ -10,6 +10,8 @@ import { loginurl } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
 import { StyledBaseButton } from "../Buttons/buttons.styles";
 
+console.log(useUserActions);
+
 // * Adding yup validation
 const schema = yup
   .object({
@@ -37,11 +39,11 @@ function LoginForm() {
   }
     
     const {
-        register, 
-        handleSubmit,
-        formState: {errors},
-    }   = useForm({
-        resolver: yupResolver(schema),
+            register, 
+            handleSubmit,
+            formState: { errors },
+    }  = useForm({
+            resolver: yupResolver(schema),
     });
 
     console.log(errors);
@@ -49,18 +51,12 @@ function LoginForm() {
     
     
     async function onSubmit(data)  {
+         console.log(data);
+
       
-      console.log(data);
+    setUser(json);
 
-      const options = {
-        headers: { "Content-Type": "application/json" },
-        method: "POST",
-        body: JSON.stringify(data),  
-      };
-
-      setUser(json);
-
-          navigate("/home");
+    navigate("/home");
         
     } 
 

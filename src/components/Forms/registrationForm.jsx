@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./validationmessage";
 import useApi from "../../hooks/useApi";
+import { useUserActions } from "../../store/UseUserStore";
 import { registerurl  } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
 import { StyledBaseButton } from "../Buttons/buttons.styles";
@@ -20,6 +22,12 @@ const schema = yup
 
 function RegistrationForm() {
   const { isLoading, error  } = useApi(registerurl);
+
+  const { setUser } = useUserActions();
+  console.log(setUser);
+
+  const navigate = useNavigate();
+
 
   if (isLoading) {
     return <div>Loading posts...</div>;
@@ -43,13 +51,12 @@ function RegistrationForm() {
 
     async function onSubmit(data)  {
       
-        console.log(data);
+      console.log(data);
 
-        const options = {
-            headers: { "Content-Type": "application/json" },
-            method: "POST",
-            body: JSON.stringify(data),  
-        };
+      setUser(json);
+
+      navigate("/home");
+        
    } 
           
      
