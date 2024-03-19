@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import Icons from "../Icons/index";
+import Emoji from "../Emoji/index";
+import DeleteButton from "../Buttons/deleteButton";
+import FollowButton from "../Buttons/followButton";
 import { StyledBaseButton } from "../Buttons/buttons.styles";
 import { StyledProfileCard } from "./styledCard.styles";
 
@@ -10,7 +13,7 @@ function ProfileCard() {
           <StyledProfileCard>
               <div>
                   <h3>Profile Name:</h3>
-                  <StyledBaseButton>FOLLOW</StyledBaseButton>
+                  <FollowButton />
               </div>
               <div>
               <h3>Title:</h3>
@@ -20,10 +23,10 @@ function ProfileCard() {
               </div> 
               <div>
                 <Icons />
+                <Emoji />
                 <StyledBaseButton>LIKE</StyledBaseButton>
                 <StyledBaseButton>COMMENT</StyledBaseButton>
-                <StyledBaseButton>DELETE</StyledBaseButton>
-                <StyledBaseButton>UPDATE</StyledBaseButton>
+                <DeleteButton />
               </div>
               <div>
                 <h3>Title:</h3>
@@ -33,10 +36,10 @@ function ProfileCard() {
               </div> 
               <div>
                 <Icons />
+                <Emoji />
                 <StyledBaseButton>LIKE</StyledBaseButton>
                 <StyledBaseButton>COMMENT</StyledBaseButton>
-                <StyledBaseButton>DELETE</StyledBaseButton>
-                <StyledBaseButton>UPDATE</StyledBaseButton>
+                <DeleteButton />
               </div>
               <div>
                 <h3>Title:</h3>
@@ -46,10 +49,10 @@ function ProfileCard() {
               </div> 
               <div>
                 <Icons />
+                <Emoji />
                 <StyledBaseButton>LIKE</StyledBaseButton>
                 <StyledBaseButton>COMMENT</StyledBaseButton>
-                <StyledBaseButton>DELETE</StyledBaseButton>
-                <StyledBaseButton>UPDATE</StyledBaseButton>
+                <DeleteButton />
               </div>
           </StyledProfileCard>
         </>

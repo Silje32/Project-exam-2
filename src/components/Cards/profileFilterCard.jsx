@@ -1,10 +1,10 @@
 import { useState } from "react";
-import StyledProfileFilter  from "../Searchbar/profileFilter";
+import ProfileFilter  from "../Searchbar/profileFilter";
 import { StyledCard } from "./styledCard.styles";
-import { profilesurl } from "../../constants/api";
+import {  profileIdurl } from "../../constants/api";
 
-function ProfileFilterCard([]) {
-   const [searchTerm, setSearchTerm] = useState("");
+function ProfileFilterCard() {
+   const [searchTerm, setSearchTerm] = useState([]);
     
    console.log("search", searchTerm );
 
@@ -12,7 +12,7 @@ function ProfileFilterCard([]) {
         <>
           <StyledCard>
               <div>
-              <StyledProfileFilter onChange={(event) => setSearchTerm(event.target.value.trim())}  />
+              <ProfileFilter onChange={(event) => setSearchTerm(event.target.value.trim())}  />
               </div> 
           </StyledCard>
         </>

@@ -10,7 +10,7 @@ function GetProfile () {
     }
   
     if (error) {
-      return <div>Error loading home page</div>;
+      return <div>Error loading profiles</div>;
     }
     
     return ( 
