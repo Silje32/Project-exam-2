@@ -10,7 +10,6 @@ import { loginurl } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
 import { StyledBaseButton } from "../Buttons/buttons.styles";
 
-console.log(useUserActions);
 
 // * Adding yup validation
 const schema = yup
@@ -21,23 +20,7 @@ const schema = yup
 .required();
 
 
-function LoginForm() {
-  const { isLoading, error } = useApi(loginurl);
-
-  const { setUser } = useUserActions();
-    console.log(setUser);
-
-  const navigate = useNavigate();
-
-  
-  if (isLoading) {
-    return <div>Logging in...</div>;
-  }
-
-  if (error) {
-    return <div>Error loading login page</div>;
-  }
-    
+function LoginForm() {   
     const {
             register, 
             handleSubmit,
@@ -51,19 +34,35 @@ function LoginForm() {
     
     
     async function onSubmit(data)  {
-         console.log(data);
+      const { isLoading, isError } = useApi(loginurl);
+      
+      console.log(data);
+
+      const { setUser } = useUserActions();
+      console.log(setUser);
+  
+      const navigate = useNavigate();
+ 
+
+      if (isLoading) {
+        return <div>Logging in...</div>;
+      }
+  
+      if (isError) {
+        return <div>Error loading login page</div>;
+      }
 
       
-    setUser(json);
+      setUser(json);
 
-    navigate("/home");
+      navigate("/home");
         
     } 
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
            <StyledFieldset disabled={isLoading}> 
-            {error && <ServerError>{error}</ServerError>}
+            {errors && <ServerError>{errors}</ServerError>}
                 <div>
                   <StyledLabel>Email:</StyledLabel>
                   <StyledInput {...register("email") }  />
