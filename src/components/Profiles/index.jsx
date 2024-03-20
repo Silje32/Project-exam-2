@@ -1,22 +1,63 @@
+import { useState, useEffect } from 'react';
 import { getprofilesurl } from "../../constants/api";
-import useApi from "../../hooks/useApi";
+
 
 function GetProfile () {
 
-    const { data: profile, isLoading, error  } = useApi(getprofilesurl);
+    const [profile, setProfile] = useState([]);
+    const [isLoading, setisLoading] = useState(false);
+    const [isError, setisError] = useState(null);
+  
+    
+      useEffect(() => {
+          async function getData() {
+            
+            const options = {
+              headers: { "Content-Type": "application/json" },
+              method: "GET",
+              body: JSON.stringify(data),  
+            };
+      
 
+            try {
+              setisLoading(true);
+              setisError(null);
+              const response = await fetch(getprofilesurl, options);
+             
+              setProfile(json);
+
+              if(!response.ok) {
+                const json = await response.json();
+                return json(profile);           
+          }
+
+  
+
+            } catch (error) {
+              console.log(error);
+              setisError(true);
+            } finally {
+              setisLoading(false);    
+            } 
+          }    
+          
+         getData();
+      }, [getprofilesurl]); 
+
+
+   
     if (isLoading) {
       return <div>Loading posts...</div>;
     }
   
-    if (error) {
+    if (isError) {
       return <div>Error loading profiles</div>;
     }
     
     return ( 
         <>
           {profile.map((profile) => (
-             <div>
+             <div key={profile.id}>
                 <h2>{profile.title}</h2>
                 <div>{profile.image}</div>
              </div>
