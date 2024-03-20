@@ -71,25 +71,13 @@ function LoginForm() {
       }
     }
       
-      
-      if (isLoading) {
-        return <div>Logging in...</div>;
-      }
-  
-      if (isError) {
-        return <div>Error loading login page</div>;
-      }
-
-      
-      setUser(json);
-
       navigate("/home");
         
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
            <StyledFieldset disabled={isLoading}> 
-            {errors && <ServerError>{errors}</ServerError>}
+            {isError && <ServerError>{isError}</ServerError>}
                 <div>
                   <StyledLabel>Email:</StyledLabel>
                   <StyledInput {...register("email") }  />
