@@ -6,10 +6,10 @@ export const BASE_URL = "https://nf-api.onrender.com/api/v1/";
 
 //POST
 // * login page 
-export const loginurl = "${BASE_URL}social/auth/login";
+export const loginurl = "https://nf-api.onrender.com/api/v1/social/auth/login";
 
 // * registration page
-export const registerurl = "${BASE_URL}social/auth/register";
+export const registerurl = "https://nf-api.onrender.com/api/v1/social/auth/register";
 
 
 
@@ -50,7 +50,7 @@ export const unfollowurl = "${BASE_URL}social/{name}/unfollow";
 //GET
 
 // * Home page  (index)
-export const getpostsurl = "${BASE_URL}social/posts";
+export const getpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
 
 // * Home page  (follow)
 export const getfollowingurl = "${BASE_URL}social/posts/following";

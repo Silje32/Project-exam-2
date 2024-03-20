@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ServerError from "./serverError";
 import ValidationMessage from "./validationMessage";
-import useApi from "../../hooks/useApi";
 import { useUserActions } from "../../store/UseUserStore";
 import { loginurl } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
@@ -20,7 +20,16 @@ const schema = yup
 .required();
 
 
-function LoginForm() {   
+function LoginForm() {
+  const [isLoading, setIsLoading] = useState(false);
+	const [isError, setisError] = useState(null);
+
+  const { setUser } = useUserActions();
+
+	const navigate = useNavigate();
+
+	console.log(setUser);
+   
     const {
             register, 
             handleSubmit,
@@ -34,16 +43,35 @@ function LoginForm() {
     
     
     async function onSubmit(data)  {
-      const { isLoading, isError } = useApi(loginurl);
-      
       console.log(data);
 
-      const { setUser } = useUserActions();
-      console.log(setUser);
-  
-      const navigate = useNavigate();
- 
+      const options = {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify(data),
+      };
 
+      try {
+        setIsLoading(true);
+        setisError(null);
+        const response = await fetch(loginurl, options);
+        const json = await response.json();
+  
+        if (!response.ok) {
+          return setisError(json.errors?.[0]?.message ?? "There was an error");
+        }
+  
+        setUser(json);
+        navigate("/dashboard");
+  
+      } catch (error) {
+        setisError(error.toString());
+      } finally {
+        setIsLoading(false);
+      }
+    }
+      
+      
       if (isLoading) {
         return <div>Logging in...</div>;
       }
@@ -57,7 +85,6 @@ function LoginForm() {
 
       navigate("/home");
         
-    } 
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>

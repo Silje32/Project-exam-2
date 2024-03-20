@@ -3,7 +3,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./validationMessage";
-import useApi from "../../hooks/useApi";
 import { useUserActions } from "../../store/UseUserStore";
 import { registerurl  } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
@@ -21,6 +20,15 @@ const schema = yup
 
 
 function RegistrationForm() {
+  const [isLoading, setIsLoading] = useState(false);
+	const [isError, setisError] = useState(null);
+
+  const { setUser } = useUserActions();
+
+	const navigate = useNavigate();
+
+	console.log(setUser);
+   
 
     const {
         register, 
@@ -35,20 +43,40 @@ function RegistrationForm() {
   
 
     async function onSubmit(data)  {
+      console.log(data);
 
-      const { isLoading, error  } = useApi(registerurl);
+      const options = {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify(data),
+      };
 
-      const { setUser } = useUserActions();
-      console.log(setUser);
-
-      const navigate = useNavigate();
+      try {
+        setIsLoading(true);
+        setisError(null);
+        const response = await fetch(registerurl, options);
+        const json = await response.json();
+  
+        if (!response.ok) {
+          return setisError(json.errors?.[0]?.message ?? "There was an error");
+        }
+  
+        setUser(json);
+        navigate("/dashboard");
+  
+      } catch (error) {
+        setisError(error.toString());
+      } finally {
+        setIsLoading(false);
+      }
+    }
 
 
       if (isLoading) {
         return <div>Loading posts...</div>;
       }
 
-      if (error) {
+      if (errors) {
         return <div>Error loading registration page</div>;
       }    
       
@@ -57,7 +85,6 @@ function RegistrationForm() {
       setUser(json);
 
       navigate("/home");
-    } 
           
      
   return ( 
