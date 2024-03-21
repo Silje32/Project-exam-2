@@ -1,28 +1,59 @@
+import { useState, useEffect } from 'react';
 import { BannerAvatarurl } from "../../constants/api";
-import useApi from "../../hooks/useApi";
+
 
 function Banner() {
- 
-    const { data: banner, isLoading, error  } = useApi(BannerAvatarurl );
+  const [banner, setBanner] = useState(null);
+  const [isLoading, setisLoading] = useState(false);
+  const [isError, setisError] = useState(false);
+
+  useEffect(() => {
+    async function getData(BannerAvatarurl) {
+      
+      const options = {
+        headers: { "Content-Type": "application/json" },
+        method: "PUT",
+        body: JSON.stringify(data),
+      };
+
+
+      try {
+        setisLoading(true);
+        setisError(false);
+
+        const response = await fetch(BannerAvatarurl, options);
+        const json = await response.json();
+
+        setBanner(json);
+      } catch (error) {
+        console.log(error);
+        setisError(true);
+      } finally {
+        setisLoading(false);    
+      } 
+    } 
+        
+   getData("BannerAvatarurl");
+}, []); 
+
 
     if (isLoading) {
-      return <div>Loading posts...</div>;
+      return <div>Loading banner...</div>;
     }
   
-    if (error) {
-      return <div>Error loading home page</div>;
+    if (isError) {
+      return <div>Error loading banner</div>;
     }
     
 
 
     return (
-
-        {banner.map((banner) => (
-            <div>
-               <div>{banner.image}</div>
-            </div>
-
-      );
+      <> 
+        <div>
+            <div>{banner.image}</div>
+        </div>
+      </>
+    );
 }
 
 export default Banner;
