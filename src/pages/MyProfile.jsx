@@ -7,12 +7,14 @@
 // A registered user may update a Post they own.
 // A registered user may delete a Post they own. 
 
+import Banner from "../components/Banner/index";
 import ProfileCard from "../components/Cards/profileCard";
 import ProfileFilterCard from "../components/Cards/profileFilterCard";
 
 function MyProfile() {
     return (
-        <>           
+        <> 
+           <Banner />          
            <ProfileCard />
            <ProfileFilterCard />
         </>      

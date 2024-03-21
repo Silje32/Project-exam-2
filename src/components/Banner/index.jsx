@@ -3,7 +3,7 @@ import { BannerAvatarurl } from "../../constants/api";
 
 
 function Banner() {
-  const [banner, setBanner] = useState(null);
+  const [banner, setBanner] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
@@ -13,7 +13,7 @@ function Banner() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(data),
+        body: JSON.stringify(banner),
       };
 
 
