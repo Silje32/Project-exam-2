@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./validationMessage";
-import { useUserActions } from "../../store/UseUserStore";
 import { registerurl  } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
 import { StyledBaseButton } from "../Buttons/buttons.styles";
@@ -14,20 +14,17 @@ const schema = yup
   .object({
      firstName: yup.string().min(3, "Your first name should be at least 3 characters.").required("minimum 3 characters required"),
      lastName: yup.string().min(3, "Your last name should be at least 3 characters.").required("minimum 3 characters required"),
-     email: yup.string().email("Please write a valid email address.").required("email required"),
+     email: yup.string().email("Please write a valid email address.").required("Email required"),
 })
 .required();
 
 
 function RegistrationForm() {
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
 
-  const { setUser } = useUserActions();
-
 	const navigate = useNavigate();
-
-	console.log(setUser);
    
 
     const {
@@ -41,7 +38,6 @@ function RegistrationForm() {
     console.log(errors);
 
   
-
     async function onSubmit(data)  {
       console.log(data);
 
@@ -61,8 +57,8 @@ function RegistrationForm() {
           return setisError(json.errors?.[0]?.message ?? "There was an error");
         }
   
-        setUser(json);
-        navigate("/dashboard");
+        setData(json);
+        navigate("/home");
   
       } catch (error) {
         setisError(error.toString());
@@ -70,27 +66,12 @@ function RegistrationForm() {
         setIsLoading(false);
       }
     }
-
-
-      if (isLoading) {
-        return <div>Loading posts...</div>;
-      }
-
-      if (errors) {
-        return <div>Error loading registration page</div>;
-      }    
-      
-      console.log(data);
-
-      setUser(json);
-
-      navigate("/home");
           
-     
+  
   return ( 
     <div>
-        <form onSubmit={handleSubmit(onSubmit)} >
-          <StyledFieldset> 
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <StyledFieldset disabled={isLoading}> 
             <div>
                 <StyledLabel>First Name:</StyledLabel>
                 <StyledInput {...register("firstName") }  />
