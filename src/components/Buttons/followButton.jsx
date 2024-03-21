@@ -1,41 +1,62 @@
+import { useState, useEffect } from 'react';
 import { followurl } from "../../constants/api";
 import { unfollowurl } from "../../constants/api";
-import useApi from "../../hooks/useApi";
+import { StyledFollowButton } from "./buttons.styles";
 
 
-function FollowButton () {
-    const { data, isLoading, error  } = useApi(followurl);
+export default function FollowButton () {
+  const [follow, setFollow] = useState(null);
+  const [isLoading, setisLoading] = useState(false);
+  const [isError, setisError] = useState(false);
+
+  useEffect(() => {
+    async function getData(followurl) {
+      
+      const options = {
+        headers: { "Content-Type": "application/json" },
+        method: "PUT",
+        body: JSON.stringify(data),
+      };
+
+
+      try {
+        setisLoading(true);
+        setisError(false);
+
+        const response = await fetch(followurl, options);
+        const json = await response.json();
+
+        setFollow(json);
+      } catch (error) {
+        console.log(error);
+        setisError(true);
+      } finally {
+        setisLoading(false);    
+      } 
+    } 
+        
+   getData("followurl");
+}, []); 
+
 
     if (isLoading) {
       return <div>Follow profile</div>;
     }
 
   
-    if (error) {
+    if (isError) {
       return <div>An error occured when following this profile</div>;
     }
-
     
-    function handleFollow() {
-
-      const unfollow = useApi(unfollowurl);
-     
-    
-      if (unfollow) {
-        return <div>Stop following this profile</div>;
-      }
-         
+    function handleSubmit() {
+            
     }
 
-
     return (
-        <>  
-          <FollowButton onClick={handleFollow}>
-            FOLLOW
-          </FollowButton>
-        </> 
-        
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <StyledFollowButton type="submit">
+             {isLoading ? "Submitting..." : "PUBLISH"}
+          </StyledFollowButton>
+       </form>                             
     );
 }
-
-export default FollowButton ;
