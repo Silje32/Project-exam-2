@@ -18,29 +18,29 @@ export const registerurl = "https://nf-api.onrender.com/api/v1/social/auth/regis
 //GET
 
 // * profile page (index)
-export const getprofilesurl = "${BASE_URL}social/profiles";
+export const getprofilesurl = "https://nf-api.onrender.com/api/v1/social/profiles";
 
 // searchbar? or my 7 page? 
-export const profileIdurl = "${BASE_URL}social/profiles/{name}";
+export const profileIdurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}";
 
 // * profile page  (getPosts)
-export const postsurl = "${BASE_URL}social/profiles/{name}/posts";
+export const postsurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}/posts";
 
 
 //PUT
 
 // * profile page  (Banner)
-export const BannerAvatarurl = "${BASE_URL}social/profiles/{name}/media";
+export const BannerAvatarurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}/media";
 
 
 
 //PUT
 
 // * profile page  (followButton)
-export const followurl = "${BASE_URL}social/{name}/follow";
+export const followurl = "https://nf-api.onrender.com/api/v1/social/{name}/follow";
 
 // * profile page  (followButton)
-export const unfollowurl = "${BASE_URL}social/{name}/unfollow";
+export const unfollowurl = "https://nf-api.onrender.com/api/v1/social/{name}/unfollow";
 
 
 
@@ -53,31 +53,31 @@ export const unfollowurl = "${BASE_URL}social/{name}/unfollow";
 export const getpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
 
 // * Home page  (follow)
-export const getfollowingurl = "${BASE_URL}social/posts/following";
+export const getfollowingurl = "https://nf-api.onrender.com/api/v1/social/posts/following";
 
 
 
 //POST
 
 // * Create Post page  (createPost)
-export const postpostsurl = "${BASE_URL}social/posts";
+export const postpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
 
 // 
-export const commenturl = "${BASE_URL}social/posts/{id}/comment";
+export const commenturl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment";
 
 
 
 //PUT/DELETE/GET
 
 // * Comment Page  (comments index)
-export const postsidurl = "${BASE_URL}social/posts/{id}";
+export const postsidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}";
 
 //PUT
 
 // * Profile and Home page  (emoji index)
-export const emojiurl = "${BASE_URL}social/posts/{id}/react/{symbol}";
+export const emojiurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/react/{symbol}";
 
 
 //DELETE
-export const deleteCommentidurl = "${BASE_URL}social/posts/{id}/comment/{commentId}";
+export const deleteCommentidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment/{commentId}";
 
