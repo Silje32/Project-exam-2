@@ -8,12 +8,13 @@ function Banner() {
   const [isError, setisError] = useState(false);
 
   useEffect(() => {
-    async function getData(BannerAvatarurl) {
+    async function getData(data) {
+      console.log(data);
       
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(banner),
+        body: JSON.stringify(data),
       };
 
 
@@ -50,7 +51,7 @@ function Banner() {
     return (
       <> 
         <div>
-            <div>{banner.image}</div>
+            <img>{banner.image}</img>
         </div>
       </>
     );
