@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyledBaseButton } from "./buttons.styles";
+import { StyledLikeButton } from "./buttons.styles";
 
 function LikeButton() {
     const [count, setCount] = useState(0);
@@ -11,9 +11,9 @@ function LikeButton() {
 
     return ( 
          <>
-           <StyledBaseButton $isActive={false} onClick={() => onButtonClick()}>
+           <StyledLikeButton $isActive={false} onClick={() => onButtonClick()}>
                 LIKE
-            </StyledBaseButton>
+            </StyledLikeButton>
            <div>{count}</div>
          </>
     );
