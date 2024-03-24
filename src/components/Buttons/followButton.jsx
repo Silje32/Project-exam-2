@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { followurl } from "../../constants/api";
 import { unfollowurl } from "../../constants/api";
 import { StyledFollowButton } from "./buttons.styles";
@@ -9,8 +9,9 @@ export default function FollowButton () {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
-  useEffect(() => {
-    async function getData(followurl) {
+
+    async function onSubmit(data) {
+        console.log(data);
       
       const options = {
         headers: { "Content-Type": "application/json" },
@@ -33,30 +34,27 @@ export default function FollowButton () {
       } finally {
         setisLoading(false);    
       } 
-    } 
-        
-   getData("followurl");
-}, []); 
+    
 
-
-    if (isLoading) {
-      return <div>Follow profile</div>;
-    }
+        if (isLoading) {
+           return <div>Follow profile</div>;
+        }
 
   
-    if (isError) {
-      return <div>An error occured when following this profile</div>;
-    }
+        if (isError) {
+           return <div>An error occured when following this profile</div>;
+        }
     
-    function handleSubmit() {
+        function handleSubmit() {
             
-    }
+        }
 
-    return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <StyledFollowButton type="submit">
-             {isLoading ? "Submitting..." : "PUBLISH"}
-          </StyledFollowButton>
-       </form>                             
-    );
+          return (
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <StyledFollowButton type="submit">
+                    {isLoading ? "Submitting..." : "FOLLOW"}
+                </StyledFollowButton>
+            </form>                             
+          );
+    }
 }
