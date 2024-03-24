@@ -9,7 +9,7 @@ function DeleteButton() {
   const [isError, setisError] = useState(false);
 
           
-      async function getData(data) {
+      async function onSubmit(data) {
           console.log(data);
       
       const options = {
@@ -34,9 +34,6 @@ function DeleteButton() {
         setisLoading(false);    
       } 
     } 
-        
-   getData("deleteCommentidurl/${id}");
-}, []); 
 
 
     if (isLoading) {
@@ -47,11 +44,15 @@ function DeleteButton() {
       return <div>Deleting this post was not possible</div>;
     }
 
+    function handleSubmit() {
+            
+    }
+
 
     return ( 
       <form onSubmit={handleSubmit(onSubmit)}>
              <StyledDeleteButton type="submit">
-                 {isLoading ? "Submitting..." : "PUBLISH"}
+                 {isLoading ? "Submitting..." : "DELETE"}
              </StyledDeleteButton>
       </form>
     );
