@@ -3,14 +3,14 @@ import { getprofilesurl } from "../../constants/api";
 
 
 function GetProfile () {
-
     const [profile, setProfile] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(null);
   
     
       useEffect(() => {
-          async function getData() {
+          async function getData(data) {
+            console.log(data);
             
             const options = {
               headers: { "Content-Type": "application/json" },
@@ -29,10 +29,8 @@ function GetProfile () {
               if(!response.ok) {
                 const json = await response.json();
                 return json(profile);           
-          }
-
+               }
   
-
             } catch (error) {
               console.log(error);
               setisError(true);
@@ -41,8 +39,8 @@ function GetProfile () {
             } 
           }    
           
-         getData();
-      }, [getprofilesurl]); 
+         getData("getprofilesurl");
+      }, []); 
 
 
    
