@@ -9,7 +9,8 @@ function GetPost() {
     const [isError, setisError] = useState(null);
   
     useEffect(() => {
-        async function getData() {
+        async function getData(data) {
+          console.log(data);
           
           const options = {
             headers: { "Content-Type": "application/json" },
@@ -39,8 +40,8 @@ function GetPost() {
           } 
         }    
         
-       getData();
-    }, [postsurl]); 
+       getData("postsurl");
+    }, []); 
 
 
     if (isLoading) {
@@ -55,10 +56,10 @@ function GetPost() {
     return ( 
         <>
           {posts.map((post) => (
-             <div key={post.id}>
+            <div key={post.id}>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
-             </div>
+            </div>
           ))}
         </>
     );
