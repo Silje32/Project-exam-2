@@ -62,7 +62,7 @@ export const getfollowingurl = "https://nf-api.onrender.com/api/v1/social/posts/
 // * Create Post page  (createPost)
 export const postpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
 
-// 
+// * Comment page  (Publish Button / Publish comment) 
 export const commenturl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment";
 
 
@@ -79,5 +79,7 @@ export const emojiurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/re
 
 
 //DELETE
+
+// * Delete Button
 export const deleteCommentidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment/{commentId}";
 
