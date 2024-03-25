@@ -1,26 +1,56 @@
+import { useState, useEffect } from "react";
 import { emojiurl } from "../../constants/api";
-import useApi from "../../hooks/useApi";
 
 
 function Emoji() {
-    const { data: emoji, isLoading, error  } = useApi(emojiurl);
+  const [emoji, setEmoji] = useState([]);
+  const [isLoading, setisLoading] = useState(false);
+  const [isError, setisError] = useState(false);
+
+  useEffect(() => {
+    async function getData(data) {
+        console.log(data);
+      
+      const options = {
+        headers: { "Content-Type": "application/json" },
+        method: "PUT",
+        body: JSON.stringify(data),
+      };
+      try {
+        setisLoading(true);
+        setisError(false);
+
+        const response = await fetch(emojiurl, options);
+        const json = await response.json();
+
+        setEmoji(json);
+      } catch (error) {
+        console.log(error);
+        setisError(true);
+      } finally {
+        setisLoading(false);    
+      } 
+    }   
+    
+   getData("emojiurl");
+}, []); 
+
+
 
     if (isLoading) {
-      return <div>Loading posts...</div>;
+      return <div>Loading emoji...</div>;
     }
   
-    if (error) {
-      return <div>Error loading home page</div>;
+    if (isError) {
+      return <div>Error loading emoji</div>;
     }
     
 
     return ( 
         <>
-          {emoji.map((emoji) => (
              <div>
                 <img>{emoji.image}</img>
              </div>
-          ))}
         </>
     );
 }
