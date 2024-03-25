@@ -62,7 +62,7 @@ function LoginForm() {
         }
   
         setUser(json);
-        navigate("/dashboard");
+        navigate("/home");
   
       } catch (error) {
         setisError(error.toString());
@@ -70,10 +70,8 @@ function LoginForm() {
         setIsLoading(false);
       }
     }
-      
-      navigate("/home");
         
-
+    
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
            <StyledFieldset disabled={isLoading}> 
