@@ -128,6 +128,7 @@ export const StyledLikeButton = styled.button`
       text-decoration: none;
       color: ${(props) => (props.$isActive ? "blue" : "white")};
       text-align: center;
+      
    }
 
    a:hover {
