@@ -16,7 +16,7 @@ function LogoutButton() {
         <StyledLogoutButton onClick={handleLogout}>
             LOGOUT
         </StyledLogoutButton>
-     );
+    );
 }
 
 export default LogoutButton;
