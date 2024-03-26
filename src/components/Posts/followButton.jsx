@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getfollowingurl } from "../../constants/api";
 import { unfollowurl } from "../../constants/api";
+import { StyledFollowButton } from "../Posts/posts.styles";
 
 
 function FollowButton() {
@@ -9,13 +10,13 @@ function FollowButton() {
   const [isError, setisError] = useState(false);
        
         useEffect(() => {
-            async function getData(follow) {
-              console.log(follow);
+            async function getData(data) {
+              console.log(data);
               
               const options = {
                 headers: { "Content-Type": "application/json" },
                 method: "GET",
-                body: JSON.stringify(follow),
+                body: JSON.stringify(data),
               };
   
   
@@ -53,11 +54,11 @@ function FollowButton() {
 
     return ( 
         <> 
-          <FollowButton onClick={handleFollow}>
+          <StyledFollowButton onClick={handleFollow}>
             FOLLOW
-          </FollowButton>
+          </StyledFollowButton>
         </>
-      );
+    );
 }
 
 export default FollowButton;
