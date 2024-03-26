@@ -22,6 +22,7 @@ import GlobalStyles from "./styles/GlobalStyles";
             <Route path="/home/comments/:id" element={<Comments />} />
             <Route path="create" element={<CreatePost />} />
             <Route path="my-profile" element={<MyProfile />} />
+            <Route path="/my-profile/comments/:id" element={<Comments />} />
           </Route>
         </Routes>
       </>
