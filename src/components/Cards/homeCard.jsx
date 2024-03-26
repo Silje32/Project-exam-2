@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
 import Icons from "../Icons/index";
 import LikeButton from "../Buttons/likeButton";
+import CommentsButton from "../Buttons/commentsButton";
 import PostList from "../Posts/index";
-import { StyledBaseButton } from "../Buttons/buttons.styles";
-import { StyledCard } from "../Cards/styledCard.styles";
+import { StyledHomeCard } from "../Cards/styledCard.styles";
 
 
 function HomeCard() {
 
     return (  
         <>
-          <StyledCard>
+          <StyledHomeCard>
             <PostList />
               <div>
                 <h2>PROFILE NAME:</h2>
@@ -20,13 +19,13 @@ function HomeCard() {
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
+                </div>
+                <div>
                 <Icons />
                 <LikeButton />
-                <StyledBaseButton>
-                    <Link to={"comments"}>COMMENTS</Link>
-                </StyledBaseButton>
+                <CommentsButton />
               </div>
-          </StyledCard>
+          </StyledHomeCard>
         </>
     );
 }
