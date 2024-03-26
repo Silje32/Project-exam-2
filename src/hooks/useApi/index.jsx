@@ -4,12 +4,12 @@ import { useState, useEffect } from 'react';
 export default function useApi(BASE_URL) {
     const [data, setData] = useState([]);
     const [isLoading, setisLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [isError, setisError] = useState(null);
   
     
       useEffect(() => {
           async function getData() {
-
+            
             const options = {
               headers: { "Content-Type": "application/json" },
               method: ("POST","GET"),
@@ -19,26 +19,29 @@ export default function useApi(BASE_URL) {
 
             try {
               setisLoading(true);
-              setError(null);
+              setisError(null);
               const response = await fetch(BASE_URL, options);
-              const json = await response.json();
              
+              setData(json);
 
               if(!response.ok) {
-                  return setError(json.errors?.[0]?.message ?? "There was an error");             
+                const json = await response.json();
+                return setisError(json.errors?.[0]?.message ?? "There was an error");             
           }
 
+              const { setUser } = useUserActions();
+                 console.log(setUser);
+  
             } catch (error) {
               console.log(error);
-              setError (error.toString());
+              setisError(true);
             } finally {
-              setisLoading (false);
-              
+              setisLoading(false);    
             } 
-        }    
+          }    
           
-        getData();
-        }, [BASE_URL]); 
-        return { data, isLoading, error };
+         getData();
+      }, [BASE_URL]); 
+      return { data, isLoading, isError };
 }
 
