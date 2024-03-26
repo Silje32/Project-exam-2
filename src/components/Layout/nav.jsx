@@ -14,7 +14,6 @@ function Nav() {
     <>
       <nav>
         <NavStyling>
-      {!token ? (
           <ul>             
             <li>
               <NavLink to="/">LOGIN</NavLink>
@@ -29,9 +28,7 @@ function Nav() {
               <NavLink to="/my-profile">MY PROFILE</NavLink>
             </li>
           </ul>
-      ) : (
-          <LogoutButton /> 
-      )}      
+          <LogoutButton />      
         </NavStyling>        
       </nav>
     </>
