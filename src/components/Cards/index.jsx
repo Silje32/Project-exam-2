@@ -3,7 +3,7 @@ import LoginForm from "../Forms/loginForm";
 import { StyledBaseButton } from "../Buttons/buttons.styles";
 import { StyledCard } from "../Cards/styledCard.styles";
 
-function Card() {
+function LoginCard() {
 
     return (  
         <>
@@ -23,4 +23,4 @@ function Card() {
     );
 }
 
-export default Card;
+export default LoginCard;
