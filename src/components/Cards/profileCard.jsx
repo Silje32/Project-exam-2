@@ -1,11 +1,11 @@
 import Icons from "../Icons/index";
 import Emoji from "../Emoji/index";
-import DeleteButton from "../Buttons/deleteButton";
 import FollowButton from "../Posts/followButton";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
+import DeleteButton from "../Buttons/deleteButton";
 import GetPost from "../Profiles/getPosts";
-import { StyledProfileCard } from "./styledCard.styles";
+import { StyledProfileCard, StyledButtonCard } from "./styledCard.styles";
 
 function ProfileCard() {
 
@@ -22,39 +22,39 @@ function ProfileCard() {
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
-              </div> 
-              <div>
                    <Icons />
                    <Emoji />
-                   <LikeButton />
-                   <CommentsButton />
-                   <DeleteButton />
+                   <StyledButtonCard>
+                      <LikeButton />
+                      <CommentsButton />
+                      <DeleteButton />
+                   </StyledButtonCard>
               </div>
               <div>
                 <h3>Title:</h3>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
-              </div> 
-              <div>
                 <Icons />
                 <Emoji />
-                <LikeButton />
-                <CommentsButton />
-                <DeleteButton />
+                <StyledButtonCard>
+                    <LikeButton />
+                    <CommentsButton />
+                    <DeleteButton />
+                </StyledButtonCard>
               </div>
-              <div>
+              <div>   
                 <h3>Title:</h3>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
                 <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
-              </div> 
-              <div>
                 <Icons />
                 <Emoji />
-                <LikeButton />
-                <CommentsButton />
-                <DeleteButton />
+                <StyledButtonCard>
+                    <LikeButton />
+                    <CommentsButton />
+                    <DeleteButton />
+                </StyledButtonCard>
               </div>
           </StyledProfileCard>
         </>
