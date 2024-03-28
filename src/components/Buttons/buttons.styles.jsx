@@ -63,7 +63,7 @@ export const StyledCommentsButton = styled.button`
    padding: 10px 20px;
    display: flex;
    flex: 2;
-   flex-direction: row;
+   flex-direction: column;
    justify-content: space-between;
    font-size: 22px;
    min-width: 150px;
@@ -112,6 +112,37 @@ export const StyledLikeButton = styled.button`
    }
 `  
 
+export const StyledLikesButton = styled.button`
+@font-face {
+   font-family: 'noveldisplay-mediumxcmp';
+   src: url('noveldisplay-mediumxcmp-webfont.woff2') format('woff2'),
+        url('noveldisplay-mediumxcmp-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+   padding: 10px 20px;
+   display: flex;
+   flex: 1;
+   flex-direction: row;
+   justify-content: space-between;
+   font-size: 22px;
+   min-width: 150px;
+   cursor: pointer;
+   border-color: #5EA7EF;
+   color: ${(props) => (props.$isActive ? "blue" : "black")};
+   background-color: ${(props) => (props.$isActive ? "black" : "white")};
+
+   a {
+      text-decoration: none;
+      color: ${(props) => (props.$isActive ? "blue" : "black")};
+      text-align: center;
+      
+   }
+
+   a:hover {
+      background-color: "#C09DDF";
+   }
+`  
 
 export const StyledDeleteButton = styled.button`
 @font-face {
