@@ -10,6 +10,7 @@
 import Banner from "../components/Banner/index";
 import ProfileCard from "../components/Cards/profileCard";
 import ProfileFilterCard from "../components/Cards/profileFilterCard";
+import { StyledProfileFilterCard } from "../components/Cards/styledCard.styles";
 
 function MyProfile() {
     return (
@@ -17,6 +18,7 @@ function MyProfile() {
            <Banner />          
            <ProfileCard />
            <ProfileFilterCard />
+           <StyledProfileFilterCard />
         </>      
     );
 }
