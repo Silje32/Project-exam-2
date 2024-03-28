@@ -2,7 +2,7 @@ import Icons from "../Icons/index";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
 import PostList from "../Posts/index";
-import { StyledHomeCard } from "../Cards/styledCard.styles";
+import { StyledHomeCard, StyledButtonCard } from "../Cards/styledCard.styles";
 
 
 function HomeCard() {
@@ -22,8 +22,10 @@ function HomeCard() {
                 </div>
                 <div>
                 <Icons />
-                <LikeButton />
-                <CommentsButton />
+                <StyledButtonCard>
+                  <LikeButton />
+                  <CommentsButton />
+                </StyledButtonCard>   
               </div>
           </StyledHomeCard>
         </>
