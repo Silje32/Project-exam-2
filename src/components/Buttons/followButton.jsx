@@ -1,3 +1,5 @@
+// A registered user may follow and unfollow another Profile.
+
 import { useState } from 'react';
 import { followurl } from "../../constants/api";
 import { unfollowurl } from "../../constants/api";
