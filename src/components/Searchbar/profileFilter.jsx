@@ -1,3 +1,5 @@
+// A registered user may view a list of Profiles.
+
 import { StyledProfileFilter } from "./styledProfileFilter.styles";
 
 function ProfileFilter() {
@@ -5,10 +7,9 @@ function ProfileFilter() {
 
     return ( 
         <>
-            <StyledProfileFilter />
-                
+            <StyledProfileFilter />               
         </>
-     );
+    );
 }
 
 export default ProfileFilter;
