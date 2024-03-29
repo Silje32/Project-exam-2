@@ -10,15 +10,11 @@ function HomeCard() {
     return (  
         <>
           <StyledHomeCard>
-            <PostList />
               <div>
                 <h2>PROFILE NAME:</h2>
               </div> 
               <div>
-                <h3>Title</h3>
-                <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
-                <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
-                <p>Lorem Ipsum do la remi ta ta la santa tattaa.</p>
+              <PostList />
                 </div>
                 <div>
                 <Icons />
