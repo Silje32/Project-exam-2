@@ -1,3 +1,5 @@
+// A registered user may delete a Post they own. 
+
 import { useState } from 'react';
 import { deleteCommentidurl } from "../../constants/api";
 import { StyledDeleteButton } from "./buttons.styles";
