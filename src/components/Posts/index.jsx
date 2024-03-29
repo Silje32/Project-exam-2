@@ -52,8 +52,8 @@ function PostList() {
         <>  
           {posts.map((post) => (
             <div key={post.id}>        
-              <h2>title: {post.title}</h2>
-              <p>body: {post.body}</p>
+              <h2>Title: {post.title}</h2>
+              <p>{post.body}</p>
             </div>
             ))}
         </>            
