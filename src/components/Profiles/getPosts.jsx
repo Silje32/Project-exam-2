@@ -1,6 +1,7 @@
+// A registered user may view a list of Posts.
+
 import { useState, useEffect } from 'react';
 import { postsurl } from "../../constants/api";
-
 
 
 function GetPost() {
@@ -57,7 +58,7 @@ function GetPost() {
         <>
           {posts.map((post) => (
             <div key={post.id}>
-                <h2>{post.title}</h2>
+                <h2>Title:{post.title}</h2>
                 <p>{post.body}</p>
             </div>
           ))}
