@@ -1,3 +1,5 @@
+// A registered user may update their avatar and banner.
+
 import { useState, useEffect } from 'react';
 import { BannerAvatarurl } from "../../constants/api";
 
@@ -51,7 +53,7 @@ function Banner() {
     return (
       <> 
         <div>
-            <img>{banner.image}</img>
+            <img>{banner.media}</img>
         </div>
       </>
     );
