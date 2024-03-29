@@ -1,3 +1,5 @@
+// A registered user may react to any Post with an emoji.
+
 import { useState, useEffect } from "react";
 import { emojiurl } from "../../constants/api";
 
