@@ -20,25 +20,36 @@ export const StyledHomeCard = styled.div`
    padding: 60px;
 `
 
+export const StyledMyProfileCard = styled.div`
+   display: flex;
+   flex: 1;
+   flex-direction: row;
+   align-items: center;
+   background-color: white;
+   border-radius: 5px;
+   padding: 60px;
+`
+
 export const StyledProfileCard = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
    background-color: white;
    border-radius: 5px;
-   max-width: 800px;
-   margin-left: 20px;
+   max-width: 1400px;
+   margin-right: 10px;
    padding: 20px;
 `
 
 export const StyledProfileFilterCard = styled.div`
    display: flex;
+   flex: 1;
    flex-direction: column;
    align-items: center;
-   background-color: pink;
+   background-color: white;
    border-radius: 5px;
-   max-width: 400px;
-   margin-right: 20px;
+   max-width: 1300px;
+   margin-left: 20px;
    padding: 20px;
 
 `
@@ -50,7 +61,7 @@ export const StyledButtonCard = styled.div`
    align-items: center;
    background-color: white;
    border-radius: 5px;
-   padding: 60px;
+   padding: 20px;
    text-align: left;
 `
 ;
