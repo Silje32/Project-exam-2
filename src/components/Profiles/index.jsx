@@ -5,7 +5,7 @@ import { getprofilesurl } from "../../constants/api";
 function GetProfile () {
     const [profile, setProfile] = useState([]);
     const [isLoading, setisLoading] = useState(false);
-    const [isError, setisError] = useState(null);
+    const [isError, setisError] = useState(false);
   
     
       useEffect(() => {
@@ -15,7 +15,6 @@ function GetProfile () {
             const options = {
               headers: { "Content-Type": "application/json" },
               method: "GET",
-              body: JSON.stringify(data),  
             };
       
 
@@ -23,12 +22,10 @@ function GetProfile () {
               setisLoading(true);
               setisError(null);
               const response = await fetch(getprofilesurl, options);
-             
-              setProfile(json);
 
-              if(!response.ok) {
+              if(response.ok) {
                 const json = await response.json();
-                return json(profile);           
+                return setProfile(json);           
                }
   
             } catch (error) {
