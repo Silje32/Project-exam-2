@@ -5,7 +5,7 @@ import { BannerAvatarurl } from "../../constants/api";
 
 
 function Banner() {
-  const [banner, setBanner] = useState([]);
+  const [media, setMedia] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
@@ -16,7 +16,6 @@ function Banner() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(data),
       };
 
 
@@ -27,7 +26,7 @@ function Banner() {
         const response = await fetch(BannerAvatarurl, options);
         const json = await response.json();
 
-        setBanner(json);
+        setMedia(json);
       } catch (error) {
         console.log(error);
         setisError(true);
@@ -53,7 +52,7 @@ function Banner() {
     return (
       <> 
         <div>
-            <img>{banner.media}</img>
+            <img>{media.banner}</img>
         </div>
       </>
     );
