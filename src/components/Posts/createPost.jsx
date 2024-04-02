@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import { postpostsurl } from "../../constants/api";
 
 
-
 function CreatePost() {
-  const [create, setCreate] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
@@ -15,7 +14,7 @@ function CreatePost() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify(),
       };
 
 
@@ -24,9 +23,13 @@ function CreatePost() {
         setisError(false);
 
         const response = await fetch(postpostsurl, options);
-        const json = await response.json();
 
-        setCreate(json);
+        if (response.ok) {
+          const json = await response.json();
+          return setPosts(json);
+        }
+
+        throw new Error();
       } catch (error) {
         console.log(error);
         setisError(true);
@@ -36,30 +39,30 @@ function CreatePost() {
     } 
     
     
-   getData("postpostsurl");
-}, []); 
+    getData("postpostsurl");
+  }, []); 
   
    
 
-    if (isLoading) {
-      return <div>Loading posts...</div>;
-    }
+  if (isLoading) {
+     return <div>Loading post...</div>;
+  }
   
-    if (isError) {
-      return <div>Error loading Create new Post page</div>;
-    }
+  if (isError) {
+     return <div>Error loading Create New Post</div>;
+  }
     
 
-    return ( 
-        <>
-          {create.map((create) => (
-             <div key={create.id}>
-                <h2>{create.title}</h2>
-                <p>{create.body}</p>
-             </div>
+  return ( 
+      <>
+        {posts.map((post) => (
+            <div key={post.id}>
+              <h2>{post.title}</h2>
+              <p>{post.body}</p>
+            </div>
           ))}
-        </>
-    );
+      </>
+  );
 }
 
 export default CreatePost;
