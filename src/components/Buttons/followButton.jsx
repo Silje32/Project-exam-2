@@ -18,7 +18,6 @@ export default function FollowButton () {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(data),
       };
 
 
@@ -51,12 +50,12 @@ export default function FollowButton () {
             
         }
 
-          return (
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <StyledFollowButton type="submit">
-                    {isLoading ? "Submitting..." : "FOLLOW"}
-                </StyledFollowButton>
-            </form>                             
-          );
+        return (
+          <form onSubmit={handleSubmit(onSubmit)}>
+             <StyledFollowButton type="submit">
+                  {isLoading ? "Submitting..." : "FOLLOW"}
+             </StyledFollowButton>
+          </form>                             
+        );
     }
 }
