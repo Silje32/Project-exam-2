@@ -64,8 +64,8 @@ function LoginForm() {
         setUser(json);
         navigate("/home");
   
-      } catch (error) {
-        setisError(error.toString());
+      } catch (errors) {
+        setisError(isError.toString());
       } finally {
         setIsLoading(false);
       }

@@ -61,7 +61,7 @@ function RegistrationForm() {
         navigate("/home");
   
       } catch (error) {
-        setisError(error.toString());
+        setisError(isError.toString());
       } finally {
         setIsLoading(false);
       }
