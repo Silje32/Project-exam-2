@@ -15,8 +15,8 @@ function ProfileCard() {
         <>
           <StyledProfileCard>
               <div>
-              <GetProfile />
                   <h3>Profile Name:</h3>
+                  <GetProfile />
                   <FollowButton />
               </div>
               <div>
