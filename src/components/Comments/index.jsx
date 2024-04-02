@@ -4,20 +4,20 @@ import { postsidurl } from "../../constants/api";
 
 function Comment() {
 
-    const [comments, setComments] = useState([]);
+    const [comment, setComment] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
 
     const { id  } = useParams();
 
     useEffect(() => {
-        async function getData(data) {
-          console.log(data);
+        async function getData() {
+          console.log();
           
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(),
           };
 
 
@@ -26,11 +26,15 @@ function Comment() {
             setisError(false);
 
             const response = await fetch(postsidurl, options);
-            const json = await response.json();
 
-            setComments(json);
-          } catch (error) {
-            console.log(error);
+            if (response.ok) {
+              const json = await response.json();
+              return setComment(json);
+            }
+
+            throw new Error();
+          } catch (Error) {
+            console.log(Error);
             setisError(true);
           } finally {
             setisLoading(false);    
@@ -52,7 +56,7 @@ function Comment() {
 
     return ( 
         <>
-          <div>{comments.title}</div>
+          <div>{comment.title}</div>
         </>
     );
 }
