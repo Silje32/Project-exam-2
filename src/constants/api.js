@@ -1,15 +1,14 @@
-export const BASE_URL = "https://nf-api.onrender.com/api/v1/";
-
+const BASE_URL = "https://nf-api.onrender.com/api/v1/";
 
 
 // Auth
 
 //POST
 // * login page 
-export const loginurl = "https://nf-api.onrender.com/api/v1/social/auth/login";
+export const loginurl = `${BASE_URL}social/auth/login`;
 
 // * registration page
-export const registerurl = "https://nf-api.onrender.com/api/v1/social/auth/register";
+export const registerurl = `${BASE_URL}social/auth/register`;
 
 
 
@@ -18,29 +17,29 @@ export const registerurl = "https://nf-api.onrender.com/api/v1/social/auth/regis
 //GET
 
 // * profile page (index)
-export const getprofilesurl = "https://nf-api.onrender.com/api/v1/social/profiles";
+export const getprofilesurl = `${BASE_URL}social/profiles`;
 
 // searchbar? or my 7 page? 
-export const profileIdurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}";
+export const profileIdurl = `${BASE_URL}social/profiles/{name}`;
 
-// * profile page  (getPosts)
-export const postsurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}/posts";
+// * profile page  (GetPosts)
+export const postsurl = `${BASE_URL}social/profiles/{name}/posts`;
 
 
 //PUT
 
 // * profile page  (Banner)
-export const BannerAvatarurl = "https://nf-api.onrender.com/api/v1/social/profiles/{name}/media";
+export const BannerAvatarurl = `${BASE_URL}social/profiles/{name}/media`;
 
 
 
 //PUT
 
 // * profile page  (followButton)
-export const followurl = "https://nf-api.onrender.com/api/v1/social/{name}/follow";
+export const followurl = `${BASE_URL}social/{name}/follow`;
 
 // * profile page  (followButton)
-export const unfollowurl = "https://nf-api.onrender.com/api/v1/social/{name}/unfollow";
+export const unfollowurl = `${BASE_URL}social/{name}/unfollow`;
 
 
 
@@ -50,36 +49,36 @@ export const unfollowurl = "https://nf-api.onrender.com/api/v1/social/{name}/unf
 //GET
 
 // * Home page  (index)
-export const getpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
+export const getpostsurl = `${BASE_URL}social/posts`;
 
 // * Home page  (follow)
-export const getfollowingurl = "https://nf-api.onrender.com/api/v1/social/posts/following";
+export const getfollowingurl = `${BASE_URL}social/posts/following`;
 
 
 
 //POST
 
-// * Create Post page  (createPost)
-export const postpostsurl = "https://nf-api.onrender.com/api/v1/social/posts";
+// * Create Post page  (CreatePost)
+export const postpostsurl = `${BASE_URL}social/posts`;
 
 // * Comment page  (Publish Button / Publish comment) 
-export const commenturl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment";
+export const commenturl = `${BASE_URL}social/posts/{id}/comment`;
 
 
 
 //PUT/DELETE/GET
 
 // * Comment Page  (comments index)
-export const postsidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}";
+export const postsidurl = `${BASE_URL}social/posts/{id}`;
 
 //PUT
 
 // * Profile and Home page  (emoji index)
-export const emojiurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/react/{symbol}";
+export const emojiurl = `${BASE_URL}social/posts/{id}/react/{symbol}`;
 
 
 //DELETE
 
 // * Delete Button
-export const deleteCommentidurl = "https://nf-api.onrender.com/api/v1/social/posts/{id}/comment/{commentId}";
+export const deleteCommentidurl = `${BASE_URL}social/posts/{id}/comment/{commentId}`;
 
