@@ -22,11 +22,14 @@ function ProfileFilterInput() {
       try {
         setisLoading(true);
         setisError(false);
-
         const response = await fetch(profileIdurl, options);
-        const json = await response.json();
 
-        setSearchTerm(json);
+        if (response.ok) {
+          const json = await response.json();
+          return setSearchTerm(json);           
+        }
+
+        throw new Error();
       } catch (Error) {
         console.log(Error);
         setisError(true);
