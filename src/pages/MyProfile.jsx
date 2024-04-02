@@ -6,9 +6,9 @@ import { StyledMyProfileCard } from "../components/Cards/styledCard.styles";
 function MyProfile() {
     return (
         <> 
-          <StyledMyProfileCard>
-             <Banner />          
-             <ProfileCard />
+          <Banner />  
+          <StyledMyProfileCard>      
+             <ProfileCard />           
              <ProfileInputCard />
           </StyledMyProfileCard>
         </>      
