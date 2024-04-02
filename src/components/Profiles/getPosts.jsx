@@ -5,9 +5,9 @@ import { postsurl } from "../../constants/api";
 
 
 function GetPost() {
-    const [posts, setPost] = useState([]);
+    const [posts, setPosts] = useState([]);
     const [isLoading, setisLoading] = useState(false);
-    const [isError, setisError] = useState(null);
+    const [isError, setisError] = useState(false);
   
     useEffect(() => {
         async function getData(data) {
@@ -16,25 +16,22 @@ function GetPost() {
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "GET",
-            body: JSON.stringify(data),  
           };
     
 
           try {
             setisLoading(true);
-            setisError(null);
+            setisError(false);
             const response = await fetch(postsurl, options);
-           
-            setPost(json);
 
-            if(!response.ok) {
+            if (response.ok) {
               const json = await response.json();
-              return json(posts);           
-        }
+              return setPosts(json);           
+            }
 
-
-          } catch (error) {
-            console.log(error);
+            throw new Error();
+          } catch (Error) {
+            console.log(Error);
             setisError(true);
           } finally {
             setisLoading(false);    
