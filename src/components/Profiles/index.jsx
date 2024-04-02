@@ -21,6 +21,7 @@ function GetProfile () {
             try {
               setisLoading(true);
               setisError(null);
+              
               const response = await fetch(getprofilesurl, options);
 
               if(response.ok) {
