@@ -16,7 +16,6 @@ function PostList() {
             const options = {
               headers: { "Content-Type": "application/json" },
               method: "GET",
-              body: JSON.stringify(data),
             };
 
 
@@ -25,22 +24,25 @@ function PostList() {
               setisError(false);
 
               const response = await fetch(getpostsurl, options);
-              const json = await response.json();
 
-              setPosts(json);
-            } catch (error) {
-              console.log(error);
+              if (response.ok) {
+                const json = await response.json();
+                return setPosts(json);
+              }
+
+              throw new Error();
+            } catch (Error) {
+              console.log(Error);
               setisError(true);
             } finally {
               setisLoading(false);    
             } 
           } 
-          
-          
+                    
          getData("getpostsurl");
       }, []); 
     
-      if (isLoading || !posts) {
+      if (isLoading) {
         return <div>Loading posts...</div>;
       }
     
@@ -48,16 +50,16 @@ function PostList() {
         return <div>Error loading posts</div>;
       }
 
-    return ( 
-        <>  
-          {posts.map((post) => (
-            <div key={post.id}>        
-              <h2>Title: {post.title}</h2>
-              <p>{post.body}</p>
-            </div>
-            ))}
-        </>            
-    );
+      return ( 
+         <>  
+           {posts.map((post) => (
+             <div key={post.id}>        
+                <h2>Title: {post.title}</h2>
+                <p>Post: {post.body}</p>
+             </div>
+           ))}
+         </>            
+      );
 }
 
 export default PostList;
