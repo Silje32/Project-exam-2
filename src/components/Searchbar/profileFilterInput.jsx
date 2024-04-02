@@ -16,7 +16,6 @@ function ProfileFilterInput() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "GET",
-        body: JSON.stringify(data),
       };
 
 
@@ -28,8 +27,8 @@ function ProfileFilterInput() {
         const json = await response.json();
 
         setSearchTerm(json);
-      } catch (error) {
-        console.log(error);
+      } catch (Error) {
+        console.log(Error);
         setisError(true);
       } finally {
         setisLoading(false);    
