@@ -37,6 +37,7 @@ function CommentCard() {
               <div>
                 <h3>Write a comment:</h3>
                 <Icons />
+                <Emoji />
                 <PublishButton />
               </div>
           </StyledCard>
