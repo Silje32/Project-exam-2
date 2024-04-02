@@ -1,4 +1,5 @@
 import Icons from "../Icons/index";
+import Emoji from "../Emoji/index";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
 import PostList from "../Posts/index";
@@ -18,6 +19,7 @@ function HomeCard() {
                 </div>
                 <div>
                 <Icons />
+                <Emoji />
                 <StyledButtonCard>
                   <LikeButton />
                   <CommentsButton />
