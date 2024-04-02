@@ -16,16 +16,20 @@ function Emoji() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(data),
       };
+
       try {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(emojiurl, options);
-        const json = await response.json();
+      const response = await fetch(emojiurl, options);
 
-        setEmoji(json);
+      if (response.ok) {
+          const json = await response.json();
+          return setEmoji(json);
+      }
+
+        throw new Error();
       } catch (error) {
         console.log(error);
         setisError(true);
@@ -36,7 +40,6 @@ function Emoji() {
     
    getData("emojiurl");
 }, []); 
-
 
 
     if (isLoading) {
