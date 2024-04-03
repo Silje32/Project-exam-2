@@ -9,11 +9,10 @@ export const StyledHeading = styled.h1`
   font-size: 60px;
   flex-grow: 0;
   flex-shrink: 0;
-`
-
-export const StyledLogo = styled.img`
-  padding: 20px;
-  width: 100px;
+  margin-left: 15px;
+  margin-top: 80px;
 `;
+
+
 
 
