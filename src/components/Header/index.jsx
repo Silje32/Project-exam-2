@@ -1,12 +1,11 @@
-import { StyledHeading, StyledLogo } from "./heading.styles";
-import Logo from "../../images/Logo_final.jpg";
+import { StyledHeading } from "./heading.styles";
+
 
 function Header() {
 
     return (
       <>
         <StyledHeading> 
-             <StyledLogo src={Logo}  alt="Logo" />
              DROPS OF KNOWLEDGE
         </StyledHeading> 
       </>     
