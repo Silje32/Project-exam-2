@@ -23,6 +23,9 @@ function Nav() {
                 <li>
                   <NavLink to="/">LOGIN</NavLink>
                 </li>
+                <li>
+                  <NavLink to="/register">REGISTER</NavLink>
+                </li>
               </ul>
             </> 
            ) : (
