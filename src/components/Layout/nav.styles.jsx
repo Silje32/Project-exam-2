@@ -9,7 +9,7 @@ ul {
    justify-content: space-between;
    min-width: 1470px;
    cursor: pointer;
-   background-color: ${(props) => (props.$nav ? "white" : "#5EA7EF")};
+   background-color: ${(props) => (props.$nav ? "#5EA7EF" : "white")};
 }
 
 ul li {
@@ -17,7 +17,7 @@ ul li {
 }
 
 a {
-   color: ${(props) => (props.$nav ? "black" : "white")};
+   color: ${(props) => (props.$nav ? "white" : "black")};
    text-decoration: none;
    font-size: 18px;
    font-family: haboro-serif, times new roman, serif;
