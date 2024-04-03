@@ -89,7 +89,7 @@ function RegistrationForm() {
             </div>
             <div>
                <StyledBaseButton type="submit">
-                   {isLoading ? "Error" : "SUBMIT THE FORM"}
+                   {isLoading ? "Error" : "REGISTER"}
                </StyledBaseButton>   
             </div>
           </StyledFieldset>  
