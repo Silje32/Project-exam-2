@@ -36,7 +36,7 @@ export const StyledLogoutButton = styled.button`
 }
    padding: 10px 20px;
    font-size: 22px;
-   min-width: 200px;
+   min-width: 100px;
    cursor: pointer;
    color: ${(props) => (props.$isActive ? "blue" : "white")};
    background-color: ${(props) => (props.$isActive ? "#707070" : "black")};
