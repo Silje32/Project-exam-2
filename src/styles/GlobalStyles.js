@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     }
      
     body {
-        background-color: #C09DDF;
+        background-color: #5EA7EF;
         font-size: 15px;
         color: black
         flex-grow: 1;
