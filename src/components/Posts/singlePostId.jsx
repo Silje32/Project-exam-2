@@ -15,13 +15,13 @@ function SinglePostId() {
     const { id  } = useParams();
 
     useEffect(() => {
-        async function getData() {
-          console.log();
+        async function getData(data) {
+          console.log(data);
           
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(),
+            body: JSON.stringify(data),
           };
 
 
@@ -61,7 +61,7 @@ function SinglePostId() {
     return (
         <>
           <h2>Single Post</h2>
-          
+
         </>
     );
 }
