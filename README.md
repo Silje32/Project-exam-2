@@ -48,7 +48,7 @@ In your .env file write the API URL. You also need to create an .env.example fil
 
 
 
-05. For the Icons you will need to install react-icons from Fontawesome:
+06. For the Icons you will need to install react-icons from Fontawesome:
 In the terminal in VSC write; "npm i react-icons". 
 
 SVG ICON PACKAGES:
@@ -61,10 +61,6 @@ THE FREE PACKAGE:
 npm install --save @fortawesome/fontawesome-free
 
 
-##### HOW TO TEST THE PROJECT
-01. Add:  "test": "node test.js" to the scripts in the package.json file. 
-
-02. To check that the test works run "npm test" in the terminal.
 
 
 
