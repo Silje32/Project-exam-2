@@ -1,3 +1,5 @@
+// A registered user may view a list of Posts.
+
 import { useState, useEffect } from 'react';
 import { getpostsurl } from "../../constants/api";
 
