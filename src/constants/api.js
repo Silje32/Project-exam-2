@@ -1,14 +1,15 @@
-const BASE_URL = "https://nf-api.onrender.com/api/v1/";
+export const BASE_URL = new URL("https://nf-api.onrender.com/api/v1/");
+export const NEW_URL = BASE_URL.toString()
 
 
 // Auth
 
 //POST
 // * login page 
-export const loginurl = `${BASE_URL}social/auth/login`;
+export const loginurl = `${NEW_URL}social/auth/login`;
 
 // * registration page
-export const registerurl = `${BASE_URL}social/auth/register`;
+export const registerurl = `${NEW_URL}social/auth/register`;
 
 
 
@@ -17,29 +18,29 @@ export const registerurl = `${BASE_URL}social/auth/register`;
 //GET
 
 // * profile page (index)
-export const getprofilesurl = `${BASE_URL}social/profiles`;
+export const getprofilesurl = `${NEW_URL}social/profiles`;
 
 // searchbar? or my 7 page? 
-export const profileIdurl = `${BASE_URL}social/profiles/{name}`;
+export const profileIdurl = `${NEW_URL}social/profiles/{name}`;
 
 // * profile page  (GetPosts)
-export const postsurl = `${BASE_URL}social/profiles/{name}/posts`;
+export const postsurl = `${NEW_URL}social/profiles/{name}/posts`;
 
 
 //PUT
 
 // * profile page  (Banner)
-export const BannerAvatarurl = `${BASE_URL}social/profiles/{name}/media`;
+export const BannerAvatarurl = `${NEW_URL}social/profiles/{name}/media`;
 
 
 
 //PUT
 
 // * profile page  (followButton)
-export const followurl = `${BASE_URL}social/{name}/follow`;
+export const followurl = `${NEW_URL}social/{name}/follow`;
 
 // * profile page  (followButton)
-export const unfollowurl = `${BASE_URL}social/{name}/unfollow`;
+export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
 
 
 
@@ -49,36 +50,36 @@ export const unfollowurl = `${BASE_URL}social/{name}/unfollow`;
 //GET
 
 // * Home page  (index)
-export const getpostsurl = `${BASE_URL}social/posts`;
+export const getpostsurl = `${NEW_URL}social/posts`;
 
 // * Home page  (follow)
-export const getfollowingurl = `${BASE_URL}social/posts/following`;
+export const getfollowingurl = `${NEW_URL}social/posts/following`;
 
 
 
 //POST
 
 // * Create Post page  (CreatePost)
-export const postpostsurl = `${BASE_URL}social/posts`;
+export const postpostsurl = `${NEW_URL}social/posts`;
 
-// * Comment page  (Publish Button / Publish comment) 
-export const commenturl = `${BASE_URL}social/posts/{id}/comment`;
+// * Comment page  (Comment) 
+export const commenturl = `${NEW_URL}social/posts/{id}/comment`;
 
 
 
 //PUT/DELETE/GET
 
-// * Comment Page  (comments index)
-export const postsidurl = `${BASE_URL}social/posts/{id}`;
+// * SinglePostId  (singlePostId)
+export const postidurl = `${NEW_URL}social/posts/{id}`;
 
 //PUT
 
 // * Profile and Home page  (emoji index)
-export const emojiurl = `${BASE_URL}social/posts/{id}/react/{symbol}`;
+export const emojiurl = `${NEW_URL}social/posts/{id}/react/{symbol}`;
 
 
 //DELETE
 
 // * Delete Button
-export const deleteCommentidurl = `${BASE_URL}social/posts/{id}/comment/{commentId}`;
+export const deleteCommentidurl = `${NEW_URL}social/posts/{id}/comment/{commentId}`;
 
