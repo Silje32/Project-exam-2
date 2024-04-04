@@ -30,6 +30,24 @@ In the terminal in VSC write; "npm i styled-components".
 04. For the LoginForm you will need to install react hook form + Zustand + yup:
 In the terminal in VSC write; "npm install react-hook-form". Then for yup validation you need to install "npm install @hookform/resolvers yup". Lastly install Zustand "npm i zustand".
 
+05. For managing secrets you need to install a dotenv package and make a .gitignore file and a .env file:
+Before you install a dotenv package make sure that you have Node installed first (https://nodejs.org/en/download/). You can check that the installation was successfull by running: "node -v" in the terminal.
+Then you can install the package by typing "npm i -D dotenv" in the terminal. Check your package.json file that you actually got the package. 
+
+In the src folder make a .gitignore file and a .env file. Inside the .gitignore file write 
+/node_modules and .env. This will now  exclude these folders. It is important to include .env in the 
+.gitignore file BEFORE you write any sensitive information in the .env file. 
+
+In your .env file write the API URL. You also need to create an .env.example file. Here you write the same information in the same format but you exclude the details so the developer can use their own details to access the information. 
+
+#### Usage Instructions for the .env file : 
+1. Register an account here `https://app.api/register`
+2. Get your key from `https://app.api/account/keys`
+3. Visit `https://app.api/docs` for endpoints
+4. Enter username, key and target endpoint in `.env`
+
+
+
 05. For the Icons you will need to install react-icons from Fontawesome:
 In the terminal in VSC write; "npm i react-icons". 
 
@@ -43,9 +61,9 @@ THE FREE PACKAGE:
 npm install --save @fortawesome/fontawesome-free
 
 
+##### HOW TO TEST THE PROJECT
 
 
 
-### HOW TO TEST THE PROJECT
 
 
