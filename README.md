@@ -62,7 +62,9 @@ npm install --save @fortawesome/fontawesome-free
 
 
 ##### HOW TO TEST THE PROJECT
+01. Add:  "test": "node test.js" to the scripts in the package.json file. 
 
+02. To check that the test works run "npm test" in the terminal.
 
 
 
