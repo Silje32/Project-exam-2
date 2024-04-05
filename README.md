@@ -47,8 +47,8 @@ In your .env file write the API URL. You also need to create an .env.example fil
 4. Enter username, key and target endpoint in `.env`
 
 
-
-06. For the Icons you will need to install react-icons from Fontawesome:
+##### ICONS : 
+01. For the Icons you will need to install react-icons from Fontawesome:
 In the terminal in VSC write; "npm i react-icons". 
 
 SVG ICON PACKAGES:
