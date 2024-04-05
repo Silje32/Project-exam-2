@@ -22,6 +22,18 @@ export const StyledHomeCard = styled.div`
    min-width: 1000px;
 `
 
+export const StyledSinglePostCard = styled.div`
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: white;
+   border-radius: 5px;
+   margin: 20px 130px;
+   padding: 60px;
+   min-width: 1000px;
+`
+
+
 export const StyledMyProfileCard = styled.div`
    display: flex;
    flex: 1;
