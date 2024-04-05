@@ -35,7 +35,7 @@ function Banner() {
       } 
     } 
         
-   getData("BannerAvatarurl");
+   getData();
 }, []); 
 
 
@@ -51,9 +51,7 @@ function Banner() {
 
     return (
       <> 
-        <div>
-            <img>{media.banner}</img>
-        </div>
+        <h2>Banner</h2> 
       </>
     );
 }
