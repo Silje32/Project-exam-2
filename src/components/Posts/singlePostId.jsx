@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { postidurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
 
 
 function SinglePostId() {
@@ -15,8 +15,8 @@ function SinglePostId() {
     const { id  } = useParams();
 
     useEffect(() => {
-        async function getData(data) {
-          console.log(data);
+        async function getData(id) {
+          console.log(id);
           
           const options = {
             headers: { "Content-Type": "application/json" },
@@ -29,7 +29,7 @@ function SinglePostId() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(postidurl, options);
+            const response = await fetch(`${NEW_URL}social/posts/{id}`, options);
 
             if (response.ok) {
               const json = await response.json();
@@ -46,15 +46,15 @@ function SinglePostId() {
         } 
         
         
-       getData("postidurl/${id}");
+       getData();
     }, [id]); 
 
     if (isLoading) {
-      return <div>Loading comments...</div>;
+      return <div>Loading single post...</div>;
     }
   
     if (isError) {
-      return <div>Error loading comments</div>;
+      return <div>Error loading single post</div>;
     }
     
 
