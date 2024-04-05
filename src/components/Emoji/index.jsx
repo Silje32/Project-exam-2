@@ -54,7 +54,7 @@ function Emoji() {
     return ( 
         <>
              <div>
-                <img>{emoji.image}</img>
+                <h2>Emoji</h2>
              </div>
         </>
     );
