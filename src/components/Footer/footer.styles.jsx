@@ -13,6 +13,7 @@ export const StyledFooter = styled.footer`
   flex-grow: 0;
   flex-shrink: 0;
   text-align: right;
+  max-width: 100%;
 `;
 
 
