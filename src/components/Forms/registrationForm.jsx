@@ -1,3 +1,5 @@
+// A user with a stud.noroff.no e-mail may register.
+
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -15,6 +17,7 @@ const schema = yup
      firstName: yup.string().min(3, "Your first name should be at least 3 characters.").required("minimum 3 characters required"),
      lastName: yup.string().min(3, "Your last name should be at least 3 characters.").required("minimum 3 characters required"),
      email: yup.string().email("Please write a valid email address.").required("Email required"),
+     password: yup.string().min(4, "Your password should be at least 4 characters").required("Please enter a password"),
 })
 .required();
 
@@ -86,6 +89,11 @@ function RegistrationForm() {
                 <StyledLabel>E-mail:</StyledLabel>
                 <StyledInput {...register("email") }  />
                 {errors.email && <ValidationMessage>{errors.email.message}</ValidationMessage>}
+            </div>
+            <div>
+                <StyledLabel>Password:</StyledLabel>
+                <StyledInput {...register("password") } type="password" />
+                {errors.password && <ValidationMessage>{errors.password.message}</ValidationMessage>}
             </div>
             <div>
                <StyledBaseButton type="submit">
