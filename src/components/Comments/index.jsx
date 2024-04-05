@@ -1,6 +1,9 @@
+// A registered user may create a comment on any Post.
+
+
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { postsidurl } from "../../constants/api";
+import { commenturl  } from "../../constants/api";
 
 function Comment() {
 
@@ -25,7 +28,7 @@ function Comment() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(postsidurl, options);
+            const response = await fetch(commenturl, options);
 
             if (response.ok) {
               const json = await response.json();
@@ -42,7 +45,7 @@ function Comment() {
         } 
         
         
-       getData("postsidurl/${id}");
+       getData("commenturl/${id}");
     }, [id]); 
 
     if (isLoading) {
@@ -56,7 +59,7 @@ function Comment() {
 
     return ( 
         <>
-          <div>{comment.title}</div>
+          <h2>Comment</h2>
         </>
     );
 }
