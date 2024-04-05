@@ -2,8 +2,10 @@ import Icons from "../Icons/index";
 import Emoji from "../Emoji/index";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
+import ViewPostButton from "../Buttons/viewPostButton";
 import PostList from "../Posts/index";
 import { StyledHomeCard, StyledButtonCard } from "../Cards/styledCard.styles";
+
 
 
 function HomeCard() {
@@ -25,6 +27,7 @@ function HomeCard() {
                   <CommentsButton />
                 </StyledButtonCard>   
               </div>
+              <ViewPostButton />
           </StyledHomeCard>
         </>
     );
