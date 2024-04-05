@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./validationMessage";
-import { registerurl  } from "../../constants/api";
+import {  NEW_URL } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
 import { StyledBaseButton } from "../Buttons/buttons.styles";
 
@@ -53,7 +53,7 @@ function RegistrationForm() {
       try {
         setIsLoading(true);
         setisError(null);
-        const response = await fetch(registerurl, options);
+        const response = await fetch(`${NEW_URL}social/auth/register`, options);
         const json = await response.json();
   
         if (!response.ok) {
