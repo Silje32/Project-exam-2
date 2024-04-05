@@ -1,3 +1,5 @@
+// * A registered user may login.
+
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import ServerError from "./serverError";
 import ValidationMessage from "./validationMessage";
 import { useUserActions } from "../../store/UseUserStore";
-import { loginurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
 import { StyledBaseButton } from "../Buttons/buttons.styles";
 
@@ -54,7 +56,7 @@ function LoginForm() {
       try {
         setIsLoading(true);
         setisError(null);
-        const response = await fetch(loginurl, options);
+        const response = await fetch(`${NEW_URL}social/auth/login`, options);
         const json = await response.json();
   
         if (!response.ok) {
