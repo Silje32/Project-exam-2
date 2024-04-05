@@ -1,10 +1,17 @@
 // A registered user may view a list of Posts.
 
 import { useState, useEffect } from 'react';
-import { postsurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
+import { useToken } from "../../store/UseUserStore";
 
 
 function GetPost() {
+
+    const token = useToken();
+
+    console.log("token", token);
+
+
     const [posts, setPosts] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
@@ -22,7 +29,8 @@ function GetPost() {
           try {
             setisLoading(true);
             setisError(false);
-            const response = await fetch(postsurl, options);
+
+            const response = await fetch(`${NEW_URL}social/profiles/{name}/posts`, options);
 
             if (response.ok) {
               const json = await response.json();
@@ -38,7 +46,7 @@ function GetPost() {
           } 
         }    
         
-       getData("postsurl");
+       getData();
     }, []); 
 
 
