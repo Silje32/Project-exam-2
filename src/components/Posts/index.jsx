@@ -1,7 +1,7 @@
 // A registered user may view a list of Posts.
 
 import { useState, useEffect } from 'react';
-import { getpostsurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
 import { useToken } from "../../store/UseUserStore";
 
 
@@ -18,8 +18,8 @@ function PostList() {
   
   
       useEffect(() => {
-          async function getData(data) {
-              console.log(data);
+          async function getData(posts) {
+              console.log(posts);
             
             const options = {
               headers: { "Content-Type": "application/json" },
@@ -31,12 +31,13 @@ function PostList() {
               setisLoading(true);
               setisError(false);
 
-              const response = await fetch(getpostsurl, options);
+              const response = await fetch(`${NEW_URL}social/posts`,options);
 
               if (response.ok) {
                 const json = await response.json();
                 return setPosts(json);
               }
+              
 
               throw new Error();
             } catch (Error) {
@@ -47,7 +48,7 @@ function PostList() {
             } 
           } 
                     
-         getData("getpostsurl");
+         getData(posts);
       }, []); 
     
       if (isLoading) {
@@ -58,6 +59,7 @@ function PostList() {
         return <div>Error loading posts</div>;
       }
 
+
       return ( 
          <>  
            {posts.map((post) => (
@@ -65,7 +67,7 @@ function PostList() {
                 <h2>Title: {post.title}</h2>
                 <p>Post: {post.body}</p>
              </div>
-           ))}
+             ))}
          </>            
       );
 }
