@@ -38,7 +38,7 @@ function Emoji() {
       } 
     }   
     
-   getData("emojiurl");
+   getData();
 }, []); 
 
 
