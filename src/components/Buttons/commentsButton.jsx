@@ -1,3 +1,5 @@
+// A registered user may create a comment on any Post. 
+
 import { Link } from "react-router-dom";
 import { StyledCommentsButton } from "../Buttons/buttons.styles";
 
