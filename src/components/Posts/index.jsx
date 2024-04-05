@@ -2,9 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { getpostsurl } from "../../constants/api";
+import { useToken } from "../../store/UseUserStore";
 
 
 function PostList() {
+
+  const token = useToken();
+
+  console.log("token", token);
+
 
   const [posts, setPosts] = useState([]);
   const [isLoading, setisLoading] = useState(false);
