@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 import ProfileFilter  from "./profileFilter";
 import { profileIdurl } from "../../constants/api";
+import { useToken } from "../../store/UseUserStore";
 
 function ProfileFilterInput() {
+
+   const token = useToken();
+
+   console.log("token", token);
+
+
    const [searchTerm, setSearchTerm] = useState([]);
    const [isLoading, setisLoading] = useState(null);
    const [isError, setisError] = useState(null);
