@@ -1,13 +1,7 @@
 import Icons from "../Icons/index";
-import Emoji from "../Emoji/index";
-import FollowButton from "../Posts/followButton";
-import LikeButton from "../Buttons/likeButton";
-import CommentsButton from "../Buttons/commentsButton";
-import UpdateButton from "../Buttons/updateButton";
-import DeleteButton from "../Buttons/deleteButton";
-import GetProfile from "../Profiles/index";
-import GetPost from "../Profiles/getPosts";
-import { StyledProfileCard, StyledButtonCard } from "./styledCard.styles";
+import Emoji from "../Emoji/emoji";
+import PostList from "../Posts/postList";
+import { StyledProfileCard } from "./styledCard.styles";
 
 function ProfileCard() {
 
@@ -15,41 +9,10 @@ function ProfileCard() {
         <>
           <StyledProfileCard>
               <div>
-                  <h3>Profile Name:</h3>
-                  <GetProfile />
-                  <FollowButton />
-              </div>
-              <div>
-              <GetPost />
-              <Icons />
-              <Emoji />
-                <StyledButtonCard>
-                    <LikeButton />
-                    <CommentsButton />
-                    <UpdateButton />
-                    <DeleteButton />
-                </StyledButtonCard>
-              </div>
-              <div>
-              <Icons />
-              <Emoji />
-                <StyledButtonCard>
-                    <LikeButton />
-                    <CommentsButton />
-                    <UpdateButton />
-                    <DeleteButton />
-                </StyledButtonCard>
-              </div>
-              <div>   
-              <Icons />
-              <Emoji />
-                <StyledButtonCard>
-                    <LikeButton />
-                    <CommentsButton />
-                    <UpdateButton />
-                    <DeleteButton />
-                </StyledButtonCard>
-              </div>
+                 <PostList />
+                 <Icons />
+                 <Emoji />
+              </div>    
           </StyledProfileCard>
         </>
     );
