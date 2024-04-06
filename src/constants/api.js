@@ -1,4 +1,4 @@
-export const BASE_URL = new URL("https://nf-api.onrender.com/api/v1/");
+const BASE_URL = new URL("https://nf-api.onrender.com/api/v1/");
 export const NEW_URL = BASE_URL.toString()
 
 
@@ -17,7 +17,7 @@ export const registerurl = `${NEW_URL}social/auth/register`;
 
 //GET
 
-// * profile page (index)
+// * Home page (GetProfile)
 export const getprofilesurl = `${NEW_URL}social/profiles`;
 
 // searchbar? or my 7 page? 
@@ -49,7 +49,7 @@ export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
 
 //GET
 
-// * Home page  (index)
+// * MyProfile page  (PostList)
 export const getpostsurl = `${NEW_URL}social/posts`;
 
 // * Home page  (follow)
