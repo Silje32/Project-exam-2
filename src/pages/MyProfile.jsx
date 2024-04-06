@@ -1,4 +1,4 @@
-import Banner from "../components/Banner/index";
+import Banner from "../components/Banner/banner";
 import ProfileCard from "../components/Cards/profileCard";
 import ProfileInputCard from "../components/Cards/profileInputCard";
 import { StyledMyProfileCard } from "../components/Cards/styledCard.styles";
