@@ -38,6 +38,15 @@ const GlobalStyles = createGlobalStyle`
         font-style: normal;
         font-weight: 400;
     }
+
+    p {
+        line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      margin-top: 20px;  
+    }
 `;
 
 export default GlobalStyles;
