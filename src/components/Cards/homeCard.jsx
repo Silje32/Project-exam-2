@@ -1,9 +1,10 @@
 import Icons from "../Icons/index";
-import Emoji from "../Emoji/index";
+import Emoji from "../Emoji/emoji";
+import GetPost from "../Profiles/getPosts";
+import GetProfile from "../Profiles/getProfile";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
 import ViewPostButton from "../Buttons/viewPostButton";
-import PostList from "../Posts/index";
 import { StyledHomeCard, StyledButtonCard } from "../Cards/styledCard.styles";
 
 
@@ -12,13 +13,13 @@ function HomeCard() {
 
     return (  
         <>
-          <StyledHomeCard>
+          <StyledHomeCard>      
               <div>
-                <h2>PROFILE NAME:</h2>
+              <GetProfile />
               </div> 
               <div>
-              <PostList />
-                </div>
+              <GetPost />
+              </div>
                 <div>
                 <Icons />
                 <Emoji />
