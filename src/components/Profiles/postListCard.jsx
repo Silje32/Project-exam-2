@@ -1,8 +1,8 @@
-import Icons from "../Icons/index";
+import Icons from "../Icons/icons";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
 import UpdateButton from "../Buttons/updateButton";
-import DeleteButton from "../Buttons/deleteButton";
+import DeleteButton from "../Delete/deleteButton";
 import { StyledButtonCard } from "../Cards/styledCard.styles";
 import { StyledPostListCard } from "./postListCard.styles";
 
