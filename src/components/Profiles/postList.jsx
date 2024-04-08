@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { NEW_URL } from "../../constants/api";
 import { useToken } from "../../store/UseUserStore";
-import { PostListCard } from "./postListCard";
+import PostListCard  from "../Profiles/postListCard";
 
 
 function PostList() {
@@ -68,8 +68,7 @@ function PostList() {
          <>  
            {posts.map((post, index) => (
              <PostListCard key={index} post={post} />
-           ))}
-                
+           ))}              
          </>            
       );
 }
