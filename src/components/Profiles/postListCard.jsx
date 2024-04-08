@@ -13,7 +13,7 @@ export function PostListCard({ post: { title, body, image } }) {
          <StyledPostListCard>
             <h3>Title: {title}</h3>
             <p>{body}</p>
-            <img src={`${image}`} alt="" />
+            <img src={`${image}`} alt="Image of post" />
             <StyledButtonCard>
                 <Icons />
                 <LikeButton />
