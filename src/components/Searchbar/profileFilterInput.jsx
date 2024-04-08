@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ProfileFilter  from "./profileFilter";
-import { profileIdurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
 import { useToken } from "../../store/UseUserStore";
 
 function ProfileFilterInput() {
@@ -21,7 +21,10 @@ function ProfileFilterInput() {
       console.log(data);
       
       const options = {
-        headers: { "Content-Type": "application/json" },
+        headers: {
+           "Content-Type": "application/json",
+           Authorization: `Bearer ${token}`, 
+      },
         method: "GET",
       };
 
@@ -29,7 +32,7 @@ function ProfileFilterInput() {
       try {
         setisLoading(true);
         setisError(false);
-        const response = await fetch(profileIdurl, options);
+        const response = await fetch(`${NEW_URL}social/profiles/{name}`, options);
 
         if (response.ok) {
           const json = await response.json();
@@ -45,7 +48,7 @@ function ProfileFilterInput() {
       } 
     } 
         
-   getData("profileIdurl");
+   getData();
 }, []); 
 
   if (isLoading) {
