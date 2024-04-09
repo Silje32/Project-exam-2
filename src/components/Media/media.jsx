@@ -17,6 +17,7 @@ function Media() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
+        body: JSON.stringify(banner),
       };
 
 
