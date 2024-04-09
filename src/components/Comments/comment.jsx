@@ -1,9 +1,9 @@
 // A registered user may create a comment on any Post.
 
-
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { commenturl  } from "../../constants/api";
+import CommentList from "./commentList";
+import { NEW_URL } from "../../constants/api";
 
 function Comment() {
 
@@ -14,13 +14,13 @@ function Comment() {
     const { id  } = useParams();
 
     useEffect(() => {
-        async function getData() {
-          console.log();
+        async function getData(comment) {
+          console.log(comment);
           
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(),
+            body: JSON.stringify(comment),
           };
 
 
@@ -28,7 +28,7 @@ function Comment() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(commenturl, options);
+            const response = await fetch(`${NEW_URL}social/posts/{id}/comment`, options);
 
             if (response.ok) {
               const json = await response.json();
@@ -45,7 +45,7 @@ function Comment() {
         } 
         
         
-       getData("commenturl/${id}");
+       getData();
     }, [id]); 
 
     if (isLoading) {
@@ -59,7 +59,9 @@ function Comment() {
 
     return ( 
         <>
-          <h2>Comment</h2>
+          {comment.map((comments) => (
+            <CommentList key={id}  comments={comments}/>
+          ))}
         </>
     );
 }
