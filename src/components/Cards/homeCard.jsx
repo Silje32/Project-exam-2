@@ -9,16 +9,17 @@ function HomeCard() {
 
     return (  
         <>
-          <StyledHomeCard>      
-              <div>
-              <GetAllProfiles />
-              </div> 
-              <div>
+          <StyledHomeCard>
+            <div>
               <GetPost />
-              </div>
-              <div>
+            </div>
+            <div>
                 <ViewPostButton />       
-              </div>   
+            </div>
+      
+            <div>
+              <GetAllProfiles />
+            </div> 
           </StyledHomeCard>
         </>
     );
