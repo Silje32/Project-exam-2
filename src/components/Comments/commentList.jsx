@@ -1,9 +1,10 @@
-import Icons from "../Icons/index";
+import Icons from "../Icons/icons";
 import LikesButton from "../Buttons/likesButton";
+import BackButton from "../Buttons/backButton";
 import { StyledButtonCard } from "../Cards/styledCard.styles";
 import { StyledCommentList } from "./commentList.styles";
 
-export function CommentList({ comment: { body, author } }) {
+export function CommentList({ comments: { body, author } }) {
 
     return ( 
         <>
@@ -14,7 +15,7 @@ export function CommentList({ comment: { body, author } }) {
             <StyledButtonCard>
                 <Icons />
                 <LikesButton />
-                <Back />
+                <BackButton />
             </StyledButtonCard>
          </StyledCommentList>
         </>
