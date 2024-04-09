@@ -15,13 +15,13 @@ function SinglePostId() {
     const { id  } = useParams();
 
     useEffect(() => {
-        async function getData(id) {
-          console.log(id);
+        async function getData(postid) {
+          console.log(postid);
           
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(id),
           };
 
 
@@ -59,9 +59,10 @@ function SinglePostId() {
     
 
     return (
-        <>
-          <h2>Single Post</h2>
-
+        <>  
+          {postid.map((post, index) => (
+            <SinglePostIdCard key={index} post={post} />
+          ))}
         </>
     );
 }
