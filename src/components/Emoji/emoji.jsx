@@ -38,7 +38,7 @@ function Emoji() {
       } 
     }   
     
-   getData();
+   getData(emoji);
 }, []); 
 
 
@@ -53,9 +53,11 @@ function Emoji() {
 
     return ( 
         <>
-             <div>
-                <h4>Emoji</h4>
-             </div>
+          <div>
+             {emoji.map((icon, index) => (
+                <EmojiList key={index} icon={icon} />
+              ))}
+          </div>
         </>
     );
 }
