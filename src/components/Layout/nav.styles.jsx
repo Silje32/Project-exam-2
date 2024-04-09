@@ -16,6 +16,7 @@ ul li {
    margin: 0 auto;
 }
 
+
 a {
    color: ${(props) => (props.$nav ? "white" : "black")};
    text-decoration: none;
@@ -25,8 +26,8 @@ a {
    font-weight: 500;
 }
 
-a:hover {
-   color: black;
+&:hover {
+   color: #5EA7EF;
 }
 
 `;
