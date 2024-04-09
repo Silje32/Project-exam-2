@@ -14,8 +14,8 @@ export function PostListCard({ post: { title, body, image } }) {
             <h3>Title: {title}</h3>
             <p>{body}</p>
             <img src={`${image}`} alt="Image of post" />
+            <Icons />
             <StyledButtonCard>
-                <Icons />
                 <LikeButton />
                 <CommentsButton />
                 <UpdateButton />
@@ -23,7 +23,6 @@ export function PostListCard({ post: { title, body, image } }) {
             </StyledButtonCard>
          </StyledPostListCard>
         </>
-
     );
 }
 
