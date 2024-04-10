@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
-import Icons from "../Icons/index";
-import Emoji from "../Emoji/index";
-import Comment from "../Comments/index";
+import Icons from "../Icons/icons";
+import Emoji from "../Emoji/emoji";
+import Comment from "../Comments/comment";
 import LikesButton from "../Buttons/likesButton";
 import PublishButton from "../Buttons/publishButton";
-import { StyledBaseButton } from "../Buttons/buttons.styles";
+import BackButton  from "../Buttons/backButton";
 import { StyledCard, StyledButtonCard } from "./styledCard.styles";
 
 function CommentCard() {
@@ -17,25 +16,17 @@ function CommentCard() {
                   <Icons />
                   <StyledButtonCard>
                      <LikesButton />
-                     <StyledBaseButton>
-                       <Link to={"/home"}>BACK</Link>
-                     </StyledBaseButton>
+                     <BackButton />
                   </StyledButtonCard>
               </div>
+             
               <div>
                 <h3>Profile Name:</h3>
                   <Comment />
-              </div> 
+              </div>
+
               <div>
-                <h3>Profile Name:</h3>
-                  <Comment />
-              </div> 
-              <div>
-                <h3>Profile Name:</h3>
-                  <Comment />
-              </div> 
-              <div>
-                <h3>Write a comment:</h3>
+                <h4>Write a comment:</h4>
                 <Icons />
                 <Emoji />
                 <PublishButton />
