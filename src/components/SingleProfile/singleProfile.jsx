@@ -7,15 +7,15 @@ import { NEW_URL } from "../../constants/api";
 
 function SingleProfile() {
     
-    const [single, setSingle] = useState([]);
+    const [profileid, setProfileid] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
 
     const { id  } = useParams();
   
     useEffect(() => {
-        async function getData(single) {
-          console.log(single);
+        async function getData(profileid) {
+          console.log(profileid);
           
           const options = {
             headers: { "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function SingleProfile() {
 
             if (response.ok) {
               const json = await response.json();
-              return setSingle(json);           
+              return setProfileid(json);           
             }
 
 
@@ -45,7 +45,7 @@ function SingleProfile() {
           } 
         }    
         
-       getData(single);
+       getData(profileid);
     }, [id]); 
 
 
