@@ -1,4 +1,5 @@
 // A registered user may view a list of Posts.
+// Retrieve all posts made by profile.
 
 import { useState, useEffect } from 'react';
 import { NEW_URL } from "../../constants/api";
