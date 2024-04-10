@@ -6,6 +6,7 @@ import Comments from "./pages/Comments";
 import SinglePost from "./pages/SinglePost";
 import CreatePost from "./pages/CreatePost";
 import MyProfile from "./pages/MyProfile";
+import SingleProfile from "./pages/SingleProfile";
 import Layout from "./components/Layout/index";
 import GlobalStyles from "./styles/GlobalStyles";
 
