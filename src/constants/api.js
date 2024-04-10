@@ -29,17 +29,17 @@ export const postsurl = `${NEW_URL}social/profiles/{name}/posts`;
 
 //PUT
 
-// * profile page  (Banner)
+//  profile page  (Banner)
 export const BannerAvatarurl = `${NEW_URL}social/profiles/{name}/media`;
 
 
 
 //PUT
 
-// * profile page  (followButton)
+//  profile page  (followButton)
 export const followurl = `${NEW_URL}social/{name}/follow`;
 
-// * profile page  (followButton)
+//  profile page  (followButton)
 export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
 
 
@@ -49,20 +49,20 @@ export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
 
 //GET
 
-// * MyProfile page  (PostList)
+//  MyProfile page  (PostList)
 export const getpostsurl = `${NEW_URL}social/posts`;
 
-// * Home page  (follow)
+//  Home page  (follow)
 export const getfollowingurl = `${NEW_URL}social/posts/following`;
 
 
 
 //POST
 
-// * Create Post page  (CreatePost)
+//  Create Post page  (CreatePost)
 export const postpostsurl = `${NEW_URL}social/posts`;
 
-// * Comment page  (Comment) 
+//  Comment page  (Comment) 
 export const commenturl = `${NEW_URL}social/posts/{id}/comment`;
 
 
