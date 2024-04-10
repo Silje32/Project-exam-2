@@ -2,10 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { useToken } from "../../store/UseUserStore";
 import { NEW_URL } from "../../constants/api";
 
 
 function SingleProfile() {
+
+    const token = useToken();
+
+    console.log("token", token);
     
     const [profileid, setProfileid] = useState([]);
     const [isLoading, setisLoading] = useState(false);
@@ -19,6 +24,7 @@ function SingleProfile() {
           
           const options = {
             headers: { "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, 
           },
             method: "GET",
           };
@@ -50,17 +56,17 @@ function SingleProfile() {
 
 
     if (isLoading) {
-      return <div>Loading posts...</div>;
+      return <div>Loading single profile...</div>;
     }
   
     if (isError) {
-      return <div>Error loading posts</div>;
+      return <div>Error loading single profile</div>;
     }
     
 
     return ( 
         <>
-          {single.map((singleprofile, id) => (
+          {profileid.map((singleprofile, id) => (
             <SingleProfileList key={id} singleprofile={singleprofile} />
           ))}
         </>
