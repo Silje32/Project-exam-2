@@ -1,6 +1,6 @@
 import GetAllProfiles from "../Profiles/getAllProfiles";
-import GetPost from "../Profiles/getPosts";
-import ViewPostButton from "../Buttons/viewPostButton";
+import GetPosts from "../Profiles/getPosts";
+import ViewProfileButton from "../Buttons/viewProfileButton";
 import { StyledHomeCard } from "../Cards/styledCard.styles";
 
 
@@ -11,10 +11,10 @@ function HomeCard() {
         <>
           <StyledHomeCard>
             <div>
-              <GetPost />
+              <GetPosts />
             </div>
             <div>
-                <ViewPostButton />       
+                <ViewProfileButton />       
             </div>
       
             <div>
