@@ -1,8 +1,8 @@
-import Icons from "../Icons/index";
-import Emoji from "../Emoji/index";
+import Icons from "../Icons/icons";
+import Emoji from "../Emoji/emoji";
 import LikeButton from "../Buttons/likeButton";
-import CommentsButton from "../Buttons/commentsButton";
-import SinglePostId from "../Posts/singlePostId";
+import BackButton from "../Buttons/backButton";
+import SinglePostId from "../SinglePost/singlePostId";
 import { StyledSinglePostCard, StyledButtonCard } from "../Cards/styledCard.styles";
 
 
@@ -12,17 +12,17 @@ function SinglePostCard() {
         <>
           <StyledSinglePostCard>
               <div>
-                <h2>PROFILE NAME:</h2>
+                <h3>Single Post</h3>
               </div> 
               <div>
-              <SinglePostId/>
-                </div>
-                <div>
+                <SinglePostId />
+              </div>
+              <div>
                 <Icons />
                 <Emoji />
                 <StyledButtonCard>
                   <LikeButton />
-                  <CommentsButton />
+                  <BackButton />
                 </StyledButtonCard>   
               </div>
           </StyledSinglePostCard>
