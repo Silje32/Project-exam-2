@@ -1,4 +1,6 @@
+import ViewProfileButton from "../Buttons/viewProfileButton";
 import { StyledGetPostList } from "./getPostList.styles";
+
 
 export function GetPostList({ post: { title, body, media, created, updated   } }) {
 
@@ -10,6 +12,7 @@ export function GetPostList({ post: { title, body, media, created, updated   } }
             <img src={`${media}`} alt="Image of post" />
             <p>Created : {created}</p>
             <p>Updated: {updated}</p>
+            <ViewProfileButton /> 
          </StyledGetPostList>
         </>
     );
