@@ -17,13 +17,13 @@ export const registerurl = `${NEW_URL}social/auth/register`;
 
 //GET
 
-// * Home page (GetProfile)
+// * Home page (GetAllProfiles)
 export const getprofilesurl = `${NEW_URL}social/profiles`;
 
-// searchbar? or my 7 page? 
+// Single profile page  (SingleProfile) 
 export const profileIdurl = `${NEW_URL}social/profiles/{name}`;
 
-// * profile page  (GetPosts)
+//  Home page  (GetPosts)
 export const postsurl = `${NEW_URL}social/profiles/{name}/posts`;
 
 
@@ -69,17 +69,17 @@ export const commenturl = `${NEW_URL}social/posts/{id}/comment`;
 
 //PUT/DELETE/GET
 
-// * SinglePostId  (singlePostId)
+//  SinglePostId  (singlePostId)
 export const postidurl = `${NEW_URL}social/posts/{id}`;
 
 //PUT
 
-// * Profile and Home page  (emoji index)
+//  Profile and Home page  (emoji index)
 export const emojiurl = `${NEW_URL}social/posts/{id}/react/{symbol}`;
 
 
 //DELETE
 
-// * Delete Button
+//  Delete Button
 export const deleteCommentidurl = `${NEW_URL}social/posts/{id}/comment/{commentId}`;
 
