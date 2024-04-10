@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { postpostsurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
 
 
 function CreatePost() {
@@ -22,7 +22,7 @@ function CreatePost() {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(postpostsurl, options);
+        const response = await fetch(`${NEW_URL}social/posts`, options);
 
         if (response.ok) {
           const json = await response.json();
@@ -39,7 +39,7 @@ function CreatePost() {
     } 
     
     
-    getData("postpostsurl");
+    getData();
   }, []); 
   
    
