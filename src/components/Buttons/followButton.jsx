@@ -1,13 +1,13 @@
 // A registered user may follow and unfollow another Profile.
 
 import { useState } from 'react';
-import { followurl } from "../../constants/api";
+import { NEW_URL } from "../../constants/api";
 import { unfollowurl } from "../../constants/api";
 import { StyledFollowButton } from "./buttons.styles";
 
 
 export default function FollowButton () {
-  const [follow, setFollow] = useState(null);
+  const [follow, setFollow] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
@@ -18,6 +18,7 @@ export default function FollowButton () {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
+        body: JSON.stringify(),
       };
 
 
@@ -25,7 +26,7 @@ export default function FollowButton () {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(followurl, options);
+        const response = await fetch(`${NEW_URL}social/{name}/follow`, options);
         const json = await response.json();
 
         setFollow(json);
@@ -46,16 +47,17 @@ export default function FollowButton () {
            return <div>An error occured when following this profile</div>;
         }
     
-        function handleSubmit() {
+        function onButtonClick() {
+          if (name) {
+
+          }
             
         }
 
         return (
-          <form onSubmit={handleSubmit(onSubmit)}>
-             <StyledFollowButton type="submit">
-                  {isLoading ? "Submitting..." : "FOLLOW"}
-             </StyledFollowButton>
-          </form>                             
-        );
+          <StyledFollowButton onClick={onButtonClick}>
+             FOLLOW
+          </StyledFollowButton>           
+      );
     }
 }
