@@ -1,6 +1,5 @@
-import Icons from "../Icons/index";
 import Emoji from "../Emoji/emoji";
-import PostList from "../Posts/postList";
+import PostList from "../Profiles/postList";
 import { StyledProfileCard } from "./styledCard.styles";
 
 function ProfileCard() {
@@ -8,11 +7,8 @@ function ProfileCard() {
     return (  
         <>
           <StyledProfileCard>
-              <div>
-                 <PostList />
-                 <Icons />
-                 <Emoji />
-              </div>    
+              <PostList />
+              <Emoji />    
           </StyledProfileCard>
         </>
     );
