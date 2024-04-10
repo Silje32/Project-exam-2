@@ -20,10 +20,11 @@ import GlobalStyles from "./styles/GlobalStyles";
             <Route index element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="home" element={<Home />} />
-            <Route path="/home/:id" element={<SinglePost />} />
+            <Route path="/home/:id" element={<SingleProfile />} />
             <Route path="/home/comments/:id" element={<Comments />} />
             <Route path="create" element={<CreatePost />} />
             <Route path="my-profile" element={<MyProfile />} />
+            <Route path="/my-profile/:id" element={<SinglePost />} />
             <Route path="/my-profile/comments/:id" element={<Comments />} />
           </Route>
         </Routes>
