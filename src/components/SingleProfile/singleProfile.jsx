@@ -16,7 +16,9 @@ function SingleProfile() {
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
 
-    const { id  } = useParams();
+    const params  = useParams();
+    const { id } = params
+      console.log(params);
   
     useEffect(() => {
         async function getData(profileid) {
@@ -66,9 +68,11 @@ function SingleProfile() {
 
     return ( 
         <>
-          {profileid.map((singleprofile, id) => (
-            <SingleProfileList key={id} singleprofile={singleprofile} />
-          ))}
+          <div>Individual profile page: {id} name: {params.name}
+             {profileid.map((singleprofile, id) => (
+                <SingleProfileList key={params.id} singleprofile={singleprofile} />
+              ))}
+          </div>
         </>
     );
 }
