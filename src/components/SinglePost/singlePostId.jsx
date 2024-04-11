@@ -64,7 +64,7 @@ function SinglePostId() {
 
     return (
         <>
-          <div>Individual product page: {params.id}</div>
+          <div>Individual post page: {params.id}</div>
           {postid.map((post, id) => (
             <SinglePostIdCard key={id} post={post}  />
           ))}
