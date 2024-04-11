@@ -1,12 +1,13 @@
 
 import { StyledSinglePostIdCard } from "./singlePostIdCard.styles";
 
-export function SinglePostIdCard({ postid: { _author, _comments, _reactions } }) {
+export function SinglePostIdCard({ postid: { id, _author, _comments, _reactions } }) {
 
     return ( 
         <>
          <StyledSinglePostIdCard>
             <h3>Title: {_author}</h3>
+            <p>{id}</p>
             <p>{_comments}</p>
             <p>{_reactions}</p>
          </StyledSinglePostIdCard>
