@@ -14,6 +14,8 @@ function SinglePostId() {
     const [isError, setisError] = useState(false);
 
     const params = useParams();
+    const { id } = params
+      console.log(params);
 
     useEffect(() => {
         async function getData(postid) {
@@ -61,7 +63,7 @@ function SinglePostId() {
 
     return (
         <>
-          <h2>Individual profile page:{id} {params.id}</h2> 
+          <h2>Individual profile page: {params.id}</h2> 
             {postid.map((post, id) => (
               <SinglePostIdCard key={id} post={post} />
           ))}
