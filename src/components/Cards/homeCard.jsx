@@ -1,6 +1,5 @@
 import GetAllProfiles from "../Profiles/getAllProfiles";
 import GetPosts from "../Profiles/getPosts";
-import ViewProfileButton from "../Buttons/viewProfileButton";
 import { StyledHomeCard } from "../Cards/styledCard.styles";
 
 
@@ -12,9 +11,6 @@ function HomeCard() {
           <StyledHomeCard>
             <div>
               <GetPosts />
-            </div>
-            <div>
-                <ViewProfileButton />       
             </div>
       
             <div>
