@@ -1,4 +1,5 @@
 import { StyledGetAllProfileList } from "./getAllProfileList.styles";
+import ViewPostButton from "./viewPostButton";
 
 export function GetAllProfileList({ profile: { banner, avatar, name, email, _count  } }) {
 
@@ -12,6 +13,7 @@ export function GetAllProfileList({ profile: { banner, avatar, name, email, _cou
             <p>Posts: {_count.posts}</p>
             <p>Followers: {_count.followers}</p>
             <p>Following: {_count.following}</p>
+            <ViewPostButton />
          </StyledGetAllProfileList>
         </>
     );
