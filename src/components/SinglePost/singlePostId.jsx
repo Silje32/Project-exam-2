@@ -24,7 +24,7 @@ function SinglePostId() {
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(id),
+            body: JSON.stringify(),
           };
 
 
