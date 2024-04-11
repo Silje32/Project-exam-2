@@ -16,7 +16,7 @@ function Emoji() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(),
+        body: JSON.stringify(emoji),
       };
 
       try {
@@ -39,7 +39,7 @@ function Emoji() {
       } 
     }   
     
-   getData(emoji);
+   getData(`${NEW_URL}social/posts/{id}/react/{symbol}`);
 }, []); 
 
 
