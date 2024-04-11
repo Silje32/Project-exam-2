@@ -1,7 +1,7 @@
 import Icons from "../Icons/icons";
 import Emoji from "../Emoji/emoji";
 import LikeButton from "../Buttons/likeButton";
-import BackToProfileButton from "../Buttons/backToProfileButton";
+import BackButton from "../Buttons/backButton";
 import SingleProfile from "../SingleProfile/singleProfile";
 import { StyledSingleProfileCard, StyledButtonCard } from "../Cards/styledCard.styles";
 
@@ -15,7 +15,7 @@ function SingleProfileCard() {
                 <h3>Single Profile</h3>
               </div> 
               <div>
-              <BackToProfileButton/>
+              <BackButton/>
               </div>
               <div>
                 <SingleProfile />
