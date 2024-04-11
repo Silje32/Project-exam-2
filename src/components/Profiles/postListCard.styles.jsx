@@ -18,7 +18,6 @@ img {
     margin-bottom: 40px 30px;
     margin-left: 25px;
     padding: 20px;
-
 }
 
 h3 {
