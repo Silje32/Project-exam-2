@@ -9,13 +9,14 @@ import { NEW_URL } from "../../constants/api";
 
 function SinglePostId() {
 
+    const params = useParams();
+    const { id }  = params
+    console.log(params);
+
     const [postid, setPostid] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
 
-    const params = useParams();
-    const { id } = params
-      console.log(params);
 
     useEffect(() => {
         async function getData(postid) {
@@ -63,9 +64,9 @@ function SinglePostId() {
 
     return (
         <>
-          <h2>Individual profile page: {params.id}</h2> 
-            {postid.map((post, id) => (
-              <SinglePostIdCard key={id} post={post} />
+          <div>Individual product page: {params.id}</div>
+          {postid.map((post, id) => (
+            <SinglePostIdCard key={id} post={post}  />
           ))}
         </>
     );

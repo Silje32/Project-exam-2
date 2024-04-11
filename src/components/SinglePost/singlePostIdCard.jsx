@@ -7,7 +7,6 @@ export function SinglePostIdCard({ postid: { id, _author, _comments, _reactions 
         <>
          <StyledSinglePostIdCard>
             <h3>Title: {_author}</h3>
-            <p>{id}</p>
             <p>{_comments}</p>
             <p>{_reactions}</p>
          </StyledSinglePostIdCard>
