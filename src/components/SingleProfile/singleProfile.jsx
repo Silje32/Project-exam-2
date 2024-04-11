@@ -70,7 +70,7 @@ function SingleProfile() {
         <>
           <div>Individual profile page: {id} name: {params.name}
              {profileid.map((singleprofile, id) => (
-                <SingleProfileList key={params.id} singleprofile={singleprofile} />
+                <SingleProfileList key={id} singleprofile={singleprofile} />
               ))}
           </div>
         </>
