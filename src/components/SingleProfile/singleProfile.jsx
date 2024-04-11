@@ -53,7 +53,7 @@ function SingleProfile() {
           } 
         }    
         
-       getData(profileid);
+       getData(`${NEW_URL}social/profiles/{name}`);
     }, [id]); 
 
 
