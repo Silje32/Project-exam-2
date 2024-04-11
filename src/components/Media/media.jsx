@@ -17,7 +17,7 @@ function Media() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(banner),
+        body: JSON.stringify(),
       };
 
 
@@ -37,7 +37,7 @@ function Media() {
       } 
     } 
         
-   getData(banner);
+   getData(`${NEW_URL}social/profiles/{name}/media`);
   }, []); 
 
 
