@@ -1,4 +1,4 @@
-import ViewProfileButton from "../Buttons/viewProfileButton";
+import ViewProfileButton from "./viewProfileButton";
 import { StyledGetPostList } from "./getPostList.styles";
 
 
