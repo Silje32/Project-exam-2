@@ -95,7 +95,9 @@ export const StyledButtonCard = styled.div`
    border-radius: 5px;
    padding: 20px;
    text-align: center;
+   margin: auto 0;
    margin-top: 50px;
+   width: 100px;
    max-width: 100%;
 `
 ;
