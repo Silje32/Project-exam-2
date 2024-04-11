@@ -1,7 +1,7 @@
 import Icons from "../Icons/icons";
 import Emoji from "../Emoji/emoji";
 import LikeButton from "../Buttons/likeButton";
-import BackButton from "../Buttons/backButton";
+import BackToProfileButton from "../Buttons/backToProfileButton";
 import SinglePostId from "../SinglePost/singlePostId";
 import { StyledSinglePostCard, StyledButtonCard } from "../Cards/styledCard.styles";
 
@@ -22,7 +22,7 @@ function SinglePostCard() {
                 <Emoji />
                 <StyledButtonCard>
                   <LikeButton />
-                  <BackButton />
+                  <BackToProfileButton />
                 </StyledButtonCard>   
               </div>
           </StyledSinglePostCard>
