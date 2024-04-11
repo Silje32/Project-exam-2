@@ -39,7 +39,7 @@ function CreatePost() {
     } 
     
     
-    getData();
+    getData(`${NEW_URL}social/posts`);
   }, []); 
   
    
