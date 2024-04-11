@@ -7,7 +7,7 @@ function MyProfile() {
     return (
         <> 
           <Media />  
-          <StyledFlex>      
+          <StyledFlex>   
              <ProfileCard />           
              <ProfileInputCard />
           </StyledFlex>
