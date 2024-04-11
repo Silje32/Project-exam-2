@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { NEW_URL } from "../../constants/api";
-import { StyledDeleteButton } from "../Buttons/buttons.styles";
+import { StyledDeleteButton } from "./styledDeleteButton";
 
 
 function DeleteButton() {
@@ -50,7 +50,7 @@ function DeleteButton() {
       console.log("Button clicked");
 
       if (id) {
-        
+
       }
             
     }
