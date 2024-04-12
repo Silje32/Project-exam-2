@@ -9,17 +9,18 @@ import { NEW_URL } from "../../constants/api";
 function SingleProfile() {
 
     const token = useToken();
+       console.log("token", token);
 
-    console.log("token", token);
-    
+    const params  = useParams();
+    const { id } = params
+       console.log(params);
+  
+
     const [profileid, setProfileid] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
 
-    const params  = useParams();
-    const { id } = params
-      console.log(params);
-  
+    
     useEffect(() => {
         async function getData(profileid) {
           console.log(profileid);
@@ -42,7 +43,6 @@ function SingleProfile() {
               const json = await response.json();
               return setProfileid(json);           
             }
-
 
             throw new Error();
           } catch (Error) {
