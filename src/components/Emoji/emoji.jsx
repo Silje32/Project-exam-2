@@ -9,6 +9,9 @@ function Emoji() {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
+  const id = id
+
+
   useEffect(() => {
     async function getData(emoji) {
         console.log(emoji);
@@ -16,14 +19,14 @@ function Emoji() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(emoji),
+        body: JSON.stringify(symbol),
       };
 
       try {
         setisLoading(true);
         setisError(false);
 
-      const response = await fetch(`${NEW_URL}social/posts/{id}/react/{symbol}`, options);
+      const response = await fetch(`${NEW_URL}social/posts/${id}/react/${symbol}`, options);
 
       if (response.ok) {
           const json = await response.json();
@@ -39,8 +42,8 @@ function Emoji() {
       } 
     }   
     
-   getData(`${NEW_URL}social/posts/{id}/react/{symbol}`);
-}, []); 
+   getData(`${NEW_URL}social/posts/${id}/react/${symbol}`);
+}, [id]); 
 
 
     if (isLoading) {
@@ -55,8 +58,8 @@ function Emoji() {
     return ( 
         <>
           <div>
-             {emoji.map((icon, index) => (
-                <EmojiList key={index} icon={icon} />
+             {emoji.map((icon, id) => (
+                <EmojiList key={id} icon={icon} />
               ))}
           </div>
         </>
