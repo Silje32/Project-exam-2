@@ -27,6 +27,7 @@ import GlobalStyles from "./styles/GlobalStyles";
             <Route path="my-profile" element={<MyProfile />} />
             <Route path="/my-profile/:id" element={<SinglePost />} />
             <Route path="/my-profile/comments/:id" element={<Comments />} />
+            <Route path="profiles" element={<AllProfiles />} />
           </Route>
         </Routes>
       </>
