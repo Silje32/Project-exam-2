@@ -1,4 +1,4 @@
-import HomeCard from "../components/Cards/homeCard";
+import HomeCard from "../components/cards/HomeCard";
 
 function Home() {
 
