@@ -21,7 +21,7 @@ export const registerurl = `${NEW_URL}social/auth/register`;
 export const getprofilesurl = `${NEW_URL}social/profiles`;
 
 // Single profile page  (SingleProfile) 
-export const profileIdurl = `${NEW_URL}social/profiles/{name}`;
+export const profileIdurl = `${NEW_URL}social/profiles/${name}`;
 
 //  Home page  (GetPosts)
 export const postsurl = `${NEW_URL}social/profiles/{name}/posts`;
@@ -29,7 +29,7 @@ export const postsurl = `${NEW_URL}social/profiles/{name}/posts`;
 
 //PUT
 
-//  profile page  (Banner)
+//  profile page  (Media)
 export const BannerAvatarurl = `${NEW_URL}social/profiles/{name}/media`;
 
 
@@ -49,7 +49,8 @@ export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
 
 //GET
 
-//  MyProfile page  (PostList)
+//  Home  (PostList)
+// All the posts
 export const getpostsurl = `${NEW_URL}social/posts`;
 
 //  Home page  (follow)
