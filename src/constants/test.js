@@ -1,7 +1,7 @@
 
 require("dotenv/config");
 
-function test(expectedSecret) {
+function Test(expectedSecret) {
   const secretMatches = process.env.API_URL == expectedSecret;
   console.log(`The api url is ${process.env.API_URL}`);
   console.log(`The secret does${secretMatches ? "" : " not"} match!`);
