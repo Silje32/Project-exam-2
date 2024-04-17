@@ -1,4 +1,4 @@
-import SingleProfileCard from "../components/Cards/singleProfileCard";
+import SingleProfileCard from "../components/cards/SingleProfileCard";
 
 function SingleProfile() {
 
@@ -6,7 +6,7 @@ function SingleProfile() {
        <>
           <SingleProfileCard />
        </>
-    );       
+   );       
 }
 
 export default SingleProfile;  
