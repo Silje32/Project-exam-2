@@ -1,10 +1,10 @@
-import GetAllProfiles from "../components/profiles/GetAllProfiles";
+import GetAllProfilesCard from "../components/cards/GetAllProfilesCard";
 
 function AllProfiles() {
 
     return (
        <>
-          <GetAllProfiles />
+          <GetAllProfilesCard />
        </>
     );       
 }
