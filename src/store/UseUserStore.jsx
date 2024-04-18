@@ -16,6 +16,7 @@ const useUserStore = create(
 
 export const useToken = () => useUserStore((state) => state.user?.accessToken);
 export const useName = () => useUserStore((state) => state.user?.name);
+export const useFollow = () => useUserStore((state) => state.user?.follow);
 
 export const useUserActions = () => {
    const { setUser, clearUser } = useUserStore();
