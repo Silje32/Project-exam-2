@@ -30,7 +30,6 @@ function LoginForm() {
 
 	const navigate = useNavigate();
 
-	const { email, password } = [];
    
     const {
             register, 
@@ -50,7 +49,7 @@ function LoginForm() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify({ email, password }), 
+        body: JSON.stringify({ }), 
       };
 
       try {

@@ -23,6 +23,9 @@ const schema = yup
 
 
 function RegistrationForm() {
+
+
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
@@ -47,7 +50,7 @@ function RegistrationForm() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(_name, email, password),
+        body: JSON.stringify(),
       };
 
       try {
