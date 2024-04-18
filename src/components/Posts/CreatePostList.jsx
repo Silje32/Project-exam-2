@@ -3,7 +3,6 @@ import LikeButton from "../buttons/LikeButton";
 import CommentsButton from "../buttons/CommentsButton";
 import UpdateButton from "../buttons/UpdateButton";
 import DeleteButton from "../delete/DeleteButton";
-
 import { StyledButtonCard } from "../cards/StyledCard.styles";
 import { StyledCreatePostListCard } from "./CreatePostList.styles";
 

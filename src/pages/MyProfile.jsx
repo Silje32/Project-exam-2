@@ -1,4 +1,4 @@
-import Media from "../components/Media/media";
+import Media from "../components/media/Media";
 import ProfileCard from "../components/Cards/profileCard";
 
 

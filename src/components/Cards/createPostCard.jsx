@@ -1,6 +1,6 @@
 import CreatePost from "../posts/CreatePost";
 import PublishButton from "../Buttons/publishButton";
-import CloseButton from "../Buttons/closeButton";
+import CloseButton from "../buttons/CloseButton";
 import { StyledCard } from "./StyledCard.styles";
 
 function CreatePostCard() {

@@ -1,6 +1,8 @@
 import { StyledEmojiList } from "./EmojiList.styles";
 
-export function EmojiList({ emoji: { symbol } }) {
+export function EmojiList({ 
+  emoji: { symbol } 
+}) {
 
     return ( 
         <>
