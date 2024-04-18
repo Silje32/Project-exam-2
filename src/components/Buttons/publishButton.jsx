@@ -1,4 +1,4 @@
-import { StyledPublishButton } from "../Buttons/buttons.styles";
+import { StyledPublishButton } from "./Button.styles";
 
 function PublishButton() {
 

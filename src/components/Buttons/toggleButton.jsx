@@ -1,4 +1,4 @@
-import { StyledBaseButton } from "./buttons.styles";
+import { StyledBaseButton } from "./Button.styles";
 
 function ToggleButton() {
     console.log("Button clicked");

@@ -1,5 +1,5 @@
-import RegistrationForm from "../Forms/registrationForm";
-import { StyledCard } from "../Cards/styledCard.styles";
+import RegistrationForm from "../forms/RegistrationForm";
+import { StyledCard } from "./StyledCard.styles";
 
 
 function RegisterCard() {

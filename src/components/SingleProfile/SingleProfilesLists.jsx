@@ -1,4 +1,4 @@
-import { StyledSingleProfileList } from "./SingleProfileLists.styles";
+import { StyledSingleProfileList } from "./SingleProfileList.styles";
 
 export function SingleProfileList({ 
     single: { banner, avatar, name, email, _count } 

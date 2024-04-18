@@ -1,15 +1,17 @@
-import Emoji from "../Emoji/emoji";
-import PostList from "../Profiles/postList";
-import { StyledProfileCard } from "./styledCard.styles";
+import Emoji from "../emoji/Emoji";
+import GetPosts from "../profiles/GetPost";
+import { StyledMyProfileCard, StyledFlex } from "./StyledCard.styles";
 
 function ProfileCard() {
 
     return (  
         <>
-          <StyledProfileCard>
-            <PostList />
-            <Emoji />    
-          </StyledProfileCard>
+          <StyledMyProfileCard>
+            <StyledFlex>
+              <GetPosts />
+              <Emoji /> 
+            </StyledFlex> 
+          </StyledMyProfileCard>
         </>
     );
 }

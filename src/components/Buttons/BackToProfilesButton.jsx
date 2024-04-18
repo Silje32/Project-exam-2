@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledBackToProfileButton } from "./Buttons.styles";
+import { StyledBackToProfileButton } from "./Button.styles";
 
 function BackToProfileButton() {
 

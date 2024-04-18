@@ -2,18 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { useToken } from "../../store/UseUserStore";
-import GetProfileList from './getAllProfileList';
+import GetAllProfileList from "./GetAllProfileList";
 import { NEW_URL } from "../../constants/api";
 
 function GetAllProfiles () {
 
   const token = useToken();
 
-  console.log("token", token);
-
-    const [profiles, setProfiles] = useState([]);
-    const [isLoading, setisLoading] = useState(false);
-    const [isError, setisError] = useState(false);
+  const [profiles, setProfiles] = useState([]);
+  const [isLoading, setisLoading] = useState(false);
+  const [isError, setisError] = useState(false);
   
     
       useEffect(() => {
@@ -63,7 +61,7 @@ function GetAllProfiles () {
     return ( 
         <>
           {profiles.map((profile, index) => (
-             <GetProfileList key={index}  profile={profile} />
+             <GetAllProfileList key={index}  profile={profile} />
           ))}
         </>
      );

@@ -1,8 +1,8 @@
 // A registered user may delete a Post they own. 
 
 import { useState } from 'react';
-import { NEW_URL } from "../../constants/api";
-import { StyledDeleteButton } from "./styledDeleteButton";
+import { StyledDeleteButton } from "./StyledDeleteButton";
+import { NEW_URL } from "../../constants/Api";
 
 
 function DeleteButton() {
@@ -25,7 +25,7 @@ function DeleteButton() {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(`${NEW_URL}social/posts/{id}/comment/{commentId}`, options);
+        const response = await fetch(`${NEW_URL}social/posts/${id}/comment/${commentId}`, options);
         const json = await response.json();
 
         setData(json);
@@ -61,8 +61,7 @@ function DeleteButton() {
         <StyledDeleteButton onClick={onButtonClick}>
            DELETE
         </StyledDeleteButton>
-      </> 
-      
+      </>       
     );
 }
 

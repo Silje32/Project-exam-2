@@ -1,9 +1,9 @@
-import Icons from "../Icons/icons";
-import Emoji from "../Emoji/emoji";
+import Icons from "../icons/Icons";
+import Emoji from "../emoji/Emoji";
 import LikeButton from "../Buttons/likeButton";
-import BackButton from "../Buttons/backButton";
-import SingleProfile from "../SingleProfile/singleProfile";
-import { StyledSingleProfileCard, StyledButtonCard } from "../Cards/styledCard.styles";
+import BackButton from "../buttons/BackToHomeButton";
+import SingleProfile from "../singleProfile/SingleProfiles";
+import { StyledSingleProfileCard, StyledButtonCard } from "./StyledCard.styles";
 
 
 function SingleProfileCard() {
@@ -11,9 +11,6 @@ function SingleProfileCard() {
     return (  
         <>
           <StyledSingleProfileCard>
-              <div>
-                <h3>Single Profile</h3>
-              </div> 
               <div>
               <BackButton/>
               </div>

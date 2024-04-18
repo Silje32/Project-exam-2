@@ -1,7 +1,8 @@
-import { StyledGetAllProfileList } from "./getAllProfileList.styles";
-import ViewPostButton from "./viewPostButton";
+import { StyledGetAllProfileList } from "./GetAllProfileList.styles";
 
-export function GetAllProfileList({ profile: { banner, avatar, name, email, _count  } }) {
+export function GetAllProfileList({ 
+    profile: { banner, avatar, name, email, _count },
+}) {
 
     return ( 
         <>
@@ -9,11 +10,10 @@ export function GetAllProfileList({ profile: { banner, avatar, name, email, _cou
             <img src={`${banner}`} alt="Banner" />
             <img src={`${avatar}`} alt="Avatar" />
             <h2>Profile name: {name}</h2>
-            <p>Email: {email}</p>
+            <h3>E-mail: {email}</h3>
             <p>Posts: {_count.posts}</p>
             <p>Followers: {_count.followers}</p>
             <p>Following: {_count.following}</p>
-            <ViewPostButton />
          </StyledGetAllProfileList>
         </>
     );

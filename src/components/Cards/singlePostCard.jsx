@@ -1,9 +1,9 @@
-import Icons from "../Icons/icons";
-import Emoji from "../Emoji/emoji";
-import LikeButton from "../Buttons/likeButton";
-import BackToProfileButton from "../Buttons/backToProfileButton";
-import SinglePostId from "../SinglePost/singlePostId";
-import { StyledSinglePostCard, StyledButtonCard } from "../Cards/styledCard.styles";
+import Icons from "../icons/Icons";
+import Emoji from "../emoji/Emoji";
+import LikeButton from "../buttons/LikeButton";
+import BackToProfileButton from "../buttons/BackToProfileButton";
+import SinglePostId from "../singlePost/SinglePostsId";
+import { StyledSinglePostCard, StyledButtonCard } from "./StyledCard.styles";
 
 
 function SinglePostCard() {

@@ -1,23 +1,23 @@
-import GetAllProfiles from "../Profiles/getAllProfiles";
-import GetPosts from "../Profiles/getPosts";
-import { StyledHomeCard } from "../Cards/styledCard.styles";
-
+import ViewAllProfilesButton from "../buttons/ViewAllProfilesButtons";
+import PostList from "../posts/PostList";
+import ProfileFilter from "../searchbar/ProfilesFilter";
+import { StyledHomeCard, StyledFlex } from "./StyledCard.styles";
 
 
 function HomeCard() {
 
+  const posts = [];
+
     return (  
-        <>
-          <StyledHomeCard>
-            <div>
-              <GetPosts />
-            </div>
-      
-            <div>
-              <GetAllProfiles />
-            </div> 
-          </StyledHomeCard>
-        </>
+       <>
+         <StyledHomeCard>
+          <StyledFlex>
+           <ViewAllProfilesButton />
+              <ProfileFilter posts={posts} />
+              <PostList posts={posts} />        
+          </StyledFlex>   
+         </StyledHomeCard>
+       </>
     );
 }
 

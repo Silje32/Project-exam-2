@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
-import { NEW_URL } from "../../constants/api";
+import CreatePostList from './CreatePostList';
+import { NEW_URL } from "../../constants/Api";
 
 
 function CreatePost() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState( [] );
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
   useEffect(() => {
-    async function getData(data) {
-      console.log(data);
+    async function getData(posts) {
+      console.log(posts);
       
       const options = {
         headers: { "Content-Type": "application/json" },
@@ -39,7 +40,7 @@ function CreatePost() {
     } 
     
     
-    getData(`${NEW_URL}social/posts`);
+    getData();
   }, []); 
   
    
@@ -57,8 +58,7 @@ function CreatePost() {
       <>
         {posts.map((post) => (
             <div key={post.id}>
-              <h2>{post.title}</h2>
-              <p>{post.body}</p>
+              <CreatePostList />
             </div>
           ))}
       </>

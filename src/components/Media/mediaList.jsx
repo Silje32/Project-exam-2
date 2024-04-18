@@ -1,6 +1,6 @@
-import { StyledBanner, StyledAvatar } from "./mediaList.styles";
+import { StyledBanner, StyledAvatar } from "./MediaList.styles";
 
-export function Media() {
+export function MediaList() {
 
     return ( 
         <>
@@ -10,4 +10,4 @@ export function Media() {
     );
 }
 
-export default Media;
+export default MediaList;

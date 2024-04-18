@@ -1,7 +1,7 @@
-import CreatePost from "../Posts/createPost";
+import CreatePost from "../posts/CreatePost";
 import PublishButton from "../Buttons/publishButton";
 import CloseButton from "../Buttons/closeButton";
-import { StyledCard } from "../Cards/styledCard.styles";
+import { StyledCard } from "./StyledCard.styles";
 
 function CreatePostCard() {
 
@@ -12,12 +12,6 @@ function CreatePostCard() {
                   <h2>CREATE A POST</h2>
                   <CreatePost />
                </div> 
-               <div>
-                  <h3>PROFILE NAME:</h3>
-               </div> 
-               <div>
-                  <h4>What is on your mind today?</h4>    
-               </div>
                <div>
                 <PublishButton />
                 <CloseButton />

@@ -1,15 +1,13 @@
 // A registered user may react to any Post with an emoji.
 
 import { useState, useEffect } from "react";
-import { NEW_URL } from "../../constants/api";
+import { NEW_URL } from "../../constants/Api";
 
 
 function Emoji() {
   const [emoji, setEmoji] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
-
-  const id = id
 
 
   useEffect(() => {
@@ -19,7 +17,7 @@ function Emoji() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(symbol),
+        body: JSON.stringify(),
       };
 
       try {
@@ -42,8 +40,8 @@ function Emoji() {
       } 
     }   
     
-   getData(`${NEW_URL}social/posts/${id}/react/${symbol}`);
-}, [id]); 
+   getData();
+}, []); 
 
 
     if (isLoading) {
@@ -58,8 +56,8 @@ function Emoji() {
     return ( 
         <>
           <div>
-             {emoji.map((icon, id) => (
-                <EmojiList key={id} icon={icon} />
+             {emoji.map((media, id) => (
+                <EmojiList key={id} media={media} />
               ))}
           </div>
         </>

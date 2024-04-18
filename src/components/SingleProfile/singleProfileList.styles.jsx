@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledGetAllProfileList = styled.div`
+export const StyledSingleProfileList = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -9,7 +9,7 @@ opacity: 0.8;
 border-radius: 5px;
 border-color: black;
 width: 1000px;
-max-width: 50%;
+max-width: 100%;
 margin: 20px 30px;
 padding: 10px;
 

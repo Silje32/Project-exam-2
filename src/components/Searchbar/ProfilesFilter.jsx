@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledProfileFilter } from "./StyledProfileFilter.styles";
+import { StyledProfileFilter } from "./StyledProfilesFilter.styles";
 
 
 function ProfileFilter({ posts = [] }) {

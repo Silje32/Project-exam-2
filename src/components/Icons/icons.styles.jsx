@@ -2,15 +2,12 @@ import styled from "styled-components";
 
 export const StyledIcons = styled.div`
    display: flex;
-   align-items: left;
+   flex-direction: row;
+   align-items: right;
    justify-content: center;
-   width: 40px;
-   height: 40px;
-   justify-content: center;
-   padding: 10px;
-   align-items: center;
-   border-radius: 50%; 
+   width: 50px;
+   max-width: 20%;
+   height: 50px;
    list-style-type: none;
-   color: #FCE205;
-   margin-top: 500px;
+   margin-top: 50px;
 `;

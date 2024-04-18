@@ -5,10 +5,10 @@ import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
-import ValidationMessage from "./validationMessage";
-import {  NEW_URL } from "../../constants/api";
-import { StyledFieldset, StyledInput, StyledLabel  } from './styledLoginForm.styles';
-import { StyledBaseButton } from "../Buttons/buttons.styles";
+import ValidationMessage from "./ValidationMessage";
+import {  NEW_URL } from "../../constants/Api";
+import { StyledFieldset, StyledInput, StyledLabel  } from './StyledLoginForm.styles';
+import { StyledBaseButton } from "../buttons/Button.styles";
 
 
 // * Adding yup validation
@@ -16,8 +16,8 @@ const schema = yup
   .object({
      firstName: yup.string().min(3, "Your first name should be at least 3 characters.").required("minimum 3 characters required"),
      lastName: yup.string().min(3, "Your last name should be at least 3 characters.").required("minimum 3 characters required"),
-     email: yup.string().email("Please write a valid email address.").required("Email required"),
-     password: yup.string().min(4, "Your password should be at least 4 characters").required("Please enter a password"),
+     email: yup.string().email("Please write a valid noroff.no email address.").required("Noroff e-mail required"),
+     password: yup.string().min(8, "Your password should be at least 8 characters").required("Please enter a password"),
 })
 .required();
 
@@ -47,7 +47,7 @@ function RegistrationForm() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify(_name, email, password),
       };
 
       try {
@@ -76,14 +76,9 @@ function RegistrationForm() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <StyledFieldset disabled={isLoading}> 
             <div>
-                <StyledLabel>First Name:</StyledLabel>
+                <StyledLabel>Name:</StyledLabel>
                 <StyledInput {...register("firstName") }  />
-                {errors.firstName && <ValidationMessage>{errors.firstName.message}</ValidationMessage>}
-            </div>
-            <div>
-                <StyledLabel>Last Name:</StyledLabel>
-                <StyledInput {...register("lastName") }  />
-                {errors.lastName && <ValidationMessage>{errors.lastName.message}</ValidationMessage>}
+                {errors.name && <ValidationMessage>{errors.name.message}</ValidationMessage>}
             </div>
             <div>
                 <StyledLabel>E-mail:</StyledLabel>

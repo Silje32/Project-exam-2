@@ -2,9 +2,9 @@
 // Retrieve all posts.
 
 import { useState, useEffect } from 'react';
-import { NEW_URL } from "../../constants/Api";
 import { useToken } from "../../store/UseUserStore";
 import PostListCard  from "./PostListCard";
+import { NEW_URL } from "../../constants/Api";
 
 
 function PostList() {
@@ -17,7 +17,7 @@ function PostList() {
   
   
       useEffect(() => {
-          async function getData(posts) {
+          async function getData() {
             
             const options = {
               headers: {
@@ -65,8 +65,8 @@ function PostList() {
 
       return ( 
          <>  
-           {posts.map((post, index) => (
-             <PostListCard key={index} post={post} />
+           {posts.map((post, id) => (
+             <PostListCard key={id} post={post} />
            ))}    
          </>            
       );

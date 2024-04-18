@@ -1,8 +1,8 @@
-import Icons from "../Icons/icons";
+import Icons from "../icons/Icons";
 import LikesButton from "../Buttons/likesButton";
-import BackButton from "../Buttons/backButton";
-import { StyledButtonCard } from "../Cards/styledCard.styles";
-import { StyledCommentList } from "./commentList.styles";
+import BackButton from "../buttons/BackToHomeButton";
+import { StyledButtonCard } from "../Cards/StyledCard.styles";
+import { StyledCommentList } from "./CommentList.styles";
 
 export function CommentList({ comments: { body, author } }) {
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledBackToHomeButton } from "./Buttons.styles";
+import { StyledBackToHomeButton } from "./Button.styles";
 
 function BackToHomeButton() {
 

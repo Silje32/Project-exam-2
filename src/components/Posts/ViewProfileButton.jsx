@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledBaseButton } from "../buttons/Buttons.styles";
+import { StyledBaseButton } from "../buttons/Button.styles";
 
 function ViewProfileButton() {
 

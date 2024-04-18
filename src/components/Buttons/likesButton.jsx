@@ -1,5 +1,5 @@
 
-import { StyledLikesButton } from "../Buttons/buttons.styles";
+import { StyledLikesButton } from "./Button.styles";
 
 function LikesButton() {
 

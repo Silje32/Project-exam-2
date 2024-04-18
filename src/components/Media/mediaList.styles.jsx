@@ -4,7 +4,7 @@ export const StyledBanner = styled.img`
 
 img {
     padding: 10px;
-    width: 100%;
+    max-width: 100%;
 }
 
 `

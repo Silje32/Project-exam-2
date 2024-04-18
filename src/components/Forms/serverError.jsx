@@ -1,4 +1,4 @@
-import { StyledMessage } from "./styledLoginForm.styles";
+import { StyledMessage } from "./StyledLoginForm.styles";
 
 function ServerError({ children }) {
     return (

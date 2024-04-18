@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledProfileCommentsButton } from "../Buttons/buttons.styles";
+import { StyledProfileCommentsButton } from "./Button.styles";
 
 function CommentsButton() {
 

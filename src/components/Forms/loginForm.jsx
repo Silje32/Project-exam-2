@@ -5,12 +5,12 @@ import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
-import ServerError from "./serverError";
-import ValidationMessage from "./validationMessage";
+import ServerError from "./ServerError";
+import ValidationMessage from "./ValidationMessage";
 import { useUserActions } from "../../store/UseUserStore";
-import { NEW_URL } from "../../constants/api";
-import { StyledFieldset, StyledInput, StyledLabel } from "./styledLoginForm.styles";
-import { StyledBaseButton } from "../Buttons/buttons.styles";
+import { NEW_URL } from "../../constants/Api";
+import { StyledFieldset, StyledInput, StyledLabel } from "./StyledLoginForm.styles";
+import { StyledBaseButton } from "../buttons/Button.styles";
 
 
 // * Adding yup validation
@@ -30,7 +30,7 @@ function LoginForm() {
 
 	const navigate = useNavigate();
 
-	console.log(setUser);
+	const { email, password } = [];
    
     const {
             register, 
@@ -50,7 +50,7 @@ function LoginForm() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify({ email, password }), 
       };
 
       try {

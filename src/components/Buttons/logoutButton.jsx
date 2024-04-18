@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom"
 import { useUserActions } from "../../store/UseUserStore";
-import { StyledLogoutButton } from "../Buttons/buttons.styles";
+import { StyledLogoutButton } from "./Button.styles";
 
 function LogoutButton() {
 

@@ -5,7 +5,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useToken, useName } from "../../store/UseUserStore";
-import SingleProfileList from "./SingleProfileList";
+import SingleProfilesList from "./SingleProfilesLists";
 import { NEW_URL } from "../../constants/Api";
 
 
@@ -73,7 +73,7 @@ function SingleProfile() {
         <>
           <div>Individual profile page: {params.id} name: {params.name}
              {profileid.map((single, id) => (
-                <SingleProfileList key={id} single={single} />
+                <SingleProfilesList key={id} single={single} />
               ))}
           </div>
         </>

@@ -1,16 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useToken } from "../../store/UseUserStore";
 import LogoutButton from "../Buttons/logoutButton";
-import LogoImg from "../Logo/index";
-import Header from "../Header/index";
-import { NavStyling } from "./nav.styles";
+import LogoImg from "../Logo/LogoImg";
+import Header from "../header/Header";
+import { NavStyling } from "./Nav.styles";
 
 
 function Nav() {
 
   const token = useToken();
-
-  console.log("token", token);
 
   return (
     <nav>

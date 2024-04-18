@@ -1,5 +1,5 @@
-import LoginForm from "../Forms/loginForm";
-import { StyledCard } from "./styledCard.styles";
+import LoginForm from "../forms/LoginForm";
+import { StyledCard } from "./StyledCard.styles";
 
 function LoginCard() {
 

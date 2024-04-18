@@ -1,6 +1,6 @@
 // A registered user may update a Post they own.
 
-import { StyledUpdateButton } from "../Buttons/buttons.styles";
+import { StyledUpdateButton } from "./Button.styles";
 
 function UpdateButton() {
 

@@ -13,7 +13,7 @@ export const StyledDeleteButton = styled.button`
    flex: 4;
    flex-direction: row;
    font-size: 22px;
-   min-width: 150px;
+   width: 140px;
    cursor: pointer;
    color: ${(props) => (props.$isActive ? "blue" : "white")};
    background-color: ${(props) => (props.$isActive ? "#707070" : "black")};
