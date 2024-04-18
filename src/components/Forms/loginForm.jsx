@@ -49,7 +49,7 @@ function LoginForm() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify({ }), 
+        body: JSON.stringify(), 
       };
 
       try {
