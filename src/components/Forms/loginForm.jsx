@@ -10,7 +10,7 @@ import ValidationMessage from "./ValidationMessage";
 import { useUserActions } from "../../store/UseUserStore";
 import { NEW_URL } from "../../constants/Api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./StyledLoginForm.styles";
-import { StyledBaseButton } from "../buttons/Button.styles";
+import { StyledBaseButton } from "../Buttons/Button.styles";
 
 
 // * Adding yup validation
