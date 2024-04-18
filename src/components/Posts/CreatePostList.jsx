@@ -1,9 +1,9 @@
-import Icons from "../icons/Icons";
-import LikeButton from "../buttons/LikeButton";
-import CommentsButton from "../buttons/CommentsButton";
-import UpdateButton from "../buttons/UpdateButton";
-import DeleteButton from "../delete/DeleteButton";
-import { StyledButtonCard } from "../cards/StyledCard.styles";
+import Icons from "../Icons/Icons";
+import LikeButton from "../Buttons/LikeButton";
+import CommentsButton from "../Buttons/CommentsButton";
+import UpdateButton from "../Buttons/UpdateButton";
+import DeleteButton from "../Delete/DeleteButton";
+import { StyledButtonCard } from "../Cards/StyledCard.styles";
 import { StyledCreatePostListCard } from "./CreatePostList.styles";
 
 export function CreatePostList({ 

@@ -1,10 +1,12 @@
-import Icons from "../icons/Icons";
+import Icons from "../Icons/Icons";
 import LikesButton from "../Buttons/likesButton";
-import BackButton from "../buttons/BackToHomeButton";
+import BackButton from "../Buttons/BackToHomeButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
 import { StyledCommentList } from "./CommentList.styles";
 
-export function CommentList({ comments: { body, author } }) {
+export function CommentList({ 
+    comments: { body, author } 
+}) {
 
     return ( 
         <>

@@ -1,7 +1,7 @@
 // A registered user may view a list of Profiles
 
 import { useState, useEffect } from 'react';
-import { useToken } from "../../store/UseUserStore";
+import { useToken } from "../../Store/UseUserStore";
 import GetAllProfileList from "./GetAllProfileList";
 import { NEW_URL } from "../../constants/api";
 

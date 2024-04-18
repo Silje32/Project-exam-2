@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { NEW_URL } from "../../constants/Api";
 import MediaList from "./MediaList";
-import { useName } from "../../store/UseUserStore";
+import { useName } from "../../Store/UseUserStore";
 
 
 function Media() {

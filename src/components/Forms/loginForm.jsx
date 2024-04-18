@@ -7,7 +7,7 @@ import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ServerError from "./ServerError";
 import ValidationMessage from "./ValidationMessage";
-import { useUserActions } from "../../store/UseUserStore";
+import { useUserActions } from "../../Store/UseUserStore";
 import { NEW_URL } from "../../constants/Api";
 import { StyledFieldset, StyledInput, StyledLabel } from "./StyledLoginForm.styles";
 import { StyledBaseButton } from "../Buttons/Button.styles";

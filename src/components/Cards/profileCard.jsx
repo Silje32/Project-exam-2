@@ -1,5 +1,5 @@
-import Emoji from "../emoji/Emoji";
-import GetPosts from "../profiles/GetPost";
+import Emoji from "../Emoji/Emoji";
+import GetPosts from "../Profiles/GetPost";
 import { StyledMyProfileCard, StyledFlex } from "./StyledCard.styles";
 
 function ProfileCard() {

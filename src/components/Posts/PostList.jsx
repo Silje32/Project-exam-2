@@ -2,7 +2,7 @@
 // Retrieve all posts.
 
 import { useState, useEffect } from 'react';
-import { useToken } from "../../store/UseUserStore";
+import { useToken } from "../../Store/UseUserStore";
 import PostListCard  from "./PostListCard";
 import { NEW_URL } from "../../constants/Api";
 

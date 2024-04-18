@@ -1,4 +1,4 @@
-import SinglePostCard from "../components/Cards/singlePostCard";
+import SinglePostCard from "../components/Cards/SinglePostCard";
 
 function SinglePost() {
 

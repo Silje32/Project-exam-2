@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { useToken } from "../../store/UseUserStore";
-import LogoutButton from "../Buttons/logoutButton";
+import { useToken } from "../../Store/UseUserStore";
+import LogoutButton from "../Buttons/LogoutButton";
 import LogoImg from "../Logo/LogoImg";
-import Header from "../header/Header";
+import Header from "../Header/Header";
 import { NavStyling } from "./Nav.styles";
 
 

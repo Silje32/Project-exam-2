@@ -1,4 +1,4 @@
-import LoginForm from "../forms/LoginForm";
+import LoginForm from "../Forms/LoginForm";
 import { StyledCard } from "./StyledCard.styles";
 
 function LoginCard() {

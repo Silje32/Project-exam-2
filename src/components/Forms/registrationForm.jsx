@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./ValidationMessage";
 import {  NEW_URL } from "../../constants/Api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './StyledLoginForm.styles';
-import { StyledBaseButton } from "../buttons/Button.styles";
+import { StyledBaseButton } from "../Buttons/Button.styles";
 
 
 // * Adding yup validation

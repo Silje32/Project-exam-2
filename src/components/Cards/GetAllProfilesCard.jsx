@@ -1,6 +1,6 @@
-import GetAllProfileList from "../profiles/GetAllProfiles";
-import BackToHomeButton from "../buttons/BackToHomeButton"; 
-import { StyledGetAllProfilesCard } from "../cards/StyledCard.styles";
+import GetAllProfileList from "../Profiles/GetAllProfiles";
+import BackToHomeButton from "../Buttons/BackToHomeButton"; 
+import { StyledGetAllProfilesCard } from "../Cards/StyledCard.styles";
 
 
 function GetAllProfilesCard() {

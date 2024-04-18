@@ -1,4 +1,4 @@
-import Background from "../../images/modern3.jpg";
+import Background from "../../Images/modern3.jpg";
 import { StyledBackgroundImage } from "./BackgroundImage.styles";
 
 function BackgroundImage() {

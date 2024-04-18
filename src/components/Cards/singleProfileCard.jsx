@@ -1,8 +1,8 @@
-import Icons from "../icons/Icons";
-import Emoji from "../emoji/Emoji";
+import Icons from "../Icons/Icons";
+import Emoji from "../Emoji/Emoji";
 import LikeButton from "../Buttons/likeButton";
-import BackButton from "../buttons/BackToHomeButton";
-import SingleProfile from "../singleProfile/SingleProfiles";
+import BackButton from "../Buttons/BackToHomeButton";
+import SingleProfile from "../SingleProfile/SingleProfiles";
 import { StyledSingleProfileCard, StyledButtonCard } from "./StyledCard.styles";
 
 

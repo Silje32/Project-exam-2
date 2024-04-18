@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { NEW_URL } from "../../constants/Api";
-import { useToken, useName } from "../../store/UseUserStore";
+import { useToken, useName } from "../../Store/UseUserStore";
 import GetPostList from './GetPostList';
 
 

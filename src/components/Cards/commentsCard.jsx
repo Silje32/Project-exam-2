@@ -1,9 +1,9 @@
-import Icons from "../icons/Icons";
-import Emoji from "../emoji/Emoji";
-import Comment from "../comments/Comment";
+import Icons from "../Icons/Icons";
+import Emoji from "../Emoji/Emoji";
+import Comment from "../Comments/Comment";
 import LikesButton from "../Buttons/likesButton";
 import PublishButton from "../Buttons/publishButton";
-import BackButton  from "../buttons/BackToHomeButton";
+import BackButton  from "../Buttons/BackToHomeButton";
 import { StyledCard, StyledButtonCard } from "./StyledCard.styles";
 
 function CommentCard() {

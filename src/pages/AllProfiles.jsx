@@ -1,4 +1,4 @@
-import GetAllProfilesCard from "../components/cards/GetAllProfilesCard";
+import GetAllProfilesCard from "../components/Cards/GetAllProfilesCard";
 
 function AllProfiles() {
 

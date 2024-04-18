@@ -1,6 +1,6 @@
-import ViewAllProfilesButton from "../buttons/ViewAllProfilesButton";
-import PostList from "../posts/PostList";
-import ProfileFilter from "../searchbar/ProfilesFilter";
+import ViewAllProfilesButton from "../Buttons/ViewAllProfilesButton";
+import PostList from "../Posts/PostList";
+import ProfileFilter from "../Searchbar/ProfilesFilter";
 import { StyledHomeCard, StyledFlex } from "./StyledCard.styles";
 
 
