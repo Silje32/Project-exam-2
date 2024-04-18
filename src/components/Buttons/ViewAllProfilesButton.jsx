@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledViewAllProfileButton } from "./Button.styles";
+import { StyledViewAllProfilesButton } from "../buttons/Button.styles";
 
 function ViewAllProfilesButton() {
 
