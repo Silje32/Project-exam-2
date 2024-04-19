@@ -8,7 +8,7 @@ export const StyledCard = styled.div`
    border-radius: 5px;
    margin: 20px 130px;
    padding: 60px;
-   min-width: 1000px;
+   max-width: 1000px;
 `
 
 export const StyledHomeCard = styled.div`
@@ -49,7 +49,7 @@ export const StyledSingleProfileCard = styled.div`
    border-radius: 5px;
    margin: 20px 130px;
    padding: 60px;
-   min-width: 1000px;
+   max-width: 1000px;
 `
 
 
@@ -60,6 +60,7 @@ export const StyledFlex = styled.div`
    align-items: left;
    background-color: white;
    border-radius: 5px;
+
 `
 
 export const StyledProfileCard = styled.div`
