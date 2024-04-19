@@ -20,7 +20,7 @@ function Emoji() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify({ symbol }),
+        body: JSON.stringify(),
       };
 
       try {
