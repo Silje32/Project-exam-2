@@ -1,12 +1,17 @@
+// Create a new post.
+
 import { useState, useEffect } from 'react';
 import CreatePostList from './CreatePostList';
 import { NEW_URL } from "../../constants/Api";
 
 
 function CreatePost() {
+
   const [posts, setPosts] = useState( [] );
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
+
+  const { title, body } = [];
 
   useEffect(() => {
     async function getData(posts) {
@@ -15,7 +20,7 @@ function CreatePost() {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(),
+        body: JSON.stringify({ title, body }),
       };
 
 
@@ -23,7 +28,7 @@ function CreatePost() {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(`${NEW_URL}social/posts`, options);
+        const response = await fetch(`${NEW_URL}/social/posts`, options);
 
         if (response.ok) {
           const json = await response.json();
