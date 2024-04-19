@@ -1,5 +1,5 @@
 import Icons from "../Icons/Icons";
-import Emoji from "../Emoji/Emoji";
+import Emoji from "../Emoji/emoji";
 import LikeButton from "../Buttons/LikeButton";
 import BackToProfileButton from "../Buttons/BackToProfileButton";
 import SinglePostId from "../SinglePost/SinglePostsId";
