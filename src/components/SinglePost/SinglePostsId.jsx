@@ -34,7 +34,7 @@ function SinglePostId() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(`${NEW_URL}social/posts/${id}`, options);
+            const response = await fetch(`${NEW_URL}/social/posts/${id}`, options);
 
             if (response.ok) {
               const json = await response.json();
