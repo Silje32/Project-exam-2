@@ -7,6 +7,8 @@ import { NEW_URL } from "../../constants/Api";
 
 function Comment() {
 
+    const { comment } = comment;
+
     const [comment, setComment] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
