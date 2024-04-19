@@ -30,7 +30,7 @@ function GetAllProfiles () {
               setisLoading(true);
               setisError(null);
 
-              const response = await fetch(`${NEW_URL}social/profiles`, options);
+              const response = await fetch(`${NEW_URL}/social/profiles`, options);
 
               if(response.ok) {
                 const json = await response.json();
