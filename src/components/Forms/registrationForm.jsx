@@ -55,7 +55,7 @@ function RegistrationForm() {
       try {
         setIsLoading(true);
         setisError(null);
-        const response = await fetch(`${NEW_URL}social/auth/register`, options);
+        const response = await fetch(`${NEW_URL}/social/auth/register`, options);
         const json = await response.json();
   
         if (!response.ok) {
