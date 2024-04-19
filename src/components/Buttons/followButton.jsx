@@ -16,7 +16,7 @@ export default function FollowButton () {
   const [isError, setisError] = useState(false);
 
 
-    async function onSubmit(follow) {
+    async function onButtonClick(follow) {
         console.log(follow);
       
       const options = {
@@ -30,7 +30,7 @@ export default function FollowButton () {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(`${NEW_URL}social/${name}/follow`, options);
+        const response = await fetch(`${NEW_URL}/social/${name}/follow`, options);
         const json = await response.json();
 
         setFollow(json);
@@ -53,6 +53,11 @@ export default function FollowButton () {
         if (isError) {
            return <div>An error occured when following this profile</div>;
         }
+
+        
+        function onButtonClick() {
+
+        }
     
 
         return (
@@ -60,8 +65,8 @@ export default function FollowButton () {
             {follow.map((profile) => (
               <div key={profile.id}>
                 <h3>{profile.title}</h3>
-            <StyledFollowButton onClick={() => addName(name)}>Follow</StyledFollowButton>
-            <StyledFollowButton onClick={() => removeName(name)}>UnFollow</StyledFollowButton> 
+            <StyledFollowButton onClick={onButtonClick}{() => addName(name)}>Follow</StyledFollowButton>
+            <StyledFollowButton onClick={onButtonClick}{() => removeName(name)}>UnFollow</StyledFollowButton> 
             }   
           </>                             
         );    
