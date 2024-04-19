@@ -69,7 +69,7 @@ export const commenturl = `${NEW_URL}social/posts/{id}/comment`;
 
 //PUT/DELETE/GET
 
-//  SinglePostId  (SinglePostId)
+//  Update post  (updateButton)
 export const postidurl = `${NEW_URL}social/posts/{id}`;
 
 //PUT
@@ -82,4 +82,8 @@ export const emojiurl = `${NEW_URL}social/posts/{id}/react/{symbol}`;
 
 //  Delete Button
 export const deleteCommentidurl = `${NEW_URL}social/posts/{id}/comment/{commentId}`;
+
+
+
+//  SinglePostId  (SinglePostId)
 
