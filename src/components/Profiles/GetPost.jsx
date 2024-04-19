@@ -50,7 +50,7 @@ function GetPosts() {
           } 
         }    
         
-       getData(`${NEW_URL}social/profiles/${name}/posts`);
+       getData(`${NEW_URL}/social/profiles/${name}/posts`);
     }, []); 
 
 
