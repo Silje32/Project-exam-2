@@ -1,4 +1,4 @@
-const BASE_URL = new URL("https://nf-api.onrender.com/api/v1/");
+const BASE_URL = new URL("https://nf-api.onrender.com/api/v1");
 export const NEW_URL = BASE_URL.toString()
 
 
