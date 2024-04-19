@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import CommentList from "./CommentList";
-import { NEW_URL } from "../../constants/Api";
+import CommentList from "./commentList";
+import { NEW_URL } from "../../constants/api";
 
 function Comment() {
 
