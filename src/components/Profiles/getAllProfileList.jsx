@@ -1,4 +1,4 @@
-import { StyledGetAllProfileList } from "./GetAllProfileList.styles";
+import { StyledGetAllProfileList } from "./getAllProfileList.styles";
 
 export function GetAllProfileList({ 
     profile: { banner, avatar, name, email, _count },
