@@ -51,7 +51,7 @@ function SinglePostId() {
         } 
         
         
-       getData(`${NEW_URL}social/posts/${id}`);
+       getData(`${NEW_URL}/social/posts/${id}`);
     }, [id]); 
 
     if (isLoading) {
