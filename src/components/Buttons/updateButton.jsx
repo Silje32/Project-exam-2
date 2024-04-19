@@ -27,7 +27,7 @@ function UpdateButton() {
         const response = await fetch(`${NEW_URL}/social/posts/${id}`, options);
         const json = await response.json();
 
-        setFollow(json);
+        setUpdate(json);
       } catch (error) {
         console.log(error);
         setisError(true);
