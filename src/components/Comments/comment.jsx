@@ -7,7 +7,7 @@ import { NEW_URL } from "../../constants/Api";
 
 function Comment() {
 
-    const { comment } = comment;
+    const { body } = comment;
 
     const [comment, setComment] = useState([]);
     const [isLoading, setisLoading] = useState(false);
@@ -22,7 +22,7 @@ function Comment() {
           const options = {
             headers: { "Content-Type": "application/json" },
             method: "POST",
-            body: JSON.stringify(comment),
+            body: JSON.stringify(body),
           };
 
 
@@ -30,7 +30,7 @@ function Comment() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(`${NEW_URL}social/posts/{id}/comment`, options);
+            const response = await fetch(`${NEW_URL}/social/posts/{id}/comment`, options);
 
             if (response.ok) {
               const json = await response.json();
