@@ -44,7 +44,7 @@ function Emoji() {
     }   
     
    getData();
-}, []); 
+}, [id]); 
 
 
     if (isLoading) {
