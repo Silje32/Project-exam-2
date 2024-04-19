@@ -1,4 +1,4 @@
-import RegistrationForm from "../Forms/RegistrationForm";
+import RegistrationForm from "../Forms/registrationForm";
 import { StyledCard } from "./StyledCard.styles";
 
 
