@@ -38,7 +38,7 @@ function UpdateButton() {
       } 
 
       getData();
-    }, [id]); 
+    }, []); 
     
 
         if (isLoading) {
@@ -57,11 +57,11 @@ function UpdateButton() {
 
     return ( 
 
-        {update.map((updates) => (
-            <div key={updates.id}>
+        {update.map(updates.title)>
           <StyledUpdateButton onClick={onButtonClick}>
             UPDATE
           </StyledUpdateButton>
+        }
     );
 }
 
