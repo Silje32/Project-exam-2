@@ -33,7 +33,7 @@ function GetPosts() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(`${NEW_URL}social/profiles/${name}/posts`, options);
+            const response = await fetch(`${NEW_URL}/social/profiles/${name}/posts`, options);
 
             if (response.ok) {
               const json = await response.json();
