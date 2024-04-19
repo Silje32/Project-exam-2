@@ -5,18 +5,20 @@ import { StyledUpdateButton } from "./Button.styles";
 
 function UpdateButton() {
 
+  const { title, body, tags, media } = update;  
+
   const [update, setUpdate] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
 
-    async function onSubmit(update) {
+    async function onButtonClick(update) {
         console.log(update);
       
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "PUT",
-        body: JSON.stringify(),
+        body: JSON.stringify(title, body, tags, media),
       };
 
 
@@ -40,12 +42,12 @@ function UpdateButton() {
     
 
         if (isLoading) {
-           return <h3>Follow profile</h3>;
+           return <h3>Update profile.</h3>;
         }
 
   
         if (isError) {
-           return <div>An error occured when following this profile</div>;
+           return <div>An error occured when updating this profile.</div>;
         }
     
 
