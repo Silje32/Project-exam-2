@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
 import ValidationMessage from "./ValidationMessage";
-import {  NEW_URL } from "../../constants/Api";
+import {  NEW_URL } from "../../constants/api";
 import { StyledFieldset, StyledInput, StyledLabel  } from './StyledLoginForm.styles';
 import { StyledBaseButton } from "../Buttons/Button.styles";
 
