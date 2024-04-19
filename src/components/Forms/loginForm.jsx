@@ -52,7 +52,7 @@ const { email, password } = [];
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify(email, password), 
+        body: JSON.stringify({ email, password }), 
       };
 
       try {
