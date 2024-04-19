@@ -40,7 +40,7 @@ function SingleProfile() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(`${NEW_URL}social/profiles/${name}`, options);
+            const response = await fetch(`${NEW_URL}/social/profiles/${name}`, options);
 
             if (response.ok) {
               const json = await response.json();
