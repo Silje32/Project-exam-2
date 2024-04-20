@@ -2,9 +2,9 @@
 // Retrieve all posts.
 
 import { useState, useEffect } from 'react';
-import { useToken } from "../../Store/UseUserStore";
+import { useToken } from "../../store/UseUserStore";
 import PostListCard  from "./PostListCard";
-import { NEW_URL } from "../../constants/Api";
+import { NEW_URL } from "../../constants/api";
 
 
 function PostList() {
