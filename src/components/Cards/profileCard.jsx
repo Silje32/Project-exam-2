@@ -1,4 +1,4 @@
-import Emoji from "../Emoji/Emoji";
+import Emoji from "../Emoji/emoji";
 import GetPosts from "../Profiles/GetPost";
 import { StyledMyProfileCard, StyledFlex } from "./StyledCard.styles";
 
