@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { useName, useFollow } from "../../store/UseUserStore";
 import { StyledFollowButton } from "./Button.styles";
-import { NEW_URL } from "../../constants/Api";
-import { unfollowurl } from "../../constants/Api";
+import { NEW_URL } from "../../constants/api";
+import { unfollowurl } from "../../constants/api";
 
 
 export default function FollowButton () {
