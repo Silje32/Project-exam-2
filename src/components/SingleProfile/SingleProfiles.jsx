@@ -4,9 +4,9 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { useToken, useName } from "../../Store/UseUserStore";
+import { useToken, useName } from "../../store/UseUserStore";
 import SingleProfilesList from "./SingleProfileList";
-import { NEW_URL } from "../../constants/Api";
+import { NEW_URL } from "../../constants/api";
 
 
 function SingleProfile() {
