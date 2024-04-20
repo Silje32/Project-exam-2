@@ -1,4 +1,4 @@
-import CreatePost from "../Posts/CreatePost";
+import CreatePost from "../Posts/createPost";
 import PublishButton from "../Buttons/publishButton";
 import CloseButton from "../Buttons/CloseButton";
 import { StyledCard } from "./StyledCard.styles";
