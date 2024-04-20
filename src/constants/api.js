@@ -6,10 +6,10 @@ export const NEW_URL = BASE_URL.toString()
 
 //POST
 // * login page 
-export const loginurl = `${NEW_URL}social/auth/login`;
+export const loginurl = `${NEW_URL}/social/auth/login`;
 
 // * registration page
-export const registerurl = `${NEW_URL}social/auth/register`;
+export const registerurl = `${NEW_URL}/social/auth/register`;
 
 
 
@@ -18,29 +18,29 @@ export const registerurl = `${NEW_URL}social/auth/register`;
 //GET
 
 // * AllProfiles page (GetAllProfiles)
-export const getprofilesurl = `${NEW_URL}social/profiles`;
+export const getprofilesurl = `${NEW_URL}/social/profiles`;
 
 // Single profile page  (SingleProfile) 
-export const profileIdurl = `${NEW_URL}social/profiles/{name}`;
+export const profileIdurl = `${NEW_URL}/social/profiles/{name}`;
 
 // * MyProfile page  (GetPosts)
-export const postsurl = `${NEW_URL}social/profiles/{name}/posts`;
+export const postsurl = `${NEW_URL}/social/profiles/{name}/posts`;
 
 
 //PUT
 
 //  profile page  (Media)
-export const BannerAvatarurl = `${NEW_URL}social/profiles/{name}/media`;
+export const BannerAvatarurl = `${NEW_URL}/social/profiles/{name}/media`;
 
 
 
 //PUT
 
 //  profile page  (FollowButton)
-export const followurl = `${NEW_URL}social/{name}/follow`;
+export const followurl = `${NEW_URL}/social/{name}/follow`;
 
 //  profile page  (FollowButton)
-export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
+export const unfollowurl = `${NEW_URL}/social/{name}/unfollow`;
 
 
 
@@ -50,38 +50,38 @@ export const unfollowurl = `${NEW_URL}social/{name}/unfollow`;
 
 //  Home  (PostList)
 // * All the posts
-export const getpostsurl = `${NEW_URL}social/posts`;
+export const getpostsurl = `${NEW_URL}/social/posts`;
 
 //  Home page  (Follow)
-export const getfollowingurl = `${NEW_URL}social/posts/following`;
+export const getfollowingurl = `${NEW_URL}/social/posts/following`;
 
 
 
 //POST
 
 //  Create Post page  (CreatePost)
-export const postpostsurl = `${NEW_URL}social/posts`;
+export const postpostsurl = `${NEW_URL}/social/posts`;
 
 //  Comment page  (Comment) 
-export const commenturl = `${NEW_URL}social/posts/{id}/comment`;
+export const commenturl = `${NEW_URL}/social/posts/{id}/comment`;
 
 
 
 //PUT/DELETE/GET
 
 //  Update post  (updateButton)
-export const postidurl = `${NEW_URL}social/posts/{id}`;
+export const postidurl = `${NEW_URL}/social/posts/{id}`;
 
 //PUT
 
 //  Profile and Home page  (Emoji)
-export const emojiurl = `${NEW_URL}social/posts/{id}/react/{symbol}`;
+export const emojiurl = `${NEW_URL}/social/posts/{id}/react/{symbol}`;
 
 
 //DELETE
 
 //  Delete Button
-export const deleteCommentidurl = `${NEW_URL}social/posts/{id}/comment/{commentId}`;
+export const deleteCommentidurl = `${NEW_URL}/social/posts/{id}/comment/{commentId}`;
 
 
 
