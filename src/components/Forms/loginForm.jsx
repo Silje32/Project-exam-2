@@ -16,7 +16,7 @@ import { StyledBaseButton } from "../Buttons/Button.styles";
 // * Adding yup validation
 const schema = yup
   .object({
-     email: yup.string().email("Please write a valid email address.").required("Email is required"),
+     email: yup.string().email("Please write a valid email address.").required("Noroff e-mail required"),
      password: yup.string().required("Please enter a password"),
 })
 .required();
@@ -24,7 +24,7 @@ const schema = yup
 
 function LoginForm() {
 
-const { email, password } = [];
+const { email, password } = data;
 
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
