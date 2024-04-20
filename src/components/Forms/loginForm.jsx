@@ -22,7 +22,7 @@ const schema = yup
 .required();
 
 
-function LoginForm() {
+function LoginForm(props) {
 
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
