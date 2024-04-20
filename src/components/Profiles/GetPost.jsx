@@ -2,8 +2,8 @@
 // Retrieve all posts made by profile.
 
 import { useState, useEffect } from 'react';
-import { NEW_URL } from "../../constants/Api";
-import { useToken, useName } from "../../Store/UseUserStore";
+import { NEW_URL } from "../../constants/api";
+import { useToken, useName } from "../../store/UseUserStore";
 import GetPostList from './GetPostList';
 
 
