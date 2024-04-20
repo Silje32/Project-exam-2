@@ -1,7 +1,6 @@
 import Icons from "../Icons/Icons";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
-import UpdateButton from "../Buttons/updateButton";
 import DeleteButton from "../Delete/deleteButton";
 import ViewProfileButton from "./ViewProfileButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
@@ -26,7 +25,6 @@ export function PostListCard({
             <LikeButton />
             <p>{_count.comments}</p>
             <CommentsButton />
-            <UpdateButton />
             <DeleteButton />
             </StyledButtonCard>
             <ViewProfileButton /> 
