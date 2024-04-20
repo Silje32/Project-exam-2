@@ -1,4 +1,4 @@
-import { StyledEmojiList } from "./EmojiList.styles";
+import { StyledEmojiList } from "./emojiList.styles";
 
 export function EmojiList({ 
   emoji: { symbol } 
@@ -10,7 +10,6 @@ export function EmojiList({
             <img src={`${symbol}`} alt="Emoji" />   
          </StyledEmojiList>
         </>
-
     );
 }
 
