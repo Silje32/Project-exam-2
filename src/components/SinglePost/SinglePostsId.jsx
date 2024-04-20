@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { NEW_URL } from "../../constants/Api";
+import { NEW_URL } from "../../constants/api";
 import SinglePostIdCard from "./SinglePostsIdCard";
 
 
