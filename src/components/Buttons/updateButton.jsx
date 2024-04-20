@@ -57,11 +57,11 @@ function UpdateButton() {
 
     return ( 
 
-        {update.map(updates.title)
+        {update.map((updates) => (
           <StyledUpdateButton onClick={onButtonClick}>
             UPDATE
           </StyledUpdateButton>
-        }
+        )}
     );
 }
 
