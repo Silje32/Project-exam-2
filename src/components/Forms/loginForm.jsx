@@ -24,8 +24,6 @@ const schema = yup
 
 function LoginForm() {
 
-const { email, password } = data;
-
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
 
@@ -33,7 +31,6 @@ const { email, password } = data;
 
 	const navigate = useNavigate();
 
-   
     const {
             register, 
             handleSubmit,
@@ -44,10 +41,11 @@ const { email, password } = data;
 
     console.log(errors);
 
-    
-    
-    async function onSubmit(data)  {
-      console.log(data);
+    const { email, password } = setUser;
+
+
+    async function onSubmit()  {
+      console.log();
 
       const options = {
         headers: { "Content-Type": "application/json" },
@@ -74,8 +72,8 @@ const { email, password } = data;
         setIsLoading(false);
       }
     }
-        
-    
+
+
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
            <StyledFieldset disabled={isLoading}> 
