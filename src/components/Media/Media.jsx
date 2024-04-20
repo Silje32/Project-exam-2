@@ -1,9 +1,9 @@
 // A registered user may update their avatar and banner.
 
 import { useState, useEffect } from 'react';
-import { NEW_URL } from "../../constants/Api";
+import { NEW_URL } from "../../constants/api";
 import MediaList from "./MediaList";
-import { useName } from "../../Store/UseUserStore";
+import { useName } from "../../store/UseUserStore";
 
 
 function Media() {
