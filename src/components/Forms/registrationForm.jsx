@@ -23,11 +23,12 @@ const schema = yup
 
 function RegistrationForm() {
 
-  const { _name, email, password } = data;
-
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
+
+  const { _name, email, password } = data;
+
 
 	const navigate = useNavigate();
    
