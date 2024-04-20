@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { NEW_URL } from "../../constants/api";
-import MediaList from "./MediaList";
+import MediaList from "./mediaList";
 import { useName } from "../../store/UseUserStore";
 
 
