@@ -32,15 +32,15 @@ export const postsurl = `${NEW_URL}/social/profiles/{name}/posts`;
 //  profile page  (Media)
 export const BannerAvatarurl = `${NEW_URL}/social/profiles/{name}/media`;
 
-
-
-//PUT
-
 //  profile page  (FollowButton)
 export const followurl = `${NEW_URL}/social/{name}/follow`;
-
-//  profile page  (FollowButton)
 export const unfollowurl = `${NEW_URL}/social/{name}/unfollow`;
+
+//  Update post  (updateButton)
+export const postidurl = `${NEW_URL}/social/posts/{id}`;
+
+//  Profile and Home page  (Emoji)
+export const emojiurl = `${NEW_URL}/social/posts/{id}/react/{symbol}`;
 
 
 
@@ -48,13 +48,17 @@ export const unfollowurl = `${NEW_URL}/social/{name}/unfollow`;
 
 //GET
 
-//  Home  (PostList)
-// * All the posts
+//  Home page (PostList)
 export const getpostsurl = `${NEW_URL}/social/posts`;
 
-//  Home page  (Follow)
+// SinglePostId  (SinglePostId)
+export const getsinglepostsurl = `${NEW_URL}/social/posts/<id>`;
+
+//  Following page  (Following)
 export const getfollowingurl = `${NEW_URL}/social/posts/following`;
 
+// Searchbar  (ProfileFilter)
+export const getsearchurl = `${NEW_URL}/social/posts/search?q=<query>`;
 
 
 //POST
@@ -66,24 +70,16 @@ export const postpostsurl = `${NEW_URL}/social/posts`;
 export const commenturl = `${NEW_URL}/social/posts/{id}/comment`;
 
 
-
-//PUT/DELETE/GET
-
-//  Update post  (updateButton)
-export const postidurl = `${NEW_URL}/social/posts/{id}`;
-
-//PUT
-
-//  Profile and Home page  (Emoji)
-export const emojiurl = `${NEW_URL}/social/posts/{id}/react/{symbol}`;
-
-
 //DELETE
 
-//  Delete Button
+//  Delete Comment Button  (DeleteCommentButton)
 export const deleteCommentidurl = `${NEW_URL}/social/posts/{id}/comment/{commentId}`;
 
+//  Delete Post Button  (DeletePostButton)
+export const deletePost = `${NEW_URL}/social/posts/{id}`;
 
 
-//  SinglePostId  (SinglePostId)
+
+
+
 
