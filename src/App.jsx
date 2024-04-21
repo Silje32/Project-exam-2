@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Comments from "./pages/Comments";
 import SinglePost from "./pages/SinglePost";
 import CreatePost from "./pages/CreatePost";
+import Following from "./pages/Following";
 import MyProfile from "./pages/MyProfile";
 import AllProfiles from "./pages/AllProfiles";
 import SingleProfile from "./pages/SingleProfile";
@@ -25,6 +26,7 @@ import GlobalStyles from "./styles/GlobalStyles";
             <Route path="/home/:id" element={<SingleProfile />} />
             <Route path="/home/comments/:id" element={<Comments />} />
             <Route path="create" element={<CreatePost />} />
+            <Route path="following" element={<Following />} />
             <Route path="my-profile" element={<MyProfile />} />
             <Route path="/my-profile/:id" element={<SinglePost />} />
             <Route path="/my-profile/comments/:id" element={<Comments />} />

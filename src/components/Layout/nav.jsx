@@ -37,6 +37,9 @@ function Nav() {
                   <NavLink to="/create">CREATE POST</NavLink>
                 </li>
                 <li>
+                  <NavLink to="/following">FOLLOWING</NavLink>
+                </li>
+                <li>
                   <NavLink to="/my-profile">MY PROFILE</NavLink>
                 </li>
                 <li>
