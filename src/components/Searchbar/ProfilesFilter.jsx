@@ -2,8 +2,7 @@ import { useState } from "react";
 import { StyledProfileFilter } from "./StyledProfilesFilter.styles";
 
 
-function ProfileFilter({ posts = [] }) {
-  console.log("props", posts);
+function ProfileFilter() {
 
   const [searchTerm, setSearchTerm] = useState("");
     console.log("search", searchTerm);
