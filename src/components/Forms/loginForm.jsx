@@ -22,7 +22,7 @@ const schema = yup
 .required();
 
 
-function LoginForm(props) {
+function LoginForm() {
 
   const [isLoading, setIsLoading] = useState(false);
 	const [isError, setisError] = useState(null);
@@ -50,7 +50,7 @@ function LoginForm(props) {
       const options = {
         headers: { "Content-Type": "application/json" },
         method: "POST",
-        body: JSON.stringify({ email, password }), 
+        body: JSON.stringify( email, password ), 
       };
 
       try {
