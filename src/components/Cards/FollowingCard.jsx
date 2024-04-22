@@ -1,17 +1,15 @@
 // Retrieve all posts from profiles that the authenticated user is following.
 
-import Following from "../Following/following";
-import { StyledFollowingCard, StyledFlex } from "./StyledCard.styles";
+import Following from "../Following/Following";
+import { StyledFollowingCard } from "./StyledCard.styles";
 
 
 function FollowingCard() {
 
     return (  
        <>
-         <StyledFollowingCard>
-          <StyledFlex>      
-            <Following />
-          </StyledFlex>   
+         <StyledFollowingCard>      
+            <Following />  
          </StyledFollowingCard>
        </>
     );
