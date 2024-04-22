@@ -1,7 +1,6 @@
-import Icons from "../Icons/Icons";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
-import DeleteButton from "../Delete/deleteButton";
+import DeleteCommentButton from "../Delete/deleteCommentButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
 import { StyledCreatePostListCard } from "./CreatePostList.styles";
 
@@ -15,12 +14,11 @@ export function CreatePostList({
             <h2>{title}</h2>
               <p>{body}</p>
             <StyledButtonCard>
-                <Icons />
                 <p>{_count.reactions}</p>
                 <LikeButton />
                 <p>{_count.comments}</p>
                 <CommentsButton />
-                <DeleteButton />
+                <DeleteCommentButton />
             </StyledButtonCard>
          </StyledCreatePostListCard>
         </>
