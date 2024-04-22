@@ -46,7 +46,7 @@ function Following() {
             } 
           } 
                     
-         getData(`${NEW_URL}/social/posts/following`);
+         getData();
       }, []); 
     
       if (isLoading) {
@@ -60,8 +60,8 @@ function Following() {
 
       return ( 
          <>  
-           {following.map((follow, id) => (
-             <FollowingList key={id} follow={follow} />
+           {following.map((data, id) => (
+             <FollowingList key={id} data={data} />
            ))}    
          </>            
       );
