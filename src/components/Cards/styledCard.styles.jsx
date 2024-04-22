@@ -20,6 +20,15 @@ export const StyledHomeCard = styled.div`
    max-width: 1320px;
 `
 
+export const StyledFollowingCard = styled.div`
+   display: flex;
+   background-color: white;
+   border-radius: 5px;
+   padding: 60px;
+   margin: 8px auto;
+   max-width: 1320px;
+`
+
 export const StyledMyProfileCard = styled.div`
    display: flex;
    background-color: white;
