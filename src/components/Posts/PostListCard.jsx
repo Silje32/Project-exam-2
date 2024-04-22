@@ -1,7 +1,6 @@
-import Icons from "../Icons/Icons";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
-import DeleteButton from "../Delete/deleteButton";
+import DeleteButton from "../Delete/deleteCommentButton";
 import ViewProfileButton from "./ViewProfileButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
 import { StyledPostListCard } from "./PostListCard.styles";
