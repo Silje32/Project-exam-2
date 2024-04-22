@@ -2,6 +2,7 @@ import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
 import DeleteButton from "../Delete/deleteCommentButton";
 import { StyledButtonCard, StyledFollowingList } from "../Cards/StyledCard.styles";
+import { StyledFollowingList } from "./FollowingList.styles";
 
 
 export function FollowingList({ 
