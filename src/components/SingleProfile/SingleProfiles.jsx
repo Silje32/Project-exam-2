@@ -1,7 +1,6 @@
 // Retrieve a single profile by its id.
 // A registered user may view a single Profile by name.
 
-
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useToken, useName } from "../../store/UseUserStore";
@@ -56,7 +55,7 @@ function SingleProfile() {
           } 
         }    
         
-       getData(`${NEW_URL}social/profiles/${name}`);
+       getData(`${NEW_URL}/social/profiles/${name}`);
     }, [id]); 
 
 
