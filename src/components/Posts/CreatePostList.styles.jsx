@@ -4,13 +4,12 @@ import styled from "styled-components";
 export const StyledCreatePostListCard = styled.div`
 display: flex;
 flex-direction: column;
-align-items: right;
+align-items: center;
 background-color: #306FB6;
 opacity: 0.8;
 border-radius: 5px;
 max-width: 865px;
-margin-right: 350px;
-margin-bottom: 30px;
+margin: 0 auto;
 padding: 10px;
 
 img {
