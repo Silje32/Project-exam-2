@@ -13,7 +13,7 @@ function CommentsButton() {
         <StyledCommentsButton onClick={onButtonClick}>
             <Link to={"comments/${id}"}>COMMENTS</Link>
         </StyledCommentsButton>
-     );
+    );
 }
 
 export default CommentsButton;
