@@ -1,4 +1,4 @@
-import Emoji from "../Emoji/emoji";
+import Emoji from "../Emoji/Emoji";
 import Comment from "../Comments/comment";
 import LikesButton from "../Buttons/likesButton";
 import PublishButton from "../Buttons/publishButton";
