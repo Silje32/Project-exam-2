@@ -1,6 +1,6 @@
-import LikeButton from "../Buttons/likeButton";
-import CommentsButton from "../Buttons/commentsButton";
-import DeleteButton from "../Delete/deleteCommentButton";
+import LikeButton from "../Buttons/LikeButton";
+import CommentsButton from "../Buttons/CommentsButton";
+import DeleteButton from "../Delete/DeleteCommentButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
 import { StyledFollowingList } from "./FollowingList.styles";
 
