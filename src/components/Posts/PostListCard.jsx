@@ -1,6 +1,6 @@
-import LikeButton from "../Buttons/likeButton";
-import CommentsButton from "../Buttons/commentsButton";
-import DeleteButton from "../Delete/deleteCommentButton";
+import LikeButton from "../Buttons/LikeButton";
+import CommentsButton from "../Buttons/CommentsButton";
+import DeleteButton from "../Delete/DeleteCommentButton";
 import ViewProfileButton from "./ViewProfileButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
 import { StyledPostListCard } from "./PostListCard.styles";
@@ -19,7 +19,6 @@ export function PostListCard({
             <p>Created: {created}</p>
             <p>Updated: {updated}</p>
         <StyledButtonCard>
-            <Icons />
             <p>{_count.reactions}</p>
             <LikeButton />
             <p>{_count.comments}</p>
