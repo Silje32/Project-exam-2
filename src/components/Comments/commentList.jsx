@@ -1,4 +1,3 @@
-import Icons from "../Icons/Icons";
 import LikesButton from "../Buttons/likesButton";
 import BackButton from "../Buttons/BackToHomeButton";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
@@ -14,7 +13,6 @@ export function CommentList({
             <p>{body}</p>
             <h4>{author}</h4>
             <StyledButtonCard>
-                <Icons />
                 <LikesButton />
                 <BackButton />
             </StyledButtonCard>
