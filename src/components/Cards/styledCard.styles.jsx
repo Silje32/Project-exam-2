@@ -25,7 +25,6 @@ export const StyledFollowingCard = styled.div`
    background-color: white;
    border-radius: 5px;
    padding: 60px;
-   margin: 8px auto;
    max-width: 1320px;
 `
 
