@@ -11,7 +11,7 @@ function CreatePost() {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
-  const { title, body } = [];
+  const { title, body } = posts;
 
   useEffect(() => {
     async function getData(posts) {
@@ -60,11 +60,9 @@ function CreatePost() {
 
   return ( 
       <>
-        {posts.map((post) => (
-            <div key={post.id}>
-              <CreatePostList />
-            </div>
-          ))}
+        {posts.map((post, id) => (
+            <CreatePostList key={id} post={post} />
+        ))}
       </>
   );
 }
