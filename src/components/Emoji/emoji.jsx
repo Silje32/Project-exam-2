@@ -10,9 +10,7 @@ function Emoji() {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
-  const { id, symbol } = emoji;
-
-
+  
   useEffect(() => {
     async function getData() {
         console.log();
@@ -26,7 +24,7 @@ function Emoji() {
         setisLoading(true);
         setisError(false);
 
-      const response = await fetch(`${NEW_URL}/social/posts/${id}/react/${symbol}`, options);
+      const response = await fetch(`${NEW_URL}/social/posts/${id}/react/👍`, options);
 
       if (response.ok) {
           const json = await response.json();
@@ -58,8 +56,8 @@ function Emoji() {
     return ( 
         <>
           <div>
-             {emoji.map((media, id) => (
-                <EmojiList key={id} media={media} />
+             {emoji.map((media, postId) => (
+                <EmojiList key={postId} media={media} />
               ))}
           </div>
         </>
