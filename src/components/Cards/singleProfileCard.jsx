@@ -1,4 +1,3 @@
-import Icons from "../Icons/Icons";
 import Emoji from "../Emoji/emoji";
 import LikeButton from "../Buttons/likeButton";
 import BackButton from "../Buttons/BackToHomeButton";
@@ -18,7 +17,6 @@ function SingleProfileCard() {
                 <SingleProfile />
               </div>
               <div>
-                <Icons />
                 <Emoji />
                 <StyledButtonCard>
                   <LikeButton />
