@@ -1,4 +1,3 @@
-import Icons from "../Icons/Icons";
 import Emoji from "../Emoji/emoji";
 import LikeButton from "../Buttons/likeButton";
 import BackToProfileButton from "../Buttons/BackToProfileButton";
@@ -18,7 +17,6 @@ function SinglePostCard() {
                 <SinglePostId />
               </div>
               <div>
-                <Icons />
                 <Emoji />
                 <StyledButtonCard>
                   <LikeButton />
