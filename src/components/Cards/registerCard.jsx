@@ -8,7 +8,7 @@ function RegisterCard() {
           <StyledCard>
               <div>
                 <h2>REGISTRATION</h2>
-                <RegistrationForm data="props" />
+                <RegistrationForm />
               </div> 
           </StyledCard>
         </>
