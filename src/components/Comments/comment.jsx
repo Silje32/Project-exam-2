@@ -1,4 +1,5 @@
 // A registered user may create a comment on any Post.
+// Allows a comment to be made on a post.
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
@@ -30,7 +31,7 @@ function Comment() {
             setisLoading(true);
             setisError(false);
 
-            const response = await fetch(`${NEW_URL}/social/posts/{id}/comment`, options);
+            const response = await fetch(`${NEW_URL}/social/posts/${id}/comment`, options);
 
             if (response.ok) {
               const json = await response.json();
@@ -45,8 +46,7 @@ function Comment() {
             setisLoading(false);    
           } 
         } 
-        
-        
+               
        getData();
     }, [id]); 
 
