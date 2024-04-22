@@ -1,4 +1,3 @@
-import Icons from "../Icons/Icons";
 import LikeButton from "../Buttons/likeButton";
 import CommentsButton from "../Buttons/commentsButton";
 import DeleteButton from "../Delete/deleteCommentButton";
@@ -18,14 +17,13 @@ export function FollowingList({
             <img src={`${media}`} alt={`${media}`} />
             <p>Created: {created}</p>
             <p>Updated: {updated}</p>
-        <StyledButtonCard>
-            <Icons />
-            <p>{_count.reactions}</p>
-            <LikeButton />
-            <p>{_count.comments}</p>
-            <CommentsButton />
-            <DeleteButton />
-            </StyledButtonCard>
+          <StyledButtonCard>
+             <p>{_count.reactions}</p>
+             <LikeButton />
+             <p>{_count.comments}</p>
+             <CommentsButton />
+             <DeleteButton />
+          </StyledButtonCard>
          </StyledFollowingList>
         </>
     );
