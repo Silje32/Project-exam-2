@@ -2,7 +2,7 @@ import Emoji from "../Emoji/emoji";
 import Comment from "../Comments/comment";
 import LikesButton from "../Buttons/likesButton";
 import PublishButton from "../Buttons/publishButton";
-import BackButton  from "../Buttons/BackToHomeButton";
+import BackButton from "../Buttons/BackToHomeButton";
 import { StyledCard, StyledButtonCard } from "./StyledCard.styles";
 
 function CommentCard() {
