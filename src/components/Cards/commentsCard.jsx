@@ -1,4 +1,3 @@
-import Icons from "../Icons/Icons";
 import Emoji from "../Emoji/emoji";
 import Comment from "../Comments/comment";
 import LikesButton from "../Buttons/likesButton";
@@ -13,7 +12,6 @@ function CommentCard() {
           <StyledCard>
               <div>
                   <Emoji />
-                  <Icons />
                   <StyledButtonCard>
                      <LikesButton />
                      <BackButton />
@@ -27,7 +25,6 @@ function CommentCard() {
 
               <div>
                 <h4>Write a comment:</h4>
-                <Icons />
                 <Emoji />
                 <PublishButton />
               </div>
