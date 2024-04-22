@@ -1,18 +1,18 @@
 // Delete a comment based on its id.
 
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { StyledDeleteCommentButton } from "./styledDeleteButton";
 import { NEW_URL } from "../../constants/api";
 
 
 function DeleteCommentButton() {
+
   const [data, setData] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
-          
-      async function onButtonClick(data) {
+  useEffect(() => {     
+    async function getData() {
           console.log(data);
       
       const options = {
@@ -36,8 +36,10 @@ function DeleteCommentButton() {
         setisLoading(false);    
       } 
 
-    getData(`${NEW_URL}/social/posts/${id}/comment/${commentId}`);
-}, [id]); 
+    }  
+
+     getData(`${NEW_URL}/social/posts/${id}/comment/${commentId}`);
+  }, [id]); 
 
 
     if (isLoading) {

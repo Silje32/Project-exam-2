@@ -1,19 +1,19 @@
 // A registered user may delete a Post they own. 
 // Delete a post based on its id.
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { StyledDeletePostButton } from "./styledDeleteButton";
 import { NEW_URL } from "../../constants/api";
 
 
 function DeletePostButton() {
-    
+
   const [data, setData] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
-          
-      async function onButtonClick(data) {
+  useEffect(() => {    
+      async function getData() {
           console.log(data);
       
       const options = {
@@ -35,9 +35,10 @@ function DeletePostButton() {
       } finally {
         setisLoading(false);    
       } 
+    } 
       
-    getData(`${NEW_URL}/social/posts/${id}`);
-}, [id]); 
+      getData(`${NEW_URL}/social/posts/${id}`);
+  }, [id]); 
 
 
     if (isLoading) {
