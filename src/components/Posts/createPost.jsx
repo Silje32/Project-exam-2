@@ -43,8 +43,7 @@ function CreatePost() {
         setisLoading(false);    
       } 
     } 
-    
-    
+       
     getData();
   }, []); 
   
