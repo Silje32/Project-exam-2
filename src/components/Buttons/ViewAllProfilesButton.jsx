@@ -3,11 +3,11 @@ import { StyledViewAllProfilesButton } from "../Buttons/Button.styles";
 
 function ViewAllProfilesButton() {
 
-    function onButtonClick() {
+     function onButtonClick() {
 
-    }
+     }
 
-    return ( 
+     return ( 
         <StyledViewAllProfilesButton onClick={onButtonClick}>
              <Link to={"/profiles"}>View all profiles</Link>
         </StyledViewAllProfilesButton>
