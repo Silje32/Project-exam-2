@@ -1,13 +1,13 @@
 import CreatePost from "../Posts/CreatePost";
 import PublishButton from "../Buttons/PublishButton";
 import CloseButton from "../Buttons/CloseButton";
-import { StyledCard } from "./StyledCard.styles";
+import { StyledCreatePostListCard } from "../Posts/CreatePostList.styles";
 
 function CreatePostCard() {
 
     return (  
         <>
-          <StyledCard>
+          <StyledCreatePostListCard>
                <div>
                   <h2>CREATE A POST</h2>
                   <CreatePost />
@@ -16,7 +16,7 @@ function CreatePostCard() {
                 <PublishButton />
                 <CloseButton />
               </div>
-          </StyledCard>
+          </StyledCreatePostListCard>
         </>
     );
 }
