@@ -6,15 +6,13 @@ import { StyledHomeCard, StyledFlex } from "./StyledCard.styles";
 
 function HomeCard() {
 
-  const posts = [];
-
     return (  
        <>
          <StyledHomeCard>
           <StyledFlex>
            <ViewAllProfilesButton />
-              <ProfileFilter posts={posts} />
-              <PostList posts={posts} />        
+              <ProfileFilter />
+              <PostList />        
           </StyledFlex>   
          </StyledHomeCard>
        </>
