@@ -11,7 +11,7 @@ function CommentsButton() {
         <StyledProfileCommentsButton onClick={onButtonClick}>
             <Link to={"comments/${id}"}>COMMENTS</Link>
         </StyledProfileCommentsButton>
-     );
+    );
 }
 
 export default CommentsButton;
