@@ -1,6 +1,6 @@
 // A registered user may follow and unfollow another Profile.
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useName, useFollow } from "../../store/UseUserStore";
 import { StyledFollowButton } from "./Button.styles";
 import { NEW_URL } from "../../constants/api";
@@ -16,8 +16,9 @@ export default function FollowButton () {
   const [isError, setisError] = useState(false);
 
 
-    async function onButtonClick(follow) {
-        console.log(follow);
+  useEffect(() => {   
+    async function getData() {
+        console.log();
       
       const options = {
         headers: { "Content-Type": "application/json" },
@@ -39,9 +40,10 @@ export default function FollowButton () {
         setisError(true);
       } finally {
         setisLoading(false);    
-      } 
+      }
+    } 
 
-      getData();
+       getData();
     }, [name]); 
     
 

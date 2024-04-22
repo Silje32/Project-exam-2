@@ -1,6 +1,7 @@
 // A registered user may update a Post they own.
 // Update a post based on its id. This endpoint returns the updated post.
 
+import { useState, useEffect } from 'react';
 import { StyledUpdateButton } from "./Button.styles";
 
 function UpdateButton() {
@@ -12,8 +13,9 @@ function UpdateButton() {
   const [isError, setisError] = useState(false);
 
 
-    async function onButtonClick(update) {
-        console.log(update);
+  useEffect(() => {   
+    async function getData() {
+        console.log();
       
       const options = {
         headers: { "Content-Type": "application/json" },
@@ -35,9 +37,10 @@ function UpdateButton() {
         setisError(true);
       } finally {
         setisLoading(false);    
-      } 
+      }
+    } 
 
-      getData();
+       getData();
     }, []); 
     
 
