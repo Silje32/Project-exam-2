@@ -1,5 +1,5 @@
 import Media from "../components/Media/Media";
-import ProfileCard from "../components/Cards/profileCard";
+import ProfileCard from "../components/Cards/ProfileCard";
 
 
 function MyProfile() {
