@@ -10,7 +10,9 @@ function Emoji() {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
 
-  
+  const { id } = emoji;
+
+
   useEffect(() => {
     async function getData() {
         console.log();
