@@ -108,7 +108,6 @@ export const StyledButtonCard = styled.div`
    width: 1000px;
    max-width: 80%;
 `
-;
 
 export const StyledGetAllProfilesCard = styled.div`
    display: flex;
@@ -124,5 +123,5 @@ export const StyledGetAllProfilesCard = styled.div`
       padding: 20px;
       margin-top: 20px;
    }
-`
+`;
 
