@@ -1,4 +1,4 @@
-import RegisterCard from "../components/Cards/registerCard";
+import RegisterCard from "../components/Cards/RegisterCard";
 
 function Register() {
 
