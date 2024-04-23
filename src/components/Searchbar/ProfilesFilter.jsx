@@ -9,7 +9,7 @@ function ProfileFilter() {
 
     const posts= searchTerm;
   
-  const filterPosts = posts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    const filterPosts = posts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()));
     console.log("filterPosts", filterPosts);
 
 
