@@ -1,4 +1,4 @@
-import CommentCard from "../components/Cards/commentsCard";
+import CommentCard from "../components/Cards/CommentsCard";
 
 function Comments() {
     return (
