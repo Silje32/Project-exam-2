@@ -36,7 +36,6 @@ function Following() {
                 return setFollowing(json);
               }
               
-
               throw new Error();
             } catch (Error) {
               console.log(Error);
@@ -46,8 +45,8 @@ function Following() {
             } 
           } 
                     
-         getData();
-      }, []); 
+           getData();
+          }, []); 
     
       if (isLoading) {
         return <div>Loading posts...</div>;
