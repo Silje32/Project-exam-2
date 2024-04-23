@@ -25,7 +25,7 @@ function Search() {
               setisLoading(true);
               setisError(false);
 
-              const response = await fetch(`${NEW_URL}/social/posts/search?q=<query>`,options);
+              const response = await fetch(`${NEW_URL}/social/posts/_tag=my_tag>`,options);
 
               if (response.ok) {
                 const json = await response.json();
@@ -52,13 +52,12 @@ function Search() {
           return <div>Error loading posts</div>;
         }
 
-
         return ( 
-         <>  
+          <>  
            {search.map((data, id) => (
              <ProfilesFilter key={id} data={data} />
            ))}    
-         </>            
+          </>            
         );
 }
 
