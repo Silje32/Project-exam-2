@@ -9,7 +9,6 @@ function Search() {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
   
-  
         useEffect(() => {
           async function getData() {
             
@@ -19,7 +18,6 @@ function Search() {
               },
               method: "GET",
             };
-
 
             try {
               setisLoading(true);
