@@ -9,14 +9,14 @@ function GetAllProfiles () {
 
   const token = useToken();
 
-  const [profiles, setProfiles] = useState([]);
+  const [data, setData] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setisError] = useState(false);
   
     
       useEffect(() => {
-          async function getData(profiles) {
-            console.log(profiles);
+          async function getData(data) {
+            console.log(data);
             
             const options = {
               headers: { "Content-Type": "application/json",
@@ -34,37 +34,37 @@ function GetAllProfiles () {
 
               if(response.ok) {
                 const json = await response.json();
-                return setProfiles(json);           
-               }
+                return setData(json);           
+              }
   
-            } catch (error) {
-              console.log(error);
-              setisError(true);
-            } finally {
-              setisLoading(false);    
-            } 
+              } catch (error) {
+                console.log(error);
+                setisError(true);
+              } finally {
+                setisLoading(false);    
+              } 
           }    
           
-         getData();
-      }, []); 
+              getData();
+          }, []); 
 
 
    
-    if (isLoading) {
-      return <div>Loading posts...</div>;
-    }
+          if (isLoading) {
+             return <div>Loading posts...</div>;
+          }
   
-    if (isError) {
-      return <div>Error loading profiles</div>;
-    }
+          if (isError) {
+            return <div>Error loading profiles</div>;
+          }
     
-    return ( 
-        <>
-          {profiles.map((profile, index) => (
-             <GetAllProfileList key={index}  profile={profile} />
-          ))}
-        </>
-     );
+          return ( 
+                <>
+                 {data.map((profile, index) => (
+                     <GetAllProfileList key={index}  profile={profile} />
+                  ))}
+                </>
+          );
 }
 
 export default GetAllProfiles;

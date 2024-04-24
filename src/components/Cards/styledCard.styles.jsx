@@ -9,6 +9,7 @@ export const StyledCard = styled.div`
    margin: 20px 230px;
    padding: 60px;
    max-width: 1000px;
+   min-width: 800px;
 `
 
 export const StyledHomeCard = styled.div`
