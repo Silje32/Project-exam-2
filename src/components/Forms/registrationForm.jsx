@@ -14,7 +14,7 @@ import { StyledBaseButton } from "../Buttons/Button.styles";
 // * Adding yup validation
 const schema = yup
   .object({
-     name: yup.string().min(3, "Your name should be at least 3 characters.").required("Minimum 3 characters required"),
+     name: yup.string().min(2, "Your name should be at least 2 characters.").required("Minimum 2 characters required"),
      email: yup.string().email("Please write a valid noroff.no email address.").required("Noroff e-mail required"),
      password: yup.string().min(8, "Your password should be at least 8 characters").required("Please enter a password"),
 })
