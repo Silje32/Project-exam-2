@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useToken } from "../../store/UseUserStore";
-import GetAllProfileList from "./getAllProfileList";
+import GetAllProfileList from "./GetAllProfileList";
 import { NEW_URL } from "../../constants/api";
 
 function GetAllProfiles () {
