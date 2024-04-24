@@ -29,7 +29,7 @@ function Media() {
         setisLoading(true);
         setisError(false);
 
-        const response = await fetch(`${NEW_URL}/social/profiles/${name}/media`, options);
+        const response = await fetch(`${NEW_URL}/social/profiles/${name}`, options);
         const json = await response.json();
 
         setBanner(json);
@@ -41,7 +41,7 @@ function Media() {
       } 
     } 
         
-   getData(`${NEW_URL}social/profiles/${name}/media`);
+   getData();
   }, [name]); 
 
 
