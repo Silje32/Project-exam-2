@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useToken } from "../../Store/UseUserStore";
+import { useToken } from "../../store/UseUserStore";
 import Logo from "../../Images/Logo_final.jpg";
 import { StyledLogo } from "./Logo.styles";
 
