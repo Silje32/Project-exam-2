@@ -115,9 +115,8 @@ export const StyledGetAllProfilesCard = styled.div`
    align-items: center;
    background-color: white;
    border-radius: 5px;
-   margin: 0 auto;
-   margin-top: 30px;
-   max-width: 1200px;
+   margin: 30px 160px;
+   max-width: 2300px;
 
    h2 {
       padding: 20px;
