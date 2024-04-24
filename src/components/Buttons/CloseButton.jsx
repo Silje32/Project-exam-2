@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { StyledBaseButton } from "./Button.styles";
+import { StyledCloseButton } from "./Button.styles";
 
 function CloseButton() {
 
@@ -8,9 +8,9 @@ function CloseButton() {
     }
 
     return ( 
-        <StyledBaseButton onClick={onButtonClick}>
+        <StyledCloseButton onClick={onButtonClick}>
              <Link to={"/home"}>CLOSE</Link>
-        </StyledBaseButton>
+        </StyledCloseButton>
      );
 }
 

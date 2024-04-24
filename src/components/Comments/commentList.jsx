@@ -1,7 +1,7 @@
 import LikesButton from "../Buttons/likesButton";
-import BackButton from "../Buttons/BackToHomeButton";
+import { StyledCloseButton } from "../Buttons/Button.styles";
 import { StyledButtonCard } from "../Cards/StyledCard.styles";
-import { StyledCommentList } from "./commentList.styles";
+import { StyledCommentList } from "./CommentList.styles";
 
 export function CommentList({ 
     comments: { body, author } 
@@ -14,7 +14,7 @@ export function CommentList({
             <h4>{author}</h4>
             <StyledButtonCard>
                 <LikesButton />
-                <BackButton />
+                <CloseButton />
             </StyledButtonCard>
          </StyledCommentList>
         </>

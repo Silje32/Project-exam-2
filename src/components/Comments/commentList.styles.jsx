@@ -7,8 +7,7 @@ align-items: left;
 background-color: white;
 opacity: 0.8;
 border-radius: 5px;
-width: 1000px;
-max-width: 100%;
+max-width: 1600px;
 margin-bottom: 20px;
 padding: 10px;
 
