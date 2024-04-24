@@ -6,7 +6,7 @@ export const StyledCard = styled.div`
    align-items: center;
    background-color: white;
    border-radius: 5px;
-   margin: 20px 130px;
+   margin: 20px 230px;
    padding: 60px;
    max-width: 1000px;
 `
@@ -25,6 +25,7 @@ export const StyledFollowingCard = styled.div`
    background-color: white;
    border-radius: 5px;
    padding: 60px;
+   margin: 20px 230px;
    max-width: 1320px;
 `
 
@@ -36,7 +37,6 @@ export const StyledMyProfileCard = styled.div`
    margin: 8px auto;
    max-width: 1320px;
 `
-
 
 export const StyledSinglePostCard = styled.div`
    display: flex;
