@@ -3,16 +3,16 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import CommentList from "./commentList";
+import CommentList from "./CommentList";
 import { NEW_URL } from "../../constants/api";
 
 function Comment() {
 
-    const { body } = comment;
-
     const [comment, setComment] = useState([]);
     const [isLoading, setisLoading] = useState(false);
     const [isError, setisError] = useState(false);
+
+    const { body } = comment;
 
     const { id  } = useParams();
 
