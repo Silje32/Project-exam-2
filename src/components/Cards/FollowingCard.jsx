@@ -8,7 +8,8 @@ function FollowingCard() {
 
     return (  
        <>
-         <StyledFollowingCard>      
+         <StyledFollowingCard>
+            <h3>FOLLOW</h3>      
             <Following />  
          </StyledFollowingCard>
        </>
