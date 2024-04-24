@@ -57,7 +57,7 @@ export const StyledSingleProfileCard = styled.div`
    border-radius: 5px;
    margin: 20px 130px;
    padding: 60px;
-   max-width: 1000px;
+   max-width: 1300px;
 `
 
 
