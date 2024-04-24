@@ -1,4 +1,4 @@
-import Emoji from "../Emoji/emoji";
+import Emoji from "../Emoji/Emoji";
 import LikeButton from "../Buttons/likeButton";
 import BackButton from "../Buttons/BackToHomeButton";
 import SingleProfile from "../SingleProfile/SingleProfiles";

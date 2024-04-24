@@ -2,7 +2,7 @@
 // Delete a post based on its id.
 
 import { useState, useEffect } from 'react';
-import { StyledDeletePostButton } from "./styledDeleteButton";
+import { StyledDeletePostButton } from "./StyledDeleteButton";
 import { NEW_URL } from "../../constants/api";
 
 

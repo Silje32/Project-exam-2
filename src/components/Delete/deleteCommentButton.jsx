@@ -1,7 +1,7 @@
 // Delete a comment based on its id.
 
 import { useState, useEffect } from 'react';
-import { StyledDeleteCommentButton } from "./styledDeleteButton";
+import { StyledDeleteCommentButton } from "./StyledDeleteButton";
 import { NEW_URL } from "../../constants/api";
 
 
