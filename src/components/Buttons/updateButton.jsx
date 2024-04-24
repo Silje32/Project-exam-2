@@ -59,12 +59,11 @@ function UpdateButton() {
     }
 
     return ( 
-
-        {update.map((updates) => (
+        <>
           <StyledUpdateButton onClick={onButtonClick}>
             UPDATE
-          </StyledUpdateButton>
-        )}
+          </StyledUpdateButton>   
+        </>         
     );
 }
 
