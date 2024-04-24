@@ -9,7 +9,7 @@ function CloseButton() {
 
     return ( 
         <StyledCloseButton onClick={onButtonClick}>
-             <Link to={"/home"}>CLOSE</Link>
+             <Link to={"/home"}>BACK</Link>
         </StyledCloseButton>
      );
 }

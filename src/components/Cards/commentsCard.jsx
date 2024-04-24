@@ -1,8 +1,8 @@
 import Emoji from "../Emoji/Emoji";
-import Comment from "../Comments/comment";
+import Comment from "../Comments/Comment";
 import LikesButton from "../Buttons/likesButton";
 import PublishButton from "../Buttons/publishButton";
-import BackButton from "../Buttons/BackToHomeButton";
+import CloseButton from "../Buttons/CloseButton";
 import { StyledCard, StyledButtonCard } from "./StyledCard.styles";
 
 function CommentCard() {
@@ -14,7 +14,7 @@ function CommentCard() {
                   <Emoji />
                   <StyledButtonCard>
                      <LikesButton />
-                     <BackButton />
+                     <CloseButton />
                   </StyledButtonCard>
               </div>
              

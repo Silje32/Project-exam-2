@@ -316,9 +316,9 @@ export const StyledCloseButton = styled.button`
 }
    padding: 10px 20px;
    font-size: 22px;
-   min-width: 200px;
+   width: 30%;
+   margin-left: 500px;
    cursor: pointer;
-   margin-left: 900px;
    color: ${(props) => (props.$isActive ? "blue" : "white")};
    background-color: ${(props) => (props.$isActive ? "black" : "#707070")};
 
@@ -327,9 +327,8 @@ export const StyledCloseButton = styled.button`
       color: ${(props) => (props.$isActive ? "blue" : "white")};
    }
 
-   :hover {
+   a:hover {
       background-color: "#C09DDF";
    }
-
 `
 ;
